@@ -24,17 +24,19 @@ clip = json.load(open(clip_path))
 used = set()
 
 
-def get(url, tries=3):
+def get(url, tries=6):
     for k in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=60) as r:
+                time.sleep(0.8 if "wiki" in url else 0.1)
                 return r.read()
         except Exception as e:
+            ra = getattr(e, "headers", None) and e.headers.get("Retry-After")
             if k == tries - 1:
                 print("  ! fetch failed", url[:120], e, flush=True)
                 return None
-            time.sleep(2 + 3 * k)
+            time.sleep(min(60, float(ra) if ra and str(ra).isdigit() else 4 * (k + 1) ** 2))
 
 
 def jget(url):
@@ -72,7 +74,15 @@ def commons_ok(page, min_w=1000):
             "w": ii.get("width"), "h": ii.get("height")}
 
 
+WIKI = {}
 def from_wiki(article):
+    if article in WIKI:
+        return WIKI[article]
+    WIKI[article] = r = _from_wiki(article)
+    return r
+
+
+def _from_wiki(article):
     q = urllib.parse.urlencode({"action": "query", "titles": article, "prop": "pageimages", "piprop": "name",
                                 "redirects": 1, "format": "json"})
     d = jget("https://en.wikipedia.org/w/api.php?" + q) or {}
@@ -175,6 +185,8 @@ def save(key, r, need):
     return {"type": r["type"], "file": os.path.basename(path), "credit": r["credit"], "page": r.get("page", ""), "src": r["url"]}
 
 
+old_p = os.path.join(out_dir, "manifest.json")
+old = json.load(open(old_p)) if os.path.exists(old_p) else {}
 manifest = {}
 for i, b in enumerate(clip["beats"]):
     need = b["end"] - b["start"] + 0.6
@@ -185,13 +197,28 @@ for i, b in enumerate(clip["beats"]):
         if ph:
             jobs.append((f"ph/{i}/{k}", ph, False))
     for key, spec, vid in jobs:
+        sig = json.dumps(spec, sort_keys=True) + ("|px" if KEY else "")
+        o = old.get(key)
+        legacy = o and "sig" not in o and not spec.get("same") and not spec.get("redo")
+        if o and (o.get("sig") == sig or legacy) and os.path.exists(os.path.join(out_dir, o["file"])):
+            o["sig"] = sig
+            manifest[key] = o; used.add(o.get("src")); print(f"{key:10s} kept", flush=True); continue
+        if spec.get("same"):
+            continue
         r = resolve(spec, need, prefer_video=vid)
         m = save(key, r, need) if r else None
+        if m:
+            m["sig"] = sig
         print(f"{key:10s} {b['lay']:9s} {json.dumps(spec)[:70]:70s} -> {(m or {}).get('credit', 'NONE')[:90]}", flush=True)
         if m:
             manifest[key] = m
         time.sleep(0.3)
 
+# "same": reuse another key's asset (resolved after everything else is fetched)
+for i, b in enumerate(clip["beats"]):
+    for key, spec in [(f"bg/{i}", b.get("bg"))] + [(f"ph/{i}/{k}", ph) for k, ph in enumerate(b.get("photos") or [])]:
+        if spec and spec.get("same") and spec["same"] in manifest:
+            manifest[key] = dict(manifest[spec["same"]], sig="same:" + spec["same"])
 json.dump(manifest, open(os.path.join(out_dir, "manifest.json"), "w"), indent=1)
 seen = []
 for m in manifest.values():
@@ -203,7 +230,7 @@ open(os.path.join(out_dir, "credits.txt"), "w").write("B-roll and photo credits:
 from PIL import Image, ImageDraw, ImageFont
 thumbs = []
 for key, m in manifest.items():
-    p = os.path.join(out_dir, m["file"]); t = p + ".thumb.jpg"
+    p = os.path.join(out_dir, m["file"]); t = os.path.join(out_dir, key.replace("/", "_") + ".thumb.jpg")
     src = ["-ss", "1", "-i", p] if m["type"] == "video" else ["-i", p]
     if subprocess.run(["ffmpeg", "-y", "-v", "error", *src, "-frames:v", "1", "-vf", "scale=384:216:force_original_aspect_ratio=increase,crop=384:216", t]).returncode == 0:
         thumbs.append((key, m, t))
