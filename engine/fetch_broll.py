@@ -24,7 +24,7 @@ clip = json.load(open(clip_path))
 used = set()
 
 
-def get(url, tries=6):
+def get(url, tries=3):
     for k in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
@@ -36,7 +36,7 @@ def get(url, tries=6):
             if k == tries - 1:
                 print("  ! fetch failed", url[:120], e, flush=True)
                 return None
-            time.sleep(min(60, float(ra) if ra and str(ra).isdigit() else 4 * (k + 1) ** 2))
+            time.sleep(min(10, float(ra) if ra and str(ra).isdigit() else 3 * (k + 1)))
 
 
 def jget(url):

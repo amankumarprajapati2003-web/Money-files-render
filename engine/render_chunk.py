@@ -17,6 +17,13 @@ print(f"chunk {k}/{n}: frames {f0}..{f1} of {N}", flush=True)
 # ---- extract b-roll frames for the beats this chunk touches (played at 0.8x for a moody feel)
 man_p = os.path.join(job, "broll", "manifest.json")
 man = json.load(open(man_p)) if os.path.exists(man_p) else {}
+for _ in range(3):  # resolve {"same": key} re-uses from clip.json against the pack
+    for i, b in enumerate(beats):
+        for key, spec in [(f"bg/{i}", b.get("bg"))] + [(f"ph/{i}/{q}", ph) for q, ph in enumerate(b.get("photos") or [])]:
+            if spec and spec.get("same") and spec["same"] in man:
+                man[key] = man[spec["same"]]
+if man:
+    json.dump(man, open(man_p, "w"))
 fdir = os.path.join(job, "frames"); shutil.rmtree(fdir, ignore_errors=True); os.makedirs(fdir)
 index = {}
 for i, b in enumerate(beats):
