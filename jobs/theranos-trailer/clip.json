@@ -1,0 +1,604 @@
+{
+"duration": 55.6,
+"broll_from": "theranos",
+"hud": false,
+"letterbox": true,
+"plain": true,
+"beats": [
+{
+"lay": "tcard",
+"start": 0.0,
+"end": 1.4,
+"fx": [],
+"text": ""
+},
+{
+"lay": "stat",
+"start": 1.4,
+"end": 7.4,
+"fx": [
+[
+0,
+"shutter"
+],
+[
+1.6,
+"cash"
+],
+[
+1.6,
+"punch"
+]
+],
+"value": 4.5,
+"decimals": 1,
+"prefix": "$",
+"suffix": "B",
+"label": "ELIZABETH HOLMES · NET WORTH · 2014",
+"accent": "gold",
+"roll": [
+0.15,
+1.6
+],
+"bg": {
+"same": "bg/0"
+}
+},
+{
+"lay": "flash",
+"start": 7.4,
+"end": 9.4,
+"fx": [
+[
+0,
+"shutter"
+]
+],
+"name": "HENRY KISSINGER",
+"sub": "THERANOS BOARD",
+"bg": {
+"same": "ph/1/0"
+}
+},
+{
+"lay": "flash",
+"start": 9.4,
+"end": 13.7,
+"fx": [
+[
+0,
+"shutter"
+]
+],
+"name": "RUPERT MURDOCH",
+"sub": "INVESTED $121 MILLION",
+"bg": {
+"same": "ph/1/1"
+}
+},
+{
+"lay": "flash",
+"start": 13.7,
+"end": 19.1,
+"fx": [
+[
+0,
+"shutter"
+]
+],
+"name": "ONE DROP OF BLOOD",
+"sub": "HUNDREDS OF TESTS",
+"bg": {
+"same": "ph/21/0"
+}
+},
+{
+"lay": "tcard",
+"start": 19.1,
+"end": 21.0,
+"fx": [
+[
+0,
+"glitch"
+]
+],
+"text": "THERE WAS JUST ONE PROBLEM",
+"size": 150
+},
+{
+"lay": "reveal",
+"start": 21.0,
+"end": 25.2,
+"fx": [
+[
+1.9,
+"mute"
+],
+[
+2.24,
+"hit"
+]
+],
+"small": "The machine…",
+"text": "DIDN'T WORK.",
+"pop": 2.24
+},
+{
+"lay": "stamp",
+"start": 25.2,
+"end": 26.0,
+"fx": [
+[
+0.05,
+"stamp"
+]
+],
+"text": "FALSE",
+"sub": "",
+"stampAt": 0.05
+},
+{
+"lay": "flash",
+"start": 26.0,
+"end": 26.6,
+"fx": [
+[
+0,
+"shutter"
+]
+],
+"bg": {
+"same": "bg/39"
+}
+},
+{
+"lay": "stamp",
+"start": 26.6,
+"end": 27.4,
+"fx": [
+[
+0.05,
+"stamp"
+]
+],
+"text": "REVOKED",
+"sub": "",
+"stampAt": 0.05
+},
+{
+"lay": "flash",
+"start": 27.4,
+"end": 28.0,
+"fx": [
+[
+0,
+"shutter"
+]
+],
+"bg": {
+"same": "bg/52"
+}
+},
+{
+"lay": "stamp",
+"start": 28.0,
+"end": 28.7,
+"fx": [
+[
+0.05,
+"stamp"
+]
+],
+"text": "VOIDED",
+"sub": "",
+"stampAt": 0.05
+},
+{
+"lay": "stat",
+"start": 28.7,
+"end": 29.6,
+"fx": [
+[
+0.55,
+"hit"
+]
+],
+"value": 0,
+"from_": 9,
+"prefix": "$",
+"suffix": "B",
+"label": "WHAT WAS LEFT",
+"accent": "red",
+"roll": [
+0.02,
+0.55
+],
+"bg": {
+"same": "bg/5"
+}
+},
+{
+"lay": "headline",
+"start": 29.6,
+"end": 34.8,
+"fx": [
+[
+0,
+"glitch"
+],
+[
+3.6,
+"marker"
+],
+[
+3.6,
+"punch"
+]
+],
+"text": "TAKEN DOWN BY HER OWN BOARD MEMBER'S GRANDSON",
+"hl": "GRANDSON",
+"circle": 3.6,
+"bg": {
+"same": "bg/7"
+}
+},
+{
+"lay": "flash",
+"start": 34.8,
+"end": 36.2,
+"fx": [
+[
+0,
+"shutter"
+]
+],
+"name": "TYLER SHULTZ",
+"sub": "WHISTLEBLOWER",
+"bg": {
+"same": "bg/54"
+}
+},
+{
+"lay": "reveal",
+"start": 36.2,
+"end": 38.6,
+"fx": [
+[
+1.4,
+"mute"
+],
+[
+1.74,
+"hit"
+]
+],
+"small": "His grandfather sided with…",
+"text": "HOLMES.",
+"pop": 1.74
+},
+{
+"lay": "stamp",
+"start": 38.6,
+"end": 40.0,
+"fx": [
+[
+0.25,
+"stamp"
+]
+],
+"text": "GUILTY",
+"sub": "4 counts · investor fraud",
+"stampAt": 0.25,
+"bg": {
+"same": "bg/74"
+}
+},
+{
+"lay": "stat",
+"start": 40.0,
+"end": 44.2,
+"fx": [
+[
+0,
+"shutter"
+],
+[
+1.6,
+"hit"
+]
+],
+"value": 11.25,
+"decimals": 2,
+"prefix": "",
+"suffix": " YRS",
+"label": "FEDERAL PRISON",
+"accent": "red",
+"roll": [
+0.1,
+1.6
+],
+"bg": {
+"same": "bg/76"
+}
+},
+{
+"lay": "tcard",
+"start": 44.2,
+"end": 44.8,
+"fx": [],
+"text": ""
+},
+{
+"lay": "headline",
+"start": 44.8,
+"end": 49.2,
+"fx": [
+[
+2.0,
+"marker"
+]
+],
+"text": "HOW DID SHE FOOL THEM ALL?",
+"hl": "FOOL",
+"circle": 2.0,
+"bg": {
+"same": "bg/84"
+}
+},
+{
+"lay": "title",
+"start": 49.2,
+"end": 54.2,
+"fx": [
+[
+0.0,
+"hit"
+],
+[
+0.02,
+"leak"
+]
+],
+"text": "THE $9 BILLION LIE IN A DROP OF BLOOD",
+"sub": "The Theranos files."
+},
+{
+"lay": "tcard",
+"start": 54.2,
+"end": 55.6,
+"fx": [
+[
+0,
+"glitch"
+]
+],
+"small": "A MONEY FILES INVESTIGATION",
+"text": "STARTING NOW",
+"size": 120,
+"red": "all"
+}
+],
+"vo": [
+[
+1.5,
+0.5,
+5.9
+],
+[
+7.45,
+7.4,
+9.06
+],
+[
+9.5,
+10.2,
+14.14
+],
+[
+13.8,
+15.5,
+20.46
+],
+[
+19.15,
+21.42,
+23.1
+],
+[
+21.0,
+24.7,
+28.55
+],
+[
+29.7,
+39.88,
+44.6
+],
+[
+36.25,
+336.9,
+338.95
+],
+[
+38.85,
+454.1,
+454.6
+],
+[
+40.1,
+464.4,
+468.05
+],
+[
+44.9,
+518.82,
+522.86
+]
+],
+"sfx": [
+[
+"drone",
+0,
+44.2
+],
+[
+"drone",
+44.8,
+55.6
+],
+[
+"ticks",
+0.6,
+21.0,
+0.5
+],
+[
+"boom",
+1.4,
+0.5
+],
+[
+"hit",
+7.4,
+0.6
+],
+[
+"hit",
+9.4,
+0.6
+],
+[
+"whoosh",
+13.5
+],
+[
+"hit",
+13.7,
+0.6
+],
+[
+"braam",
+19.1,
+0.5
+],
+[
+"braam",
+23.24,
+1.0
+],
+[
+"boom",
+23.24,
+1.0
+],
+[
+"whoosh",
+25.0
+],
+[
+"hit",
+25.25,
+0.9
+],
+[
+"hit",
+26.0,
+0.6
+],
+[
+"hit",
+26.65,
+0.9
+],
+[
+"hit",
+27.4,
+0.6
+],
+[
+"hit",
+28.05,
+0.9
+],
+[
+"hit",
+29.25,
+0.8
+],
+[
+"boom",
+29.6,
+0.7
+],
+[
+"hit",
+33.2,
+0.7
+],
+[
+"whoosh",
+34.6
+],
+[
+"hit",
+34.8,
+0.6
+],
+[
+"braam",
+37.94,
+0.9
+],
+[
+"boom",
+39.1,
+1.0
+],
+[
+"hit",
+40.0,
+0.6
+],
+[
+"riser",
+40.3,
+44.2
+],
+[
+"hit",
+44.8,
+0.5
+],
+[
+"riser",
+46.6,
+49.2
+],
+[
+"braam",
+49.2,
+1.2
+],
+[
+"boom",
+49.2,
+1.2
+],
+[
+"ticks",
+50.0,
+54.0,
+0.25
+],
+[
+"hit",
+54.2,
+1.0
+],
+[
+"boom",
+54.2,
+0.8
+]
+]
+}

@@ -16,8 +16,23 @@ print(f"chunk {k}/{n}: frames {f0}..{f1} of {N}", flush=True)
 
 # ---- extract b-roll frames for the beats this chunk touches (played at 0.8x for a moody feel)
 man_p = os.path.join(job, "broll", "manifest.json")
+if C.get("broll_from"):  # borrow another job's pack: only keys this clip points at with {"same": ...}
+    sjob = os.path.join(ROOT, "jobs", C["broll_from"]); sdir = os.path.join(sjob, "broll")
+    src = json.load(open(os.path.join(sdir, "manifest.json"))) if os.path.exists(os.path.join(sdir, "manifest.json")) else {}
+    sbeats = json.load(open(os.path.join(sjob, "clip.json")))["beats"]
+    for _ in range(3):
+        for i, b in enumerate(sbeats):
+            for key, spec in [(f"bg/{i}", b.get("bg"))] + [(f"ph/{i}/{q}", ph) for q, ph in enumerate(b.get("photos") or [])]:
+                if spec and spec.get("same") and spec["same"] in src:
+                    src[key] = src[spec["same"]]
+    os.makedirs(os.path.join(job, "broll"), exist_ok=True); man = {}
+    for i, b in enumerate(beats):
+        for key, spec in [(f"bg/{i}", b.get("bg"))] + [(f"ph/{i}/{q}", ph) for q, ph in enumerate(b.get("photos") or [])]:
+            if spec and spec.get("same") in src:
+                man[key] = src[spec["same"]]; shutil.copy(os.path.join(sdir, man[key]["file"]), os.path.join(job, "broll", man[key]["file"]))
+    json.dump(man, open(man_p, "w"))
 man = json.load(open(man_p)) if os.path.exists(man_p) else {}
-for _ in range(3):  # resolve {"same": key} re-uses from clip.json against the pack
+for _ in range(0 if C.get("broll_from") else 3):  # resolve {"same": key} re-uses from clip.json against the pack
     for i, b in enumerate(beats):
         for key, spec in [(f"bg/{i}", b.get("bg"))] + [(f"ph/{i}/{q}", ph) for q, ph in enumerate(b.get("photos") or [])]:
             if spec and spec.get("same") and spec["same"] in man:
