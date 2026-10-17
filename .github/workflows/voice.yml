@@ -1,0 +1,53 @@
+name: voice
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Job folder under jobs/"
+        required: true
+      mode:
+        description: "samples or full"
+        default: "samples"
+      voices:
+        description: "Kokoro voice(s): comma list for samples, one voice for full"
+        default: "am_michael,am_fenrir,am_onyx,am_puck"
+      text:
+        description: "Text file inside the job folder"
+        default: "sample.txt"
+      speed:
+        default: "1.0"
+
+permissions:
+  contents: write
+
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Kokoro (free, Apache-2.0)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg > /dev/null
+          pip install -q "kokoro>=0.9.4" soundfile
+      - name: Speak
+        run: |
+          J="jobs/${{ inputs.job }}"; mkdir -p out
+          if [ "${{ inputs.mode }}" = "samples" ]; then
+            python engine/tts_kokoro.py --samples "$J/${{ inputs.text }}" "${{ inputs.voices }}" out
+            for f in out/*.wav; do ffmpeg -v error -y -i "$f" -b:a 128k "${f%.wav}.mp3"; done
+          else
+            python engine/tts_kokoro.py "$J/${{ inputs.text }}" "${{ inputs.voices }}" out/narration.wav "${{ inputs.speed }}"
+            ffmpeg -v error -y -i out/narration.wav -b:a 192k out/${{ inputs.text }}.mp3
+          fi
+          ls -la out
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          T="${{ inputs.job }}-voice"
+          gh release view "$T" --repo "${{ github.repository }}" >/dev/null 2>&1 || gh release create "$T" --repo "${{ github.repository }}" --title "$T" --notes "Kokoro TTS"
+          gh release upload "$T" out/*.mp3 --clobber --repo "${{ github.repository }}"

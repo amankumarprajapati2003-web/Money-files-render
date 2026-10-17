@@ -1,13 +1,14 @@
 """Render the paint-style engine. Usage: render_paint.py <timing.json rel to repo> <out.mp4> [--frames t1,t2,...] [--w 1920] [--fps 24]"""
 import base64, os, subprocess, sys, time, argparse
 from playwright.sync_api import sync_playwright
-ap = argparse.ArgumentParser(); ap.add_argument("timing"); ap.add_argument("out"); ap.add_argument("--frames"); ap.add_argument("--w", type=int, default=1920); ap.add_argument("--fps", type=int, default=24); a = ap.parse_args()
+ap = argparse.ArgumentParser(); ap.add_argument("timing"); ap.add_argument("out"); ap.add_argument("--frames"); ap.add_argument("--w", type=int, default=1920); ap.add_argument("--fps", type=int, default=24); ap.add_argument("--scenes", default="jobs/text-scam-pilot/scenes.js"); ap.add_argument("--cues"); a = ap.parse_args()
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); H = a.w * 9 // 16
 srv = subprocess.Popen([sys.executable, "-m", "http.server", "8771"], cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL); time.sleep(1)
 try:
     with sync_playwright() as p:
         b = p.chromium.launch(); pg = b.new_page(viewport={"width": a.w, "height": H}); pg.on("pageerror", lambda e: print("PAGEERR", e, flush=True))
-        pg.goto(f"http://localhost:8771/engine/paint.html?w={a.w}&timing=../{a.timing}"); pg.wait_for_function("window.ready===true", timeout=60000)
+        pg.goto(f"http://localhost:8771/engine/paint.html?w={a.w}&timing=../{a.timing}&scenes=../{a.scenes}"); pg.wait_for_function("window.ready===true", timeout=60000)
+        if a.cues: open(a.cues, "w").write(__import__("json").dumps({"duration": pg.evaluate("window.DUR"), "cues": pg.evaluate("window.CUES")}))
         if a.frames:
             os.makedirs(a.out, exist_ok=True)
             for t in a.frames.split(","):

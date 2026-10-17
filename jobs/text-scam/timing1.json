@@ -1,0 +1,761 @@
+{
+"duration": 300.513,
+"lines": [
+{
+"i": 0,
+"p": 0,
+"text": "It starts with a few words.",
+"start": 0.0,
+"end": 1.124
+},
+{
+"i": 1,
+"p": 0,
+"text": "\"Hi, is this Sarah?\"",
+"start": 1.863,
+"end": 3.369
+},
+{
+"i": 2,
+"p": 0,
+"text": "Wrong number.",
+"start": 4.264,
+"end": 5.603
+},
+{
+"i": 3,
+"p": 0,
+"text": "You almost ignore it.",
+"start": 5.906,
+"end": 7.587
+},
+{
+"i": 4,
+"p": 0,
+"text": "Almost.",
+"start": 9.47,
+"end": 9.956
+},
+{
+"i": 5,
+"p": 1,
+"text": "In twenty twenty-five, Americans reported losing nearly twenty-one billion dollars to online crime.",
+"start": 10.223,
+"end": 15.079
+},
+{
+"i": 6,
+"p": 1,
+"text": "The single biggest category?",
+"start": 16.293,
+"end": 18.625
+},
+{
+"i": 7,
+"p": 1,
+"text": "Crypto investment scams.",
+"start": 20.279,
+"end": 21.311
+},
+{
+"i": 8,
+"p": 1,
+"text": "Seven point two billion dollars.",
+"start": 22.645,
+"end": 24.536
+},
+{
+"i": 9,
+"p": 2,
+"text": "One of those messages reached the CEO of a small-town bank in Kansas.",
+"start": 24.832,
+"end": 27.383
+},
+{
+"i": 10,
+"p": 2,
+"text": "Within months, he had wired away forty-seven million dollars.",
+"start": 28.23,
+"end": 31.334
+},
+{
+"i": 11,
+"p": 2,
+"text": "His bank collapsed.",
+"start": 32.313,
+"end": 33.161
+},
+{
+"i": 12,
+"p": 2,
+"text": "Today he's serving twenty-four years in federal prison.",
+"start": 34.21,
+"end": 36.455
+},
+{
+"i": 13,
+"p": 3,
+"text": "And the people typing on the other end?",
+"start": 38.058,
+"end": 39.669
+},
+{
+"i": 14,
+"p": 3,
+"text": "Many of them were prisoners too.",
+"start": 41.476,
+"end": 42.777
+},
+{
+"i": 15,
+"p": 3,
+"text": "Trafficked, locked inside compounds on the other side of the world, and forced to type.",
+"start": 43.347,
+"end": 46.689
+},
+{
+"i": 16,
+"p": 4,
+"text": "This is the story of pig butchering.",
+"start": 47.952,
+"end": 49.633
+},
+{
+"i": 17,
+"p": 4,
+"text": "The scam that fattens you up... before it takes everything.",
+"start": 51.544,
+"end": 54.642
+},
+{
+"i": 18,
+"p": 4,
+"text": "And by the end of this video, you'll know the exact moment to stop replying.",
+"start": 54.94,
+"end": 59.197
+},
+{
+"i": 19,
+"p": 5,
+"text": "Chapter one.",
+"start": 59.4,
+"end": 60.56
+},
+{
+"i": 20,
+"p": 5,
+"text": "Wrong number.",
+"start": 60.911,
+"end": 61.665
+},
+{
+"i": 21,
+"p": 6,
+"text": "It usually begins with a stranger.",
+"start": 63.386,
+"end": 64.951
+},
+{
+"i": 22,
+"p": 6,
+"text": "A text.",
+"start": 66.43,
+"end": 67.075
+},
+{
+"i": 23,
+"p": 6,
+"text": "A message on Instagram, Facebook, WhatsApp, LinkedIn, or a dating app.",
+"start": 67.489,
+"end": 71.284
+},
+{
+"i": 24,
+"p": 6,
+"text": "You reply: sorry, wrong number.",
+"start": 71.638,
+"end": 73.491
+},
+{
+"i": 25,
+"p": 6,
+"text": "They apologize... and keep talking.",
+"start": 74.046,
+"end": 76.289
+},
+{
+"i": 26,
+"p": 7,
+"text": "They're friendly.",
+"start": 76.664,
+"end": 77.684
+},
+{
+"i": 27,
+"p": 7,
+"text": "Successful.",
+"start": 78.7,
+"end": 79.464
+},
+{
+"i": 28,
+"p": 7,
+"text": "Good-looking.",
+"start": 80.097,
+"end": 81.71
+},
+{
+"i": 29,
+"p": 7,
+"text": "Their photos show sports cars, rooftop dinners, first-class travel.",
+"start": 82.7,
+"end": 85.295
+},
+{
+"i": 30,
+"p": 7,
+"text": "They never ask for money.",
+"start": 85.448,
+"end": 86.454
+},
+{
+"i": 31,
+"p": 7,
+"text": "Not at first.",
+"start": 86.615,
+"end": 87.506
+},
+{
+"i": 32,
+"p": 8,
+"text": "Instead they ask about your day.",
+"start": 87.683,
+"end": 89.633
+},
+{
+"i": 33,
+"p": 8,
+"text": "Your job.",
+"start": 90.792,
+"end": 91.617
+},
+{
+"i": 34,
+"p": 8,
+"text": "Your divorce.",
+"start": 92.618,
+"end": 94.27
+},
+{
+"i": 35,
+"p": 8,
+"text": "Your debts.",
+"start": 94.492,
+"end": 95.272
+},
+{
+"i": 36,
+"p": 8,
+"text": "Every day, for weeks.",
+"start": 96.44,
+"end": 97.964
+},
+{
+"i": 37,
+"p": 9,
+"text": "The scammers have a name for this playbook.",
+"start": 98.766,
+"end": 101.293
+},
+{
+"i": 38,
+"p": 9,
+"text": "In Chinese, it's called sha zhu pan.",
+"start": 102.104,
+"end": 103.647
+},
+{
+"i": 39,
+"p": 9,
+"text": "The pig-butchering plate.",
+"start": 104.343,
+"end": 105.361
+},
+{
+"i": 40,
+"p": 9,
+"text": "First, you fatten the pig.",
+"start": 105.551,
+"end": 107.333
+},
+{
+"i": 41,
+"p": 9,
+"text": "Then, you slaughter it.",
+"start": 107.519,
+"end": 109.006
+},
+{
+"i": 42,
+"p": 10,
+"text": "Chapter two.",
+"start": 109.803,
+"end": 110.434
+},
+{
+"i": 43,
+"p": 10,
+"text": "The fattening.",
+"start": 111.263,
+"end": 112.576
+},
+{
+"i": 44,
+"p": 11,
+"text": "Once they have your trust, the stranger lets you in on a secret.",
+"start": 113.551,
+"end": 117.229
+},
+{
+"i": 45,
+"p": 11,
+"text": "An uncle who trades crypto.",
+"start": 117.445,
+"end": 119.176
+},
+{
+"i": 46,
+"p": 11,
+"text": "A platform with steady returns.",
+"start": 119.431,
+"end": 120.959
+},
+{
+"i": 47,
+"p": 11,
+"text": "They'll teach you, step by step.",
+"start": 121.322,
+"end": 123.246
+},
+{
+"i": 48,
+"p": 12,
+"text": "The app looks real.",
+"start": 123.472,
+"end": 124.724
+},
+{
+"i": 49,
+"p": 12,
+"text": "Live charts.",
+"start": 125.166,
+"end": 125.873
+},
+{
+"i": 50,
+"p": 12,
+"text": "Price tickers.",
+"start": 126.779,
+"end": 127.454
+},
+{
+"i": 51,
+"p": 12,
+"text": "A customer support chat.",
+"start": 128.488,
+"end": 130.138
+},
+{
+"i": 52,
+"p": 12,
+"text": "You start small.",
+"start": 130.366,
+"end": 131.728
+},
+{
+"i": 53,
+"p": 12,
+"text": "A few hundred dollars.",
+"start": 131.934,
+"end": 133.327
+},
+{
+"i": 54,
+"p": 12,
+"text": "The next day, your balance is up.",
+"start": 134.275,
+"end": 136.388
+},
+{
+"i": 55,
+"p": 13,
+"text": "A small business owner in Maryland, whom CNBC called Dennis, was messaged by a woman named \"Sarah.\"",
+"start": 137.78,
+"end": 142.412
+},
+{
+"i": 56,
+"p": 13,
+"text": "She said she was a wealthy executive.",
+"start": 142.763,
+"end": 144.472
+},
+{
+"i": 57,
+"p": 13,
+"text": "He was going through a separation.",
+"start": 144.674,
+"end": 146.33
+},
+{
+"i": 58,
+"p": 13,
+"text": "She talked with him for hours, every single day.",
+"start": 146.842,
+"end": 148.689
+},
+{
+"i": 59,
+"p": 14,
+"text": "On the screen, his trades kept winning.",
+"start": 149.219,
+"end": 151.512
+},
+{
+"i": 60,
+"p": 14,
+"text": "Around twenty percent at a time.",
+"start": 151.673,
+"end": 153.354
+},
+{
+"i": 61,
+"p": 14,
+"text": "His balance climbed past one point two million dollars.",
+"start": 153.631,
+"end": 156.857
+},
+{
+"i": 62,
+"p": 14,
+"text": "Then he tried to take it out.",
+"start": 157.116,
+"end": 158.397
+},
+{
+"i": 63,
+"p": 15,
+"text": "Chapter three.",
+"start": 159.579,
+"end": 160.456
+},
+{
+"i": 64,
+"p": 15,
+"text": "The slaughter.",
+"start": 161.742,
+"end": 162.591
+},
+{
+"i": 65,
+"p": 16,
+"text": "The account froze.",
+"start": 162.908,
+"end": 163.921
+},
+{
+"i": 66,
+"p": 16,
+"text": "To unlock it, he was told to pay a hundred and eighty thousand dollars.",
+"start": 166.155,
+"end": 171.999
+},
+{
+"i": 67,
+"p": 17,
+"text": "That's the moment the whole scam is built for.",
+"start": 173.046,
+"end": 176.063
+},
+{
+"i": 68,
+"p": 17,
+"text": "A tax.",
+"start": 176.243,
+"end": 176.852
+},
+{
+"i": 69,
+"p": 17,
+"text": "A fee.",
+"start": 178.51,
+"end": 179.058
+},
+{
+"i": 70,
+"p": 17,
+"text": "A penalty.",
+"start": 179.269,
+"end": 180.031
+},
+{
+"i": 71,
+"p": 17,
+"text": "Pay a little more, and you'll get it all back.",
+"start": 181.214,
+"end": 183.336
+},
+{
+"i": 72,
+"p": 18,
+"text": "None of the money was ever there.",
+"start": 184.868,
+"end": 186.946
+},
+{
+"i": 73,
+"p": 18,
+"text": "The platform was fake.",
+"start": 188.094,
+"end": 189.419
+},
+{
+"i": 74,
+"p": 18,
+"text": "The profits were just numbers on a screen.",
+"start": 190.095,
+"end": 192.172
+},
+{
+"i": 75,
+"p": 18,
+"text": "Dennis lost around half a million dollars.",
+"start": 192.734,
+"end": 195.857
+},
+{
+"i": 76,
+"p": 19,
+"text": "And then came the cruelest part.",
+"start": 197.124,
+"end": 198.516
+},
+{
+"i": 77,
+"p": 19,
+"text": "A \"recovery firm\" contacted him, promising to get his money back.",
+"start": 199.435,
+"end": 202.225
+},
+{
+"i": 78,
+"p": 19,
+"text": "For a fee.",
+"start": 202.504,
+"end": 203.096
+},
+{
+"i": 79,
+"p": 19,
+"text": "It was the same kind of scam.",
+"start": 203.281,
+"end": 204.622
+},
+{
+"i": 80,
+"p": 19,
+"text": "And he lost even more.",
+"start": 205.25,
+"end": 206.474
+},
+{
+"i": 81,
+"p": 20,
+"text": "A teacher in Hawaii, whom CNBC called Kaimi, met a \"handsome stranger\" on Instagram.",
+"start": 207.677,
+"end": 212.111
+},
+{
+"i": 82,
+"p": 20,
+"text": "Months later, he had lost more than a hundred and twenty thousand dollars, much of it paying \"fees\" to free his own money.",
+"start": 213.221,
+"end": 219.373
+},
+{
+"i": 83,
+"p": 21,
+"text": "Chapter four.",
+"start": 220.567,
+"end": 221.246
+},
+{
+"i": 84,
+"p": 21,
+"text": "The banker.",
+"start": 221.563,
+"end": 222.297
+},
+{
+"i": 85,
+"p": 22,
+"text": "You might be thinking: that would never happen to me.",
+"start": 224.39,
+"end": 227.99
+},
+{
+"i": 86,
+"p": 22,
+"text": "Shan Hanes probably thought that too.",
+"start": 228.23,
+"end": 229.651
+},
+{
+"i": 87,
+"p": 23,
+"text": "He was the CEO of Heartland Tri-State Bank in Elkhart, Kansas.",
+"start": 230.788,
+"end": 233.43
+},
+{
+"i": 88,
+"p": 23,
+"text": "A town of about two thousand people.",
+"start": 234.463,
+"end": 236.575
+},
+{
+"i": 89,
+"p": 23,
+"text": "A banker.",
+"start": 236.796,
+"end": 237.716
+},
+{
+"i": 90,
+"p": 23,
+"text": "A pillar of the community.",
+"start": 239.263,
+"end": 240.481
+},
+{
+"i": 91,
+"p": 24,
+"text": "In late twenty twenty-two, he was pulled into a crypto scam that started on WhatsApp.",
+"start": 241.894,
+"end": 245.841
+},
+{
+"i": 92,
+"p": 24,
+"text": "First, he used his own money.",
+"start": 246.07,
+"end": 247.316
+},
+{
+"i": 93,
+"p": 24,
+"text": "Then, according to prosecutors, he took forty thousand dollars from his church.",
+"start": 248.233,
+"end": 252.617
+},
+{
+"i": 94,
+"p": 24,
+"text": "Ten thousand from an investment club.",
+"start": 254.465,
+"end": 256.606
+},
+{
+"i": 95,
+"p": 24,
+"text": "Sixty thousand from his daughter's college fund.",
+"start": 256.866,
+"end": 259.953
+},
+{
+"i": 96,
+"p": 25,
+"text": "Then he started wiring the bank's money.",
+"start": 260.381,
+"end": 263.231
+},
+{
+"i": 97,
+"p": 25,
+"text": "Eleven wires in about eight weeks.",
+"start": 263.475,
+"end": 265.788
+},
+{
+"i": 98,
+"p": 25,
+"text": "One for one point five million dollars.",
+"start": 267.439,
+"end": 269.208
+},
+{
+"i": 99,
+"p": 25,
+"text": "One for ten million.",
+"start": 270.453,
+"end": 271.439
+},
+{
+"i": 100,
+"p": 26,
+"text": "Forty-seven million dollars.",
+"start": 271.722,
+"end": 274.124
+},
+{
+"i": 101,
+"p": 26,
+"text": "Gone.",
+"start": 275.437,
+"end": 276.033
+},
+{
+"i": 102,
+"p": 26,
+"text": "He never made a single cent.",
+"start": 277.371,
+"end": 279.044
+},
+{
+"i": 103,
+"p": 27,
+"text": "In July twenty twenty-three, regulators shut the bank down.",
+"start": 281.665,
+"end": 284.007
+},
+{
+"i": 104,
+"p": 27,
+"text": "Depositors were protected.",
+"start": 285.653,
+"end": 286.985
+},
+{
+"i": 105,
+"p": 27,
+"text": "Shareholders were wiped out.",
+"start": 288.493,
+"end": 289.586
+},
+{
+"i": 106,
+"p": 27,
+"text": "In August twenty twenty-four, a federal judge sentenced him to more than twenty-four years in prison.",
+"start": 291.115,
+"end": 296.203
+},
+{
+"i": 107,
+"p": 27,
+"text": "Longer than prosecutors had asked for.",
+"start": 296.579,
+"end": 298.779
+}
+]
+}
