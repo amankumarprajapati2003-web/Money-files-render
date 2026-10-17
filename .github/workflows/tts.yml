@@ -1,0 +1,38 @@
+name: tts
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Job folder under jobs/ (must contain lines.json)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Piper (free, open-source TTS)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q piper-tts
+      - name: Synthesize lines
+        run: |
+          J="jobs/${{ inputs.job }}"
+          V=$(python3 -c "import json;print(json.load(open('$J/lines.json'))['voice'])")
+          L=$(echo $V | cut -d- -f1); LANGDIR=$(echo $L | cut -d_ -f1); NAME=$(echo $V | cut -d- -f2); Q=$(echo $V | cut -d- -f3)
+          BASE="https://huggingface.co/rhasspy/piper-voices/resolve/main/$LANGDIR/$L/$NAME/$Q/$V"
+          curl -sSL -o voice.onnx "$BASE.onnx" && curl -sSL -o voice.onnx.json "$BASE.onnx.json"
+          mkdir -p tts
+          python3 engine/tts_lines.py "$J/lines.json" voice.onnx tts
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete "${{ inputs.job }}-tts" -y --cleanup-tag --repo "${{ github.repository }}" || true
+          gh release create "${{ inputs.job }}-tts" tts/narration.wav tts/timing.json --repo "${{ github.repository }}" --title "${{ inputs.job }} narration" --notes "Piper TTS"
