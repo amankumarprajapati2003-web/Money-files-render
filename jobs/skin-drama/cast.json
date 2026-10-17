@@ -1,18 +1,83 @@
 {
  "lang": "h",
  "lines": [
-  {"who": "TWACHA", "voice": "hf_alpha", "speed": 1.05, "text": "आज तो मैं शादी में चमकने वाली हूँ!"},
-  {"who": "NIMBU", "voice": "hm_omega", "speed": 0.95, "text": "चमकना है? हम चमका देंगे, बहन!"},
-  {"who": "PASTE", "voice": "hm_psi", "speed": 1.05, "text": "मैं पेस्ट भाई! दाँत भी चमकाऊँ, चेहरा भी!"},
-  {"who": "FIZZ", "voice": "hf_beta", "speed": 1.2, "text": "और मैं फ़िज़! फ़िज़ फ़िज़, टैन का खेल ख़त्म!"},
-  {"who": "TWACHA", "voice": "hf_alpha", "speed": 1.0, "text": "सच में? नाई भैया की रील में देखा था..."},
-  {"who": "TWACHA", "voice": "hf_alpha", "speed": 1.1, "text": "आह! जल रहा है!"},
-  {"who": "NIMBU", "voice": "hm_omega", "speed": 0.9, "text": "अब जाओ धूप में... हा हा हा!"},
-  {"who": "TWACHA", "voice": "hf_alpha", "speed": 1.0, "text": "मेरा टैन तो गया नहीं... ऊपर से काले दाग?"},
-  {"who": "SPF", "voice": "hm_psi", "speed": 0.92, "text": "रुको! नींबू और धूप मिलकर जलन और दाग देते हैं।"},
-  {"who": "SPF", "voice": "hm_psi", "speed": 0.95, "text": "पेस्ट दाँतों के लिए है, और फ़िज़ स्किन का पीएच बिगाड़ता है।"},
-  {"who": "SPF", "voice": "hm_psi", "speed": 0.95, "text": "टैन कुछ हफ़्तों में अपने आप जाता है। बस रोज़ सनस्क्रीन लगाओ। मैं हूँ ना!"},
-  {"who": "TWACHA", "voice": "hf_alpha", "speed": 1.05, "text": "मेरा हीरो!"},
-  {"who": "FIZZ", "voice": "hf_beta", "speed": 1.2, "text": "इस रील को उस दोस्त को भेजो जो किचन से स्किनकेयर करता है! फ़िज़!"}
+  {
+   "who": "TWACHA",
+   "voice": "hf_alpha",
+   "speed": 1.05,
+   "text": "आज तो मैं शादी में चमकने वाली हूँ!"
+  },
+  {
+   "who": "NIMBU",
+   "voice": "hm_omega",
+   "speed": 0.95,
+   "text": "चमकना है? हम चमका देंगे, बहन!"
+  },
+  {
+   "who": "PASTE",
+   "voice": "hm_psi",
+   "speed": 1.05,
+   "text": "मैं पेस्ट भाई! दाँत भी चमकाऊँ, चेहरा भी!"
+  },
+  {
+   "who": "FIZZ",
+   "voice": "hf_beta",
+   "speed": 1.2,
+   "text": "और मैं फ़िज़! फ़िज़ फ़िज़, टैन का खेल खतम!"
+  },
+  {
+   "who": "TWACHA",
+   "voice": "hf_alpha",
+   "speed": 1.0,
+   "text": "सच में? नाई भैया की रील में देखा था..."
+  },
+  {
+   "who": "TWACHA",
+   "voice": "hf_alpha",
+   "speed": 1.1,
+   "text": "आह! जल रहा है!"
+  },
+  {
+   "who": "NIMBU",
+   "voice": "hm_omega",
+   "speed": 0.9,
+   "text": "अब जाओ धूप में... हाहाहाहा!"
+  },
+  {
+   "who": "TWACHA",
+   "voice": "hf_alpha",
+   "speed": 1.0,
+   "text": "मेरा टैन तो गया नहीं... ऊपर से काले दाग?"
+  },
+  {
+   "who": "SPF",
+   "voice": "hm_psi",
+   "speed": 0.92,
+   "text": "रुको! नींबू और धूप मिलकर जलन और दाग देते हैं।"
+  },
+  {
+   "who": "SPF",
+   "voice": "hm_psi",
+   "speed": 0.95,
+   "text": "पेस्ट दाँतों के लिए है, और फ़िज़ स्किन का पीएच बिगाड़ता है।"
+  },
+  {
+   "who": "SPF",
+   "voice": "hm_psi",
+   "speed": 0.95,
+   "text": "टैन कुछ हफ़्तों में अपने आप जाता है। बस रोज़ सनस्क्रीन लगाओ। मैं हूँ ना!"
+  },
+  {
+   "who": "TWACHA",
+   "voice": "hf_alpha",
+   "speed": 1.05,
+   "text": "मेरा हीरो!"
+  },
+  {
+   "who": "FIZZ",
+   "voice": "hf_beta",
+   "speed": 1.2,
+   "text": "इस रील को उस दोस्त को भेजो जो किचन से स्किनकेयर करता है! फ़िज़!"
+  }
  ]
 }
