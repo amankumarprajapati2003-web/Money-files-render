@@ -27,6 +27,7 @@ jobs:
       - name: Speak every line
         env:
           ONLY: ${{ inputs.only }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: mkdir -p out && python engine/tts_parler.py "jobs/${{ inputs.job }}/parler.json" out 2>&1 | tee out/log.txt
       - name: Commit audio to branch parler-${{ inputs.job }}
         if: always()
