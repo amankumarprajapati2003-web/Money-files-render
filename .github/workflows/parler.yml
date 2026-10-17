@@ -22,8 +22,8 @@ jobs:
           python-version: "3.11"
       - name: Install Indic Parler-TTS (CPU)
         run: |
-          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
-          pip install -q git+https://github.com/huggingface/parler-tts.git soundfile
+          pip install -q torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q git+https://github.com/huggingface/parler-tts.git soundfile && pip install -q torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu && python -c "import torch, torchaudio; print(torch.__version__, torchaudio.__version__)"
       - name: Speak every line
         env:
           ONLY: ${{ inputs.only }}
