@@ -1,0 +1,30 @@
+name: fetch
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "File URL to download"
+        required: true
+      tag:
+        description: "Release tag to publish it under"
+        required: true
+      name:
+        description: "File name"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URL: ${{ inputs.url }}
+        run: |
+          curl -sSL --fail -o "${{ inputs.name }}" "$URL"
+          ls -la "${{ inputs.name }}"
+          gh release view "${{ inputs.tag }}" --repo "${{ github.repository }}" >/dev/null 2>&1 || gh release create "${{ inputs.tag }}" --repo "${{ github.repository }}" --title "${{ inputs.tag }}" --notes "Fetched files"
+          gh release upload "${{ inputs.tag }}" "${{ inputs.name }}" --clobber --repo "${{ github.repository }}"
