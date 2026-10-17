@@ -1,0 +1,20 @@
+{"segments": [
+  ["\"Hi, is this Sarah?\"", 1, 0.15, 0.25],
+  ["His balance climbed past", 1, 0.1, 0.2],
+  ["Then he tried to take it out.", 1, 0.05, 0.3],
+  ["The account froze.", 1, 0.1, 0.4],
+  ["A tax.", 1, 0.05, 0.1],
+  ["A fee.", 1, 0.05, 0.1],
+  ["A penalty.", 1, 0.05, 0.25],
+  ["Forty-seven million dollars.", 1, 0.1, 0.1],
+  ["Gone.", 1, 0.05, 0.5],
+  ["Passports taken.", 1, 0.1, 0.1],
+  ["Phones taken.", 1, 0.05, 0.3],
+  ["Officials called it the largest", 1, 0.1, 0.4],
+  ["Many of them were prisoners too.", 1, 0.1, 0.4],
+  ["Because right now", 1, 0.1, 0.1],
+  ["\"Hi, is this Sarah?\"", 2, 0.05, 0.6]
+ ],
+ "kicker": "A MONEY FILES INVESTIGATION",
+ "title": ["THE TEXT THAT STEALS", "$1,000,000"],
+ "end": "STARTING NOW"}

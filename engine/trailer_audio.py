@@ -8,7 +8,8 @@ SR = 48000
 clip = json.load(open(sys.argv[1])); src_audio, out = sys.argv[2], sys.argv[3]
 T = clip["duration"]; N = int(T * SR) + SR
 rng = np.random.default_rng(7)
-sfx = np.zeros((N, 2)); vo = np.zeros((N, 2)); bed = np.zeros((N, 2))
+sfx = np.zeros((N, 2), np.float32); vo = np.zeros((N, 2), np.float32); bed = np.zeros((N, 2), np.float32)
+LONG = T > 120  # long videos: cheap time-domain echo + ffmpeg filtering to keep memory low
 
 
 def lp(x, fc):  # one-pole low-pass (vectorised via lfilter-like recursion in chunks)
@@ -27,10 +28,11 @@ def hpf(x, fc):
 
 
 def put(buf, t, sig, gain=1.0, pan=0.0):
-    i = int(t * SR); sig = sig[: max(0, len(buf) - i)]
+    i = max(0, int(t * SR)); sig = sig[: max(0, len(buf) - i)]
     if sig.ndim == 1:
-        sig = np.stack([sig * (1 - pan) ** 0.5, sig * (1 + pan) ** 0.5], 1) / 2 ** 0.5 * 2 ** 0.5 / 2 ** 0.5
-    buf[i:i + len(sig)] += sig * gain
+        sig = sig.astype(np.float32); L, R = (1 - pan) ** 0.5 / 2 ** 0.5, (1 + pan) ** 0.5 / 2 ** 0.5
+        buf[i:i + len(sig), 0] += sig * (gain * L); buf[i:i + len(sig), 1] += sig * (gain * R); return
+    buf[i:i + len(sig)] += sig.astype(np.float32) * gain
 
 
 def tt(d):
@@ -80,9 +82,14 @@ def tick(g):
 for c in clip["sfx"]:
     k, t0 = c[0], c[1]
     if k == "drone":
-        d = c[2] - t0; t = tt(d); s = (np.sin(2 * np.pi * 41.2 * t) + 0.6 * np.sin(2 * np.pi * 61.7 * t + 1) + 0.25 * np.sin(2 * np.pi * 82.4 * t)) * (0.6 + 0.4 * np.sin(2 * np.pi * 0.13 * t))
-        s += lpf(rng.standard_normal(len(t)), 120) * 0.6
-        env = np.minimum(1, t / 2.0) * np.minimum(1, (d - t) / 0.08) * (0.55 + 0.45 * t / d); put(bed, t0, s * env * 0.18)
+        d = c[2] - t0
+        if d > 40:  # seamless 20 s loop, tiled (keeps memory low)
+            tl = tt(20.0); loop = (np.sin(2 * np.pi * 41.2 * tl) + 0.6 * np.sin(2 * np.pi * 61.7 * tl + 1) + 0.25 * np.sin(2 * np.pi * 82.4 * tl)) * (0.6 + 0.4 * np.sin(2 * np.pi * 0.15 * tl))
+            loop += lpf(rng.standard_normal(len(tl)), 120) * 0.6; reps = int(np.ceil(d / 20.0)); s = np.tile(loop.astype(np.float32), reps)[: int(d * SR)]; t = (np.arange(len(s), dtype=np.float32) / SR)
+        else:
+            t = tt(d); s = (np.sin(2 * np.pi * 41.2 * t) + 0.6 * np.sin(2 * np.pi * 61.7 * t + 1) + 0.25 * np.sin(2 * np.pi * 82.4 * t)) * (0.6 + 0.4 * np.sin(2 * np.pi * 0.13 * t))
+            s += lpf(rng.standard_normal(len(t)), 120) * 0.6
+        env = np.minimum(1, t / 2.0) * np.minimum(1, (d - t) / 0.08) * (0.55 + 0.45 * t / d); put(bed, t0, (s * env * 0.18).astype(np.float32))
     elif k == "ticks":
         t1, step = c[2], c[3]; x = t0; n = 0
         while x < t1:
@@ -96,19 +103,25 @@ for c in clip["sfx"]:
 
 # simple reverb on sfx (decaying-noise impulse response)
 ir_t = tt(1.8); ir = rng.standard_normal(len(ir_t)) * np.exp(-ir_t * 3.2); ir /= np.sqrt((ir ** 2).sum())
-for ch in range(2):
+if LONG:
+    wet = np.zeros_like(sfx)
+    for d, g in [(0.043, 0.35), (0.071, 0.3), (0.113, 0.25), (0.167, 0.2), (0.241, 0.15), (0.337, 0.1)]:
+        k = int(d * SR); wet[k:] += sfx[:-k] * g
+    sfx += 0.6 * wet; del wet
+for ch in ([] if LONG else range(2)):
     wet = np.fft.irfft(np.fft.rfft(sfx[:, ch], N + len(ir)) * np.fft.rfft(np.roll(ir, ch * 97), N + len(ir)), N + len(ir))[:N]
     sfx[:, ch] = sfx[:, ch] + 0.35 * wet
 
 # narration lines (high-passed to thin out the music bed underneath)
-raw = subprocess.run(["ffmpeg", "-v", "error", "-i", src_audio, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True).stdout
+raw = subprocess.run(["ffmpeg", "-v", "error", "-i", src_audio, "-ac", "1", "-ar", str(SR)] + (["-af", "highpass=f=90"] if LONG else []) + ["-f", "f32le", "-"], capture_output=True).stdout
 src = np.frombuffer(raw, dtype=np.float32).astype(np.float64)
 duck = np.ones(N)
 for at, a, b in clip.get("vo", []):
     seg = src[int(a * SR):int(b * SR)].copy(); f = int(0.012 * SR); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)
-    seg = hpf(seg, 110); seg /= max(1e-6, np.sqrt((seg ** 2).mean())) / 0.16; put(vo, at, np.stack([seg, seg], 1))
+    if not LONG: seg = hpf(seg, 110)
+    seg = seg.astype(np.float32); seg /= max(1e-6, float(np.sqrt((seg.astype(np.float64) ** 2).mean()))) / 0.16; put(vo, at, np.stack([seg, seg], 1))
     i0, i1 = int(at * SR), int((at + b - a) * SR); duck[i0:i1] = 0.45
-duck = np.convolve(duck, np.ones(4800) / 4800, mode="same")
+duck = np.convolve(duck, np.ones(4800, np.float32) / 4800, mode="same").astype(np.float32) if not LONG else duck.astype(np.float32)
 mix = vo + (sfx * 0.9 + bed) * duck[:, None]
 mix = np.tanh(mix * 1.3) / np.tanh(1.3)
 mix = mix[: int(T * SR)]; fo = int(0.6 * SR); mix[-fo:] *= np.linspace(1, 0, fo)[:, None]
