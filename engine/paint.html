@@ -1,0 +1,213 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Permanent Marker";src:url(fonts/PermanentMarker-Regular.ttf)}
+@font-face{font-family:"Bebas Neue";src:url(fonts/BebasNeue-Regular.ttf)}
+@font-face{font-family:"Inter";src:url(fonts/Inter.ttf);font-weight:100 900}
+@font-face{font-family:"Special Elite";src:url(fonts/SpecialElite-Regular.ttf)}
+html,body{margin:0;background:#000;overflow:hidden}
+</style></head><body><canvas id="c"></canvas>
+<script type="module">
+// ===== The Money Files — illustrated character engine (paint style), pilot: text-scam cold open =====
+const Q = new URLSearchParams(location.search);
+const W = +(Q.get('w') || 1920), H = Math.round(W * 9 / 16), S = W / 1920;
+const TIM = await (await fetch(Q.get('timing') || '../jobs/text-scam-pilot/timing_paced.json')).json();
+for (const f of ['40px "Permanent Marker"', '40px "Bebas Neue"', '600 40px "Inter"', '40px "Special Elite"']) await document.fonts.load(f);
+const MARK = '"Permanent Marker", cursive', HEAD = '"Bebas Neue", sans-serif', SANS = '"Inter", sans-serif', TYPE = '"Special Elite", monospace';
+const cvs = document.getElementById('c'); cvs.width = W; cvs.height = H; const ctx = cvs.getContext('2d');
+const L = TIM.lines, DUR = TIM.duration;
+// time of a phrase inside line i (estimated from character position)
+const at = (i, phrase) => { const l = L[i], k = phrase ? Math.max(0, l.text.indexOf(phrase)) : 0; return l.start + (l.end - l.start) * (k / l.text.length); };
+
+// ---------- helpers ----------
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = x => 1 - Math.pow(1 - clamp(x), 3);
+const smooth = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const back = x => { x = clamp(x); const c = 1.8; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const pop = (t, t0, d = 0.35) => back((t - t0) / d);
+const hash = (a, b = 0) => { let h = (a * 374761393 + b * 668265263) | 0; h = (h ^ (h >>> 13)) * 1274126177; return ((h ^ (h >>> 16)) >>> 0) / 4294967295; };
+let BOIL = 0, NID = 0; // line boil: outlines re-jitter 8x per second like hand-drawn animation
+const jit = (k) => (hash(BOIL, k) - 0.5) * 3.2;
+const INK = '#141414', LW = 7;
+function poly(pts, fill, close = true, lw = LW, stroke = INK) { const id = (NID += 37); ctx.beginPath(); pts.forEach(([x, y], k) => { const X = x + jit(id + k), Y = y + jit(id + k + 999); k ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); }); if (close) ctx.closePath();
+  if (fill) { ctx.fillStyle = fill; ctx.fill(); } if (lw) { ctx.lineWidth = lw; ctx.strokeStyle = stroke; ctx.lineJoin = ctx.lineCap = 'round'; ctx.stroke(); } }
+function circ(cx, cy, r, fill, lw = LW, n = 26) { const p = []; for (let k = 0; k < n; k++) { const a = k / n * Math.PI * 2; p.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]); } poly(p, fill, true, lw); }
+function ell(cx, cy, rx, ry, fill, lw = LW, rot = 0, n = 30) { const p = []; for (let k = 0; k < n; k++) { const a = k / n * Math.PI * 2, x = Math.cos(a) * rx, y = Math.sin(a) * ry; p.push([cx + x * Math.cos(rot) - y * Math.sin(rot), cy + x * Math.sin(rot) + y * Math.cos(rot)]); } poly(p, fill, true, lw); }
+function rect(x, y, w, h, fill, lw = LW) { poly([[x, y], [x + w, y], [x + w, y + h], [x, y + h]], fill, true, lw); }
+function rrect(x, y, w, h, r, fill, lw = LW) { const p = []; const c = [[x + w - r, y + r, -Math.PI / 2], [x + w - r, y + h - r, 0], [x + r, y + h - r, Math.PI / 2], [x + r, y + r, Math.PI]];
+  c.forEach(([cx, cy, a0]) => { for (let k = 0; k <= 5; k++) { const a = a0 + k / 5 * Math.PI / 2; p.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]); } }); poly(p, fill, true, lw); }
+function line(x0, y0, x1, y1, lw = LW, col = INK) { poly([[x0, y0], [(x0 + x1) / 2, (y0 + y1) / 2], [x1, y1]], null, false, lw, col); }
+function limb(x0, y0, x1, y1, col, w = 20, bend = 0) { const mx = (x0 + x1) / 2 + bend, my = (y0 + y1) / 2; poly([[x0, y0], [mx, my], [x1, y1]], null, false, w + 10, INK); poly([[x0, y0], [mx, my], [x1, y1]], null, false, w, col); }
+function text(s, x, y, size, fill = '#fff', font = MARK, align = 'center', outline = 12, rot = 0) { ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.font = `${size}px ${font}`; ctx.textAlign = align; ctx.textBaseline = 'middle';
+  if (outline) { ctx.lineJoin = 'round'; ctx.lineWidth = outline; ctx.strokeStyle = INK; ctx.strokeText(s, 0, 0); } ctx.fillStyle = fill; ctx.fillText(s, 0, 0); ctx.restore(); }
+function bg(top, bot) { const g = ctx.createLinearGradient(0, 0, 0, 1080); g.addColorStop(0, top); g.addColorStop(1, bot); ctx.fillStyle = g; ctx.fillRect(-200, -200, 2320, 1480); }
+
+// ---------- characters ----------
+// origin = hip centre. o: {skin, shirt, pants, hair, hairCol, tie, glasses, gaze:[x,y], brow:'up'|'worried'|'angry'|'flat', mouth:'smile'|'frown'|'o'|'flat'|'open'|'grin', hands:[[x,y],[x,y]], sit, coat, hat, blink}
+function person(x, y, s, o, t) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); const br = Math.sin(t * 2.2 + x) * 2.5; ctx.translate(0, br * 0.3);
+  const skin = o.skin || '#f2c4a0', shirt = o.shirt || '#4a7bd1', pants = o.pants || '#2d3142';
+  if (!o.sit) { limb(-20, -6, -26, 112, pants, 22); limb(20, -6, 26, 112, pants, 22); ell(-34, 118, 26, 12, INK, 0); ell(34, 118, 26, 12, INK, 0); }
+  else { limb(-22, -4, -30, 70, pants, 24); limb(22, -4, 30, 70, pants, 24); ell(-36, 76, 24, 11, INK, 0); ell(36, 76, 24, 11, INK, 0); }
+  if (o.hair === 'long') poly([[-62, -215], [-74, -120], [-40, -128], [40, -128], [74, -120], [62, -215]], o.hairCol || '#6b3e1f');
+  const coat = o.coat; poly([[-40, 4], [40, 4], [50, -108], [30, -130], [-30, -130], [-50, -108]], coat || shirt);
+  if (coat) { line(0, -126, 0, 4, 5); line(-30, -130, -8, -70, 5); line(30, -130, 8, -70, 5); ell(-14, -50, 4, 4, INK, 0); ell(-14, -24, 4, 4, INK, 0); }
+  if (o.tie) poly([[0, -126], [10, -110], [6, -60], [0, -48], [-6, -60], [-10, -110]], '#c0262d', true, 5);
+  rect(-12, -150, 24, 24, skin, 6);
+  const hd = o.hands || [[-60, -40], [60, -40]];
+  limb(-40, -112, hd[0][0], hd[0][1], coat || shirt, 20, -18); limb(40, -112, hd[1][0], hd[1][1], coat || shirt, 20, 18);
+  circ(hd[0][0], hd[0][1], 14, skin, 6); circ(hd[1][0], hd[1][1], 14, skin, 6);
+  if (o.phone !== undefined) { const [px, py] = hd[o.phone]; rrect(px - 16, py - 44, 32, 56, 6, '#222', 5); ctx.fillStyle = o.night ? '#9fe3ff' : '#cfe8ff'; ctx.fillRect(px - 10, py - 38, 20, 40); }
+  if (o.mag) { const [px, py] = hd[1]; line(px, py, px + 30, py - 40, 9); circ(px + 48, py - 66, 30, 'rgba(200,235,255,0.55)', 8); }
+  const hy = -192; circ(0, hy, 60, skin);
+  if (o.hair === 'short' || o.hair === 'long') poly([[-60, hy - 6], [-58, hy - 40], [-30, hy - 64], [10, hy - 66], [44, hy - 54], [62, hy - 14], [44, hy - 34], [10, hy - 40], [-24, hy - 34]], o.hairCol || '#3a2a1e', true, 6);
+  if (o.hair === 'gray') { poly([[-60, hy - 2], [-56, hy - 30], [-40, hy - 20]], o.hairCol || '#c9c9c9', true, 5); poly([[60, hy - 2], [56, hy - 30], [40, hy - 20]], o.hairCol || '#c9c9c9', true, 5); }
+  if (o.hat) { poly([[-86, hy - 34], [86, hy - 34], [70, hy - 24], [-70, hy - 24]], '#5a3d22', true, 6); poly([[-48, hy - 34], [-42, hy - 84], [0, hy - 92], [42, hy - 84], [48, hy - 34]], '#6e4b2a', true, 6); rect(-48, hy - 46, 96, 12, '#2a2a2a', 0); }
+  const g = o.gaze || [0, 0], blink = o.blink || (hash(Math.floor(t * 3), Math.floor(x)) < 0.06);
+  for (const ex of [-22, 22]) { if (blink) line(ex - 12, hy - 4, ex + 12, hy - 4, 6); else { circ(ex, hy - 6, 15, '#fff', 5, 16); circ(ex + g[0] * 6, hy - 6 + g[1] * 6, 6.5, INK, 0, 12); } }
+  if (o.glasses) { circ(-22, hy - 6, 21, null, 5, 18); circ(22, hy - 6, 21, null, 5, 18); line(-1, hy - 8, 1, hy - 8, 5); }
+  const b = o.brow || 'flat', by = hy - 30; const bp = { flat: [0, 0], up: [-8, -8], worried: [6, -8], angry: [-6, 8] }[b];
+  line(-36, by + bp[0], -10, by + bp[1], 6); line(36, by + bp[0], 10, by + bp[1], 6);
+  const m = o.mouth || 'smile', my = hy + 30;
+  if (m === 'smile') poly([[-20, my - 4], [0, my + 8], [20, my - 4]], null, false, 6);
+  else if (m === 'grin') poly([[-24, my - 6], [24, my - 6], [14, my + 12], [-14, my + 12]], '#fff', true, 6);
+  else if (m === 'frown') poly([[-18, my + 6], [0, my - 4], [18, my + 6]], null, false, 6);
+  else if (m === 'o') circ(0, my + 2, 9, '#5a1a1a', 5, 12);
+  else if (m === 'open') poly([[-18, my - 4], [18, my - 4], [10, my + 14], [-10, my + 14]], '#5a1a1a', true, 6);
+  else line(-14, my, 14, my, 6);
+  if (o.sweat) { const sy = (t * 60) % 40; poly([[56, hy - 30 + sy], [62, hy - 14 + sy], [50, hy - 14 + sy]], '#7fd0ff', true, 4); }
+  ctx.restore();
+}
+function phoneBig(x, y, s, msgs, t, opt = {}) { // big phone close-up; msgs: [{t, side:'in'|'out', text}]
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.rotate(opt.rot || 0);
+  rrect(-230, -420, 460, 840, 60, '#1b1b1f'); rrect(-205, -390, 410, 780, 36, opt.screen || '#f4f5f7', 4);
+  rrect(-60, -404, 120, 22, 10, '#000', 0);
+  ctx.font = `600 30px ${SANS}`; ctx.fillStyle = '#333'; ctx.textAlign = 'center'; ctx.fillText(opt.who || 'Unknown number', 0, -330); line(-180, -305, 180, -305, 3, '#ccc');
+  let yy = -270; ctx.font = `500 34px ${SANS}`;
+  for (const mm of msgs) { if (t < mm.t - 0.6) continue; const typing = t < mm.t, p = typing ? 1 : pop(t, mm.t, 0.3);
+    const words = mm.text.split(' '), lines = []; let cur = ''; for (const w of words) { const tt = cur ? cur + ' ' + w : w; if (ctx.measureText(tt).width > 290 && cur) { lines.push(cur); cur = w; } else cur = tt; } if (cur) lines.push(cur);
+    const show = typing ? ['• • •'] : lines, bw = Math.max(...show.map(l => ctx.measureText(l).width)) + 44, bh = show.length * 44 + 26, bx = mm.side === 'out' ? 185 - bw : -185;
+    ctx.save(); ctx.translate(mm.side === 'out' ? bx + bw : bx, yy + bh); ctx.scale(p, p); ctx.translate(-(mm.side === 'out' ? bx + bw : bx), -(yy + bh));
+    rrect(bx, yy, bw, bh, 22, mm.side === 'out' ? '#2f80ff' : '#e4e6eb', 4); ctx.fillStyle = mm.side === 'out' ? '#fff' : '#111'; ctx.textAlign = 'left';
+    show.forEach((l, k) => ctx.fillText(l, bx + 22, yy + 46 + k * 44)); ctx.restore(); yy += bh + 26; }
+  ctx.restore();
+}
+function bills(t, t0, x0, y0, x1, y1, n = 14, dur = 1.6, spread = 140) { for (let k = 0; k < n; k++) { const u = (t - t0 - k * dur / n * 0.9) / dur; if (u <= 0 || u >= 1) continue; const e = smooth(u);
+  const x = x0 + (x1 - x0) * e + Math.sin(k * 3 + u * 6) * spread * 0.3, y = y0 + (y1 - y0) * e - Math.sin(u * Math.PI) * (120 + hash(k) * spread);
+  ctx.save(); ctx.translate(x, y); ctx.rotate(u * 6 + k); rrect(-34, -17, 68, 34, 4, '#8fd18a', 4); text('$', 0, 1, 26, '#1e5a2a', HEAD, 'center', 0); ctx.restore(); } }
+function counter(v, x, y, size, prefix = '$', suffix = '', fill = '#fff') { text(prefix + Math.round(v).toLocaleString('en-US') + suffix, x, y, size, fill, MARK, 'center', size * 0.12); }
+function stamp(s, x, y, size, rot, q, col = '#d6202a') { if (q <= 0) return; const sc = 2 - easeQ(q); ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(sc, sc); ctx.globalAlpha = clamp(q * 3);
+  ctx.font = `${size}px ${HEAD}`; const w = ctx.measureText(s).width + size * 0.5; rrect(-w / 2, -size * 0.6, w, size * 1.2, 14, 'rgba(255,255,255,0.0)', 10); ctx.strokeStyle = col; ctx.lineWidth = 10; ctx.stroke();
+  ctx.fillStyle = col; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(s, 0, 4); ctx.restore(); }
+const easeQ = q => ease(clamp(q) * 1);
+function usMap(cx, cy, s, fill) { const US = [[0.05, 0.25], [0.12, 0.08], [0.30, 0.10], [0.48, 0.12], [0.60, 0.18], [0.70, 0.16], [0.78, 0.12], [0.88, 0.08], [0.96, 0.18], [0.92, 0.30], [0.86, 0.42], [0.86, 0.55], [0.80, 0.70], [0.84, 0.92], [0.78, 0.94], [0.72, 0.78], [0.62, 0.80], [0.52, 0.90], [0.44, 0.84], [0.36, 0.86], [0.28, 0.74], [0.18, 0.70], [0.10, 0.58], [0.04, 0.42]];
+  poly(US.map(([u, v]) => [cx + (u - 0.5) * 1000 * s, cy + (v - 0.5) * 560 * s]), fill); }
+function pig(x, y, s, t, mood = 'happy') { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); const P = '#ff9db5';
+  for (const lx of [-70, -25, 25, 70]) rect(lx - 14, 60, 28, 50, P, 6);
+  ell(0, 0, 150, 105, P); ell(-150, -10, 40, 34, '#ff86a6', 6); circ(-160, -16, 7, INK, 0); circ(-140, -16, 7, INK, 0);
+  poly([[-70, -90], [-40, -150], [-20, -96]], '#ff86a6', true, 6); poly([[40, -96], [64, -146], [86, -84]], '#ff86a6', true, 6);
+  rrect(-30, -108, 60, 14, 6, '#5a2a3a', 4); circ(-95, -30, 13, '#fff', 5, 14); circ(-95 + (mood === 'scared' ? 4 : -3), -30, 6, INK, 0, 10);
+  if (mood === 'happy') poly([[-120, 20], [-100, 34], [-80, 22]], null, false, 6); else circ(-100, 28, 8, '#5a1a1a', 5, 10);
+  poly([[150, -10], [172, -30], [160, 0], [182, -4]], null, false, 6); ctx.restore(); }
+
+// ---------- scenes (all coordinates in a 1920x1080 frame) ----------
+const SC = [];
+function scene(t0, t1, fn) { SC.push({ t0, t1, fn }); }
+const T = i => L[i].start, E = i => L[i].end;
+
+// 1. "Hi... is this Sarah?" — you, on the couch, at night
+scene(0, T(2) - 0.15, (t) => {
+  bg('#141b3a', '#2a2350'); circ(1650, 170, 70, '#fff3c4', 6); for (let k = 0; k < 14; k++) circ(200 + hash(k) * 1600, 60 + hash(k, 3) * 300, 3, '#fff', 0, 6);
+  rect(1460, 80, 360, 300, null, 9); line(1640, 80, 1640, 380, 8); line(1460, 230, 1820, 230, 8);
+  rrect(120, 640, 1000, 260, 50, '#5b3f8c'); rrect(90, 540, 120, 330, 40, '#6a4a9e'); rrect(1030, 540, 120, 330, 40, '#6a4a9e'); rrect(140, 470, 960, 150, 40, '#6a4a9e');
+  ctx.save(); const g = ctx.createRadialGradient(640, 420, 10, 640, 420, 260); g.addColorStop(0, 'rgba(140,220,255,0.35)'); g.addColorStop(1, 'rgba(140,220,255,0)'); ctx.fillStyle = g; ctx.fillRect(300, 150, 700, 600); ctx.restore();
+  const hi = at(0, 'Hi'), reply = T(1), almost = at(1, 'Almost.');
+  const surprised = t > hi, mouth = t > almost ? 'smile' : surprised ? 'o' : 'flat';
+  person(600, 770, 1.7, { shirt: '#3f8f6a', hair: 'short', sit: true, phone: 1, night: true, gaze: [0.6, 0.4], brow: surprised && t < reply ? 'up' : 'flat', mouth, hands: [[-30, -40], [40, -70]] }, t);
+  const z = pop(t, hi - 0.4, 0.45); if (t > hi - 0.4) phoneBig(1330, 560, 0.95 * z, [{ t: hi, side: 'in', text: 'Hi, is this Sarah?' }, { t: reply + 0.6, side: 'out', text: 'Sorry, wrong number' }, { t: almost - 0.15, side: 'in', text: 'Oh no, sorry! You seem really nice though 😊' }], t, { who: '+1 (415) •••-••••' });
+  if (t > almost) { const d = ease((t - almost) / 0.5); line(1330, -20, 1330, 70 + d * 120, 5); poly([[1330, 190 + d * 0], [1330, 230], [1300, 250], [1280, 220]].map(([a, b]) => [a, b - (1 - d) * 120]), null, false, 8, '#bbb'); }
+});
+// 2. $20.9 billion — the whole country's losses, then the biggest category
+scene(T(2) - 0.15, T(3) - 0.15, (t) => {
+  bg('#ffe9b8', '#ffd27a'); usMap(760, 560, 1.15, '#8fd0a4'); const big = at(2, 'The single'), cat = at(2, 'Crypto'), seven = at(2, 'Seven');
+  for (let k = 0; k < 9; k++) { const px = 380 + hash(k, 1) * 760, py = 430 + hash(k, 2) * 280, p = pop(t, T(2) + 0.25 + k * 0.18, 0.3); if (p <= 0) continue; ctx.save(); ctx.translate(px, py); ctx.scale(p, p); rrect(-16, -28, 32, 56, 6, '#222', 4); ctx.restore(); bills(t, T(2) + 0.5 + k * 0.18, px, py, 1480, 760, 3, 1.4, 60); }
+  poly([[1360, 640], [1600, 640], [1520, 820], [1440, 820]], '#555'); text('SCAMS', 1480, 700, 54, '#fff', HEAD, 'center', 8);
+  counter(20900000000 * smooth((t - T(2) - 0.3) / 2.6), 760, 180, 120); text('LOST BY AMERICANS IN 2025', 760, 290, 52, '#ffd400', HEAD, 'center', 9);
+  if (t > big - 0.2) { const p = ease((t - big + 0.2) / 0.5); ctx.save(); ctx.translate(-600 * (1 - p), 0);
+    person(280, 960, 1.4, { coat: '#c99a5b', hat: true, hair: 'short', gaze: [1, -0.3], brow: 'angry', mouth: t > seven ? 'open' : 'flat', mag: true, hands: [[-60, -30], [90, -150]] }, t); ctx.restore(); }
+  if (t > cat - 0.1) { const p = pop(t, cat - 0.1, 0.4); ctx.save(); ctx.translate(1500, 330); ctx.scale(p, p); rrect(-330, -110, 660, 220, 26, '#d6202a'); text('CRYPTO INVESTMENT SCAMS', 0, -42, 52, '#fff', HEAD, 'center', 0);
+    counter(7.2e9 * smooth((t - seven) / 1.4), 0, 40, 92, '$'); ctx.restore(); }
+});
+// 3. The small-town bank in Kansas, and the $47 million
+scene(T(3) - 0.15, at(4, 'Today') - 0.1, (t) => {
+  bg('#9fd8ff', '#e8f6ff'); rect(-50, 820, 2020, 300, '#e9c45a', 0); for (let k = 0; k < 60; k++) line(k * 34, 830 + hash(k) * 30, k * 34 + 10, 790 + hash(k) * 30, 5, '#b08a2a');
+  const col = at(4, 'His bank'), cracked = t > col; ctx.save(); if (cracked) { ctx.translate(1200 + Math.sin(t * 50) * 4 * clamp(1 - (t - col)), 0); ctx.rotate(0.03 * ease((t - col) / 0.4)); ctx.translate(-1200, 0); }
+  poly([[880, 360], [1200, 220], [1520, 360]], '#f1ece0'); rect(900, 360, 600, 470, '#f1ece0'); for (const cx of [960, 1080, 1320, 1440]) rect(cx - 22, 400, 44, 420, '#ddd6c6', 5);
+  rrect(1150, 600, 100, 230, 10, '#7a5230'); rect(1040, 380, 320, 64, '#2b4b7a', 6); text('HEARTLAND BANK', 1200, 413, 40, '#fff', HEAD, 'center', 0);
+  if (cracked) { poly([[1000, 360], [1040, 480], [1010, 560], [1060, 700]], null, false, 7); poly([[1420, 420], [1380, 520], [1430, 620]], null, false, 7); }
+  ctx.restore(); text('SMALL-TOWN KANSAS', 400, 150, 64, '#fff', MARK, 'center', 12);
+  const wire = at(4, 'wired');
+  person(560, 860, 1.55, { shirt: '#ffffff', tie: true, glasses: true, hair: 'gray', pants: '#3a3a4a', phone: 1, gaze: [0.5, 0.4], brow: t > col ? 'worried' : 'flat', mouth: t > col ? 'frown' : 'smile', sweat: t > col, hands: [[-60, -30], [50, -90]] }, t);
+  if (t < wire) phoneBig(790, 470, 0.36 * pop(t, T(3) + 0.8, 0.35), [{ t: T(3) + 1.1, side: 'in', text: 'Hi 👋' }], t);
+  if (t > wire) { bills(t, wire, 1250, 650, 2050, 300, 26, 1.8, 160); counter(47e6 * smooth((t - wire) / 1.8), 1450, 150, 110); text('WIRED AWAY', 1450, 250, 50, '#ffd400', HEAD, 'center', 9);
+    [['$1.5M', 0.4], ['$10M', 1.1]].forEach(([s, d], k) => { const p = pop(t, wire + d, 0.3); if (p > 0) { ctx.save(); ctx.translate(1720, 470 + k * 110); ctx.scale(p, p); rrect(-110, -40, 220, 80, 14, '#fff'); text(s, 0, 2, 50, '#1e7a3a', HEAD, 'center', 0); ctx.restore(); } }); }
+  if (cracked) { const p = pop(t, col + 0.15, 0.4); ctx.save(); ctx.translate(1200, 560); ctx.rotate(-0.12); ctx.scale(p, p); rrect(-150, -50, 300, 100, 10, '#d6202a'); text('CLOSED', 0, 3, 70, '#fff', HEAD, 'center', 0); ctx.restore(); }
+});
+// 4. 24 years — behind bars
+scene(at(4, 'Today') - 0.1, T(5) - 0.15, (t) => {
+  bg('#5d6470', '#3a3f48'); const t0 = at(4, 'Today') - 0.1;
+  person(960, 900, 1.75, { shirt: '#ff8a1e', pants: '#ff8a1e', glasses: true, hair: 'gray', gaze: [0, 0.6], brow: 'worried', mouth: 'frown', hands: [[-70, -20], [70, -20]] }, t);
+  const d = ease((t - t0 - 0.3) / 0.35); for (let k = 0; k < 9; k++) rect(560 + k * 100, -1100 + d * 1100, 26, 1100, '#8a929e', 6); rect(520, -60 + d * 0, 880, 40, '#8a929e', 6);
+  stamp('24 YEARS', 960, 300, 170, -0.12, (t - t0 - 0.75) / 0.18); text('FEDERAL PRISON', 960, 470, 56, '#fff', HEAD, 'center', 10);
+});
+// 5. Who is typing: the scam compound
+scene(T(5) - 0.15, T(6) - 0.15, (t) => {
+  bg('#121417', '#20252b'); rect(80, 70, 420, 240, '#0b0d10', 8); for (let k = 0; k < 9; k++) line(80 + k * 52, 70, 80 + k * 52 + 26, 310, 4, '#555');
+  for (let k = 0; k < 8; k++) poly([[80 + k * 55, 60], [100 + k * 55, 44], [120 + k * 55, 60]], null, false, 5, '#888');
+  const pris = at(5, 'prisoners'), traf = at(5, 'Trafficked'), lock = at(5, 'Locked'), forced = at(5, 'forced');
+  for (let k = 0; k < 3; k++) { const x = 800 + k * 390, typ = Math.sin(t * 22 + k) > 0;
+    const glow = ctx.createRadialGradient(x, 560, 10, x, 560, 240); glow.addColorStop(0, 'rgba(120,200,255,0.25)'); glow.addColorStop(1, 'rgba(120,200,255,0)'); ctx.fillStyle = glow; ctx.fillRect(x - 260, 300, 520, 520);
+    person(x, 860, 1.3, { shirt: ['#5a6b7d', '#6d5a7d', '#5a7d6b'][k], hair: k === 1 ? 'long' : 'short', hairCol: '#1d1d1d', skin: ['#e0b48f', '#d9a57c', '#c98f68'][k], gaze: [0, 0.8], brow: 'worried', mouth: 'frown', hands: [[-50, -10 + (typ ? -6 : 0)], [50, -10 + (typ ? 0 : -6)]] }, t + k);
+    rect(x - 170, 830, 340, 28, '#3b3b3b', 6); rrect(x - 100, 715, 200, 120, 8, '#222', 6); ctx.fillStyle = '#9fe3ff'; ctx.fillRect(x - 86, 727, 172, 94); }
+  person(330, 930, 1.55, { shirt: '#1d1d1d', pants: '#1d1d1d', skin: '#1d1d1d', hat: false, hair: 'short', hairCol: '#000', gaze: [1, 0], brow: 'angry', mouth: 'flat', hands: [[-60, -20], [80, -150]] }, t);
+  line(455, 700, 500, 560, 16, '#444');
+  if (t > pris) text('THEY ARE VICTIMS TOO', 1160, 150, 72, '#ff5a5a', MARK, 'center', 12);
+  if (t > traf) { const p = pop(t, traf, 0.3); ctx.save(); ctx.translate(1160, 270); ctx.scale(p, p); rrect(-300, -42, 600, 84, 10, '#ffd400'); text('TRAFFICKED · PASSPORTS TAKEN', 0, 2, 44, '#111', HEAD, 'center', 0); ctx.restore(); }
+  if (t > lock) text('MYANMAR · CAMBODIA', 290, 400, 48, '#fff', HEAD, 'center', 8);
+  if (t > forced) phoneBig(1640, 540, 0.42 * pop(t, forced, 0.35), [{ t: forced + 0.3, side: 'out', text: 'Hi, is this Sarah?' }], t, { who: 'Message' });
+});
+// 6. Pig butchering — the piggy bank fattened, then smashed
+scene(T(6) - 0.15, T(7) - 0.15, (t) => {
+  bg('#fff6e6', '#ffe1c2'); rect(-50, 760, 2020, 400, '#c98d5a', 0); line(-50, 760, 1970, 760, 8);
+  const fat = at(6, 'fattens'), takes = at(6, 'takes'), title = T(6) + 0.1;
+  const grow = 0.75 + 0.45 * smooth((t - fat) / 1.2), smashed = t > takes;
+  for (let k = 0; k < 10; k++) { const u = (t - fat - k * 0.12) / 0.6; if (u > 0 && u < 1) circ(960 + Math.sin(k) * 30, 200 + u * 340, 22, '#ffd34d', 5, 16); }
+  if (!smashed) pig(960, 640, grow, t, t > takes - 0.5 ? 'scared' : 'happy');
+  else { const u = (t - takes); for (let k = 0; k < 9; k++) { const a = -Math.PI * (0.1 + hash(k) * 0.8), v = 260 + hash(k, 2) * 260; ctx.save(); ctx.translate(960 + Math.cos(a) * v * u, 640 + Math.sin(a) * v * u + 420 * u * u); ctx.rotate(u * 8 + k); poly([[-50, -30], [40, -40], [55, 25], [-30, 40]], '#ff9db5', true, 6); ctx.restore(); }
+    for (let k = 0; k < 16; k++) { const a = -Math.PI * hash(k, 7), v = 240 + hash(k, 8) * 320; circ(960 + Math.cos(a) * v * u, 640 + Math.sin(a) * v * u + 420 * u * u, 20, '#ffd34d', 5, 14); } }
+  const hs = takes - 0.35, hu = clamp((t - hs) / 0.35); if (t > hs - 0.4 && t < takes + 0.6) { ctx.save(); ctx.translate(1300, 300); ctx.rotate(-1.4 + 1.5 * ease(hu)); rect(-14, 0, 28, 380, '#8a5a2b'); rect(-90, -40, 180, 80, '#777'); ctx.restore(); }
+  if (t > title) { const p = pop(t, title, 0.4); ctx.save(); ctx.translate(960, 170); ctx.scale(p, p); text('PIG BUTCHERING', 0, 0, 130, '#d6202a', MARK, 'center', 16); ctx.restore(); }
+});
+// 7. The moment to stop replying
+scene(T(7) - 0.15, DUR + 1, (t) => {
+  bg('#141b3a', '#2a2350'); const stop = at(7, 'stop');
+  person(480, 940, 1.6, { shirt: '#3f8f6a', hair: 'short', phone: 1, night: true, gaze: [0.7, 0.2], brow: 'up', mouth: 'o', hands: [[-60, -30], [50, -100]] }, t);
+  person(960, 940, 1.5, { coat: '#c99a5b', hat: true, hair: 'short', gaze: [-1, 0], brow: 'angry', mouth: t > stop ? 'open' : 'flat', hands: [[-110, -130], [60, -20]] }, t);
+  phoneBig(1480, 540, 0.9, [{ t: T(7) + 0.2, side: 'in', text: 'Hi, is this Sarah?' }], t);
+  stamp("DON'T REPLY", 1480, 560, 120, -0.18, (t - stop) / 0.18);
+  if (t > E(7) + 0.4) { const p = ease((t - E(7) - 0.4) / 0.5); ctx.fillStyle = `rgba(0,0,0,${0.75 * p})`; ctx.fillRect(0, 0, 1920, 1080); ctx.globalAlpha = p;
+    text('THE TEXT THAT STEALS', 960, 440, 110, '#fff', HEAD, 'center', 0); text('$1,000,000', 960, 590, 190, '#ffd400', MARK, 'center', 18); ctx.globalAlpha = 1; }
+});
+
+// ---------- frame ----------
+window.frame = (t) => {
+  BOIL = Math.floor(t * 8); NID = 0; ctx.setTransform(S, 0, 0, S, 0, 0); ctx.globalAlpha = 1; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 1920, 1080);
+  const sc = SC.find(s => t >= s.t0 && t < s.t1) || SC[SC.length - 1], lt = t - sc.t0;
+  const z = 1 + 0.03 * clamp(lt / Math.max(1, sc.t1 - sc.t0)) + 0.04 * Math.exp(-lt * 7);
+  ctx.save(); ctx.translate(960, 540); ctx.scale(z, z); ctx.translate(-960, -540); sc.fn(t); ctx.restore();
+  if (lt < 0.08) { ctx.fillStyle = `rgba(255,255,255,${0.5 * (1 - lt / 0.08)})`; ctx.fillRect(0, 0, 1920, 1080); }
+  const v = ctx.createRadialGradient(960, 540, 500, 960, 540, 1150); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,0.35)'); ctx.fillStyle = v; ctx.fillRect(0, 0, 1920, 1080);
+  const f = Math.max(1 - clamp(t / 0.3), clamp((t - (DUR - 0.5)) / 0.5)); if (f > 0) { ctx.fillStyle = `rgba(0,0,0,${f})`; ctx.fillRect(0, 0, 1920, 1080); }
+  return cvs.toDataURL('image/jpeg', 0.92);
+};
+window.DUR = DUR; window.ready = true;
+</script></body></html>

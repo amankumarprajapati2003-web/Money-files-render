@@ -69,6 +69,10 @@ def riser(t0, t1):
     return np.tanh((s + n) * env * 1.6) * 0.8
 
 
+def popfx(g):
+    t = tt(0.14); f = 700 + 900 * (t / 0.14); return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 30) * g
+
+
 def tick(g):
     t = tt(0.05); return np.sin(2 * np.pi * 2400 * t) * np.exp(-t * 160) * g + hpf(rng.standard_normal(len(t)), 3000) * np.exp(-t * 220) * 0.4 * g
 
@@ -88,6 +92,7 @@ for c in clip["sfx"]:
     elif k == "braam": put(sfx, t0, braam(c[2]))
     elif k == "whoosh": put(sfx, t0, whoosh(0.8), pan=0.2)
     elif k == "riser": put(sfx, t0, riser(t0, c[2]))
+    elif k == "pop": put(sfx, t0, popfx(c[2] if len(c) > 2 else 0.5))
 
 # simple reverb on sfx (decaying-noise impulse response)
 ir_t = tt(1.8); ir = rng.standard_normal(len(ir_t)) * np.exp(-ir_t * 3.2); ir /= np.sqrt((ir ** 2).sum())
@@ -99,7 +104,7 @@ for ch in range(2):
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", src_audio, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True).stdout
 src = np.frombuffer(raw, dtype=np.float32).astype(np.float64)
 duck = np.ones(N)
-for at, a, b in clip["vo"]:
+for at, a, b in clip.get("vo", []):
     seg = src[int(a * SR):int(b * SR)].copy(); f = int(0.012 * SR); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)
     seg = hpf(seg, 110); seg /= max(1e-6, np.sqrt((seg ** 2).mean())) / 0.16; put(vo, at, np.stack([seg, seg], 1))
     i0, i1 = int(at * SR), int((at + b - a) * SR); duck[i0:i1] = 0.45
