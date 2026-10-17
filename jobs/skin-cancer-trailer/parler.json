@@ -1,0 +1,109 @@
+{
+ "voices": {
+  "NARR": "Rohit speaks in a very deep, low-pitched, slow and dramatic voice with a serious, intense tone, like a movie trailer narrator. The recording is of very high quality, with the speaker's voice sounding clear and very close up, with no background noise.",
+  "ANCHOR": "Divya speaks at a fast pace with a confident, clear and expressive tone, like a television news anchor. The recording is of very high quality, with the speaker's voice sounding clear and very close up, with no background noise."
+ },
+ "takes": 2,
+ "lines": [
+  {
+   "who": "NARR",
+   "text": "भारत की धूप..."
+  },
+  {
+   "who": "NARR",
+   "text": "सबसे ख़ामोश हथियार है।"
+  },
+  {
+   "who": "ANCHOR",
+   "text": "ब्रेकिंग न्यूज़। केरल में यू-वी इंडेक्स दस तक पहुँचा। ये बहुत ख़तरनाक लेवल है।"
+  },
+  {
+   "who": "NARR",
+   "text": "हर दिन। हर गली। हर खेत में।"
+  },
+  {
+   "who": "ANCHOR",
+   "text": "पंजाब के एक अस्पताल की स्टडी। स्किन कैंसर के बानवे प्रतिशत मरीज़, खेतों में काम करने वाले लोग थे।"
+  },
+  {
+   "who": "NARR",
+   "text": "और हम सोचते हैं..."
+  },
+  {
+   "who": "NARR",
+   "text": "ये तो गोरों की बीमारी है।"
+  },
+  {
+   "who": "NARR",
+   "text": "ग़लत।"
+  },
+  {
+   "who": "ANCHOR",
+   "text": "डब्ल्यू-एच-ओ की कैंसर एजेंसी के अनुसार, दुनिया में मेलानोमा के केस, दो हज़ार चालीस तक पचास प्रतिशत से ज़्यादा बढ़ेंगे।"
+  },
+  {
+   "who": "NARR",
+   "text": "लेकिन भारत में असली डर... गिनती नहीं है।"
+  },
+  {
+   "who": "ANCHOR",
+   "text": "भारत में हर साल, लगभग चार हज़ार मेलानोमा केस। और पंद्रह सौ से ज़्यादा मौतें।"
+  },
+  {
+   "who": "NARR",
+   "text": "दुनिया में, हर छह केस पर एक मौत।"
+  },
+  {
+   "who": "NARR",
+   "text": "भारत में... हर पाँच केस पर, दो।"
+  },
+  {
+   "who": "NARR",
+   "text": "इसे उस इंसान को भेजो, जो रोज़ धूप में काम करता है।"
+  },
+  {
+   "who": "NARR",
+   "text": "आख़िर क्यों? क्योंकि हम, देर से पहुँचते हैं।"
+  },
+  {
+   "who": "ANCHOR",
+   "text": "भारतीय मरीज़ों में मेलानोमा अक्सर पैर के तलवे, हथेली, या नाखून में मिलता है। जहाँ कोई देखता ही नहीं।"
+  },
+  {
+   "who": "NARR",
+   "text": "एक तिल... जो बदल रहा है।"
+  },
+  {
+   "who": "NARR",
+   "text": "नाखून के नीचे, एक काली लकीर।"
+  },
+  {
+   "who": "NARR",
+   "text": "एक घाव... जो भरता ही नहीं।"
+  },
+  {
+   "who": "NARR",
+   "text": "और हम कहते हैं... कुछ नहीं होगा।"
+  },
+  {
+   "who": "NARR",
+   "text": "लेकिन कहानी का अंत, तुम लिखोगे।"
+  },
+  {
+   "who": "NARR",
+   "text": "रोज़ एस-पी-एफ तीस या उससे ज़्यादा। ग्यारह से तीन की धूप से बचो।"
+  },
+  {
+   "who": "NARR",
+   "text": "महीने में एक बार, अपने तलवे, हथेलियाँ और नाखून ख़ुद चेक करो।"
+  },
+  {
+   "who": "NARR",
+   "text": "कोई भी तिल जो बदल रहा हो, डर्मेटोलॉजिस्ट को दिखाओ। जल्दी पकड़ा, तो इलाज आसान।"
+  },
+  {
+   "who": "NARR",
+   "text": "क्योंकि भारत की धूप..."
+  }
+ ]
+}

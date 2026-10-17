@@ -1,0 +1,40 @@
+name: parler
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Job folder under jobs/ (must contain parler.json)"
+        required: true
+      only:
+        description: "Comma-separated line numbers to (re)generate; empty = all"
+        required: false
+        default: ""
+permissions:
+  contents: write
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Indic Parler-TTS (CPU)
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q git+https://github.com/huggingface/parler-tts.git soundfile
+      - name: Speak every line
+        env:
+          ONLY: ${{ inputs.only }}
+        run: mkdir -p out && python engine/tts_parler.py "jobs/${{ inputs.job }}/parler.json" out 2>&1 | tee out/log.txt
+      - name: Commit audio to branch parler-${{ inputs.job }}
+        if: always()
+        run: |
+          B="parler-${{ inputs.job }}"
+          git config user.name "voice-bot"; git config user.email "voice-bot@users.noreply.github.com"
+          git checkout --orphan "$B"; git rm -rq --cached . ; mkdir -p keep && mv out keep/
+          find . -maxdepth 1 ! -name . ! -name .git ! -name keep -exec rm -rf {} +
+          mv keep/out audio && rmdir keep
+          git add audio && git commit -qm "parler audio for ${{ inputs.job }}"
+          git push -f origin "$B"
