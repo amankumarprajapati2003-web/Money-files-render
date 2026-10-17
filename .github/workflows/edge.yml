@@ -1,0 +1,33 @@
+name: edge
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Job folder under jobs/ (must contain edge.json)"
+        required: true
+permissions:
+  contents: write
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install edge-tts (free neural voices)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q edge-tts
+      - name: Speak every line
+        run: python engine/tts_edge.py "jobs/${{ inputs.job }}/edge.json" out
+      - name: Commit audio to branch out-${{ inputs.job }}
+        run: |
+          B="out-${{ inputs.job }}"
+          git config user.name "cast-bot"; git config user.email "cast-bot@users.noreply.github.com"
+          git checkout --orphan "$B"; git rm -rq --cached . ; mkdir -p keep && mv out keep/
+          find . -maxdepth 1 ! -name . ! -name .git ! -name keep -exec rm -rf {} +
+          mv keep/out audio && rmdir keep
+          git add audio && git commit -qm "audio for ${{ inputs.job }}"
+          git push -f origin "$B"

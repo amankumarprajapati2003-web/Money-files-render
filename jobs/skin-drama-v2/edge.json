@@ -1,0 +1,17 @@
+{
+ "lines": [
+  {"who": "TWACHA", "voice": "hi-IN-SwaraNeural", "rate": "+8%", "pitch": "+12Hz", "text": "आज तो शादी है... आज तो मैं चमकूँगी!"},
+  {"who": "NIMBU", "voice": "hi-IN-MadhurNeural", "rate": "-4%", "pitch": "-12Hz", "text": "चमकना है? अरे बहन, हम हैं ना!"},
+  {"who": "PASTE", "voice": "hi-IN-MadhurNeural", "rate": "+12%", "pitch": "+18Hz", "text": "मैं पेस्ट भाई! दाँत भी चमकाऊँ, चेहरा भी!"},
+  {"who": "FIZZ", "voice": "hi-IN-SwaraNeural", "rate": "+22%", "pitch": "+45Hz", "text": "और मैं फ़िज़! फ़िज़ फ़िज़... टैन ग़ायब!"},
+  {"who": "TWACHA", "voice": "hi-IN-SwaraNeural", "rate": "+5%", "pitch": "+12Hz", "text": "सच में? नाई भैया की रील में देखा था!"},
+  {"who": "TWACHA", "voice": "hi-IN-SwaraNeural", "rate": "+15%", "pitch": "+20Hz", "text": "आह! जल रहा है... जल रहा है!"},
+  {"who": "NIMBU", "voice": "hi-IN-MadhurNeural", "rate": "-6%", "pitch": "-12Hz", "text": "अब जाओ धूप में... हा हा हा हा!"},
+  {"who": "TWACHA", "voice": "hi-IN-SwaraNeural", "rate": "+0%", "pitch": "+10Hz", "text": "मेरा टैन तो गया नहीं... ऊपर से ये काले दाग?"},
+  {"who": "SPF", "voice": "hi-IN-MadhurNeural", "rate": "+2%", "pitch": "-18Hz", "text": "रुको! नींबू लगाकर धूप में गईं? इसी से जलन और दाग होते हैं।"},
+  {"who": "SPF", "voice": "hi-IN-MadhurNeural", "rate": "+4%", "pitch": "-18Hz", "text": "पेस्ट दाँतों के लिए है, और ये फ़िज़ स्किन का पीएच बिगाड़ देता है।"},
+  {"who": "SPF", "voice": "hi-IN-MadhurNeural", "rate": "+4%", "pitch": "-18Hz", "text": "टैन तो कुछ हफ़्तों में खुद चला जाता है। बस रोज़ सनस्क्रीन लगाओ!"},
+  {"who": "TWACHA", "voice": "hi-IN-SwaraNeural", "rate": "+5%", "pitch": "+14Hz", "text": "मेरा हीरो!"},
+  {"who": "FIZZ", "voice": "hi-IN-SwaraNeural", "rate": "+18%", "pitch": "+45Hz", "text": "इस रील को उस दोस्त को भेजो, जो किचन से स्किनकेयर करता है!"}
+ ]
+}
