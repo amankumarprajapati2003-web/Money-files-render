@@ -155,32 +155,8 @@
   },
   {
    "key": "farmimg",
-   "q": "Indian farmer working field sun",
+   "q": "Indian farmer working field",
    "n": 4,
-   "kind": "image"
-  },
-  {
-   "key": "crowdimg",
-   "q": "crowd India street sun",
-   "n": 3,
-   "kind": "image"
-  },
-  {
-   "key": "labourimg",
-   "q": "construction worker India",
-   "n": 2,
-   "kind": "image"
-  },
-  {
-   "key": "mel",
-   "q": "melanoma",
-   "n": 4,
-   "kind": "image"
-  },
-  {
-   "key": "nail",
-   "q": "subungual melanoma",
-   "n": 2,
    "kind": "image"
   },
   {
@@ -190,26 +166,14 @@
    "kind": "image"
   },
   {
-   "key": "sunscreen",
-   "q": "sunscreen",
-   "n": 3,
-   "kind": "image"
-  },
-  {
-   "key": "sole",
-   "q": "foot sole",
-   "n": 2,
+   "key": "mel",
+   "q": "melanoma skin",
+   "n": 4,
    "kind": "image"
   },
   {
    "key": "doctor",
-   "q": "dermatologist examining skin",
-   "n": 2,
-   "kind": "image"
-  },
-  {
-   "key": "umbrella",
-   "q": "umbrella sun India",
+   "q": "dermatologist",
    "n": 2,
    "kind": "image"
   }

@@ -15,9 +15,9 @@ def jget(url):
     for k in range(3):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:
-                time.sleep(0.5); return json.loads(r.read())
+                time.sleep(1.5); return json.loads(r.read())
         except Exception as e:
-            print("  ! ", e, url[:100]); time.sleep(3 * (k + 1))
+            print("  ! ", e, url[:100]); time.sleep(15 * (k + 1))
     return None
 
 
@@ -44,7 +44,7 @@ def commons(q, kind, n):
         artist = strip((md.get("Artist") or {}).get("value", "")) or "Unknown"
         if kind == "video":
             if info.get("duration", 99) < 3 or info.get("height", 0) < 480: continue
-            ders = [x for x in info.get("derivatives", []) if x.get("height", 0) and x["height"] <= 1080 and "webm" in x.get("type", "") + x.get("src", "")]
+            ders = [x for x in info.get("derivatives", []) if x.get("height", 0) and x["height"] <= 720 and "webm" in x.get("type", "") + x.get("src", "")]
             ders.sort(key=lambda x: -x["height"])
             url = ders[0]["src"] if ders else info["url"]
         else:
@@ -80,7 +80,10 @@ for it in cfg["items"]:
         fn = f"{out}/{it['key']}_{got}." + ("mp4" if kind == "video" else "jpg")
         if kind == "video":
             secs = it.get("secs", 8); ss = 1.0 if c["dur"] > secs + 2 else 0
-            cmd = ["ffmpeg", "-y", "-v", "error", "-ss", str(ss), "-i", c["url"], "-t", str(secs), "-an",
+            tmp = "/tmp/dl.webm"
+            if subprocess.run(["curl", "-sSL", "--fail", "--max-filesize", "300000000", "-A", UA, "-o", tmp, c["url"]], timeout=300).returncode != 0:
+                continue
+            cmd = ["ffmpeg", "-y", "-v", "error", "-i", tmp, "-ss", str(ss), "-t", str(secs), "-an",
                    "-vf", "scale=-2:720,fps=30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-pix_fmt", "yuv420p", fn]
         else:
             cmd = ["curl", "-sSL", "--fail", "-A", UA, "-o", fn, c["url"]]
