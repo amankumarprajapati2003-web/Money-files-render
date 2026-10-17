@@ -1,0 +1,31 @@
+name: vids
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Job folder under jobs/ (must contain vids.json)"
+        required: true
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - name: Fetch b-roll
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: python engine/fetch_vids.py "jobs/${{ inputs.job }}/vids.json" out
+      - name: Commit to branch vids-${{ inputs.job }}
+        run: |
+          B="vids-${{ inputs.job }}"
+          git config user.name "broll-bot"; git config user.email "broll-bot@users.noreply.github.com"
+          git checkout --orphan "$B"; git rm -rq --cached . ; mkdir -p keep && mv out keep/
+          find . -maxdepth 1 ! -name . ! -name .git ! -name keep -exec rm -rf {} +
+          mv keep/out broll && rmdir keep
+          du -sh broll
+          git add broll && git commit -qm "b-roll for ${{ inputs.job }}"
+          git push -f origin "$B"
