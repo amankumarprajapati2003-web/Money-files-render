@@ -1,0 +1,418 @@
+[
+ {
+  "file": "sun_0.mp4",
+  "key": "sun",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5a/SDO_Sun_This_Week_%28SVS5577_-_048p30%29.webm/SDO_Sun_This_Week_%28SVS5577_-_048p30%29.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:SDO_Sun_This_Week_(SVS5577_-_048p30).webm",
+  "dur": 186.5,
+  "credit": "SDO Sun This Week (SVS5577 - 048p30).webm by NASA's Scientific Visualization Studio - SSAI/AJ Christensen, Global Science and, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "sun_1.mp4",
+  "key": "sun",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d2/SDO_Sun_This_Week_%28SVS5577_-_4hr_2048p30%29.webm/SDO_Sun_This_Week_%28SVS5577_-_4hr_2048p30%29.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:SDO_Sun_This_Week_(SVS5577_-_4hr_2048p30).webm",
+  "dur": 26.666,
+  "credit": "SDO Sun This Week (SVS5577 - 4hr 2048p30).webm by NASA's Scientific Visualization Studio - SSAI/AJ Christensen, Global Science and, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "sun_2.mp4",
+  "key": "sun",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3d/Sun_Emits_X6_3_Flare_on_February_22%2C_2024_%28SVS14535_-_SDO_02222024_X6_HMI-Continuum_4k%29.webm/Sun_Emits_X6_3_Flare_on_February_22%2C_2024_%28SVS14535_-_SDO_02222024_X6_HMI-Continuum_4k%29.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Sun_Emits_X6_3_Flare_on_February_22,_2024_(SVS14535_-_SDO_02222024_X6_HMI-Continuum_4k).webm",
+  "dur": 4.8500000000000005,
+  "credit": "Sun Emits X6 3 Flare on February 22, 2024 (SVS14535 - SDO 02222024 X6 HMI-Continuum 4k).webm by NASA's Scientific Visualization Studio - Scott Wiessinger, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "sun_3.mp4",
+  "key": "sun",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e6/Sun_Emits_X6_3_Flare_on_February_22%2C_2024_%28SVS14535_-_SDO_02222024_X6_131_4k%29.webm/Sun_Emits_X6_3_Flare_on_February_22%2C_2024_%28SVS14535_-_SDO_02222024_X6_131_4k%29.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Sun_Emits_X6_3_Flare_on_February_22,_2024_(SVS14535_-_SDO_02222024_X6_131_4k).webm",
+  "dur": 4.8500000000000005,
+  "credit": "Sun Emits X6 3 Flare on February 22, 2024 (SVS14535 - SDO 02222024 X6 131 4k).webm by NASA's Scientific Visualization Studio - Scott Wiessinger, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "flare_0.mp4",
+  "key": "flare",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/13/Solar_Blast.ogv/Solar_Blast.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Solar_Blast.ogv",
+  "dur": 5.124352200000001,
+  "credit": "Solar Blast.ogv by NASA, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "flare_1.mp4",
+  "key": "flare",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/32/Earth_from_Orbit-_Solar_Flare_Erupts_%28NESDIS_2021-11-04_2021_11_04_SolarFlareErupts_UHD%29.webm/Earth_from_Orbit-_Solar_Flare_Erupts_%28NESDIS_2021-11-04_2021_11_04_SolarFlareErupts_UHD%29.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Earth_from_Orbit-_Solar_Flare_Erupts_(NESDIS_2021-11-04_2021_11_04_SolarFlareErupts_UHD).webm",
+  "dur": 124.908,
+  "credit": "Earth from Orbit- Solar Flare Erupts (NESDIS 2021-11-04 2021 11 04 SolarFlareErupts UHD).webm by NOAA, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "sunrise_0.mp4",
+  "key": "sunrise",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b0/Yogyakarta_Sunrise%2C_One.webm/Yogyakarta_Sunrise%2C_One.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Yogyakarta_Sunrise,_One.webm",
+  "dur": 357.048,
+  "credit": "Yogyakarta Sunrise, One.webm by Joaquim Baeta, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "sunrise_1.mp4",
+  "key": "sunrise",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Twilight_and_Sunrise_in_Gj%C3%B8vik_in_February_2021.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Twilight_and_Sunrise_in_Gj%C3%B8vik_in_February_2021.webm",
+  "dur": 42.461,
+  "credit": "Twilight and Sunrise in Gjøvik in February 2021.webm by Renepick, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "sunrise_2.mp4",
+  "key": "sunrise",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/29/Yogyakarta_Sunrise%2C_Two.webm/Yogyakarta_Sunrise%2C_Two.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Yogyakarta_Sunrise,_Two.webm",
+  "dur": 460.928,
+  "credit": "Yogyakarta Sunrise, Two.webm by Joaquim Baeta, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "sunset_0.mp4",
+  "key": "sunset",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8a/Sunset_Timelapse_4K.0001.webm/Sunset_Timelapse_4K.0001.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Sunset_Timelapse_4K.0001.webm",
+  "dur": 11.565,
+  "credit": "Sunset Timelapse 4K.0001.webm by Artistosteles, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "sunset_1.mp4",
+  "key": "sunset",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Timelapse_of_sunset_in_Konarka_%28original%29.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Timelapse_of_sunset_in_Konarka_(original).webm",
+  "dur": 23.978,
+  "credit": "Timelapse of sunset in Konarka (original).webm by Subhashish Panigrahi, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "heat_0.mp4",
+  "key": "heat",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/40/Relentless_Heat_Wave_Hits_California_-_VOANews.webm/Relentless_Heat_Wave_Hits_California_-_VOANews.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Relentless_Heat_Wave_Hits_California_-_VOANews.webm",
+  "dur": 167.701,
+  "credit": "Relentless Heat Wave Hits California - VOANews.webm by Voice of America, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "heat_1.mp4",
+  "key": "heat",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Heat_vs_Wave_1D.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Heat_vs_Wave_1D.webm",
+  "dur": 10.033,
+  "credit": "Heat vs Wave 1D.webm by Gpeyre, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "crowd_0.mp4",
+  "key": "crowd",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7a/Kolkata_on_streets_with_reclaim_the_night_campaign_second_time_seeking_justice_for_R_G_Kar_victim.webm/Kolkata_on_streets_with_reclaim_the_night_campaign_second_time_seeking_justice_for_R_G_Kar_victim.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Kolkata_on_streets_with_reclaim_the_night_campaign_second_time_seeking_justice_for_R_G_Kar_victim.webm",
+  "dur": 64.465,
+  "credit": "Kolkata on streets with reclaim the night campaign second time seeking justice for R G Kar victim.webm by Sumita Roy Dutta, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "crowd_1.mp4",
+  "key": "crowd",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f6/A_video_clips_of_Iftar_special_ambience_at_Zakaria_street_Kolkata.webm/A_video_clips_of_Iftar_special_ambience_at_Zakaria_street_Kolkata.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:A_video_clips_of_Iftar_special_ambience_at_Zakaria_street_Kolkata.webm",
+  "dur": 11.933,
+  "credit": "A video clips of Iftar special ambience at Zakaria street Kolkata.webm by Sumita Roy Dutta, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "crowd2_0.mp4",
+  "key": "crowd2",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/08/Video_clip_of_new_normal_Holi_bonfires_in_Delhi_during_COVID-19_pandemic_in_Delhi_VID_20210328_202706.webm/Video_clip_of_new_normal_Holi_bonfires_in_Delhi_during_COVID-19_pandemic_in_Delhi_VID_20210328_202706.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Video_clip_of_new_normal_Holi_bonfires_in_Delhi_during_COVID-19_pandemic_in_Delhi_VID_20210328_202706.webm",
+  "dur": 7.982,
+  "credit": "Video clip of new normal Holi bonfires in Delhi during COVID-19 pandemic in Delhi VID 20210328 202706.webm by Sumita Roy Dutta, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "crowd2_1.mp4",
+  "key": "crowd2",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Doves_eating_grains_New_Delhi_India.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Doves_eating_grains_New_Delhi_India.webm",
+  "dur": 53.172000000000004,
+  "credit": "Doves eating grains New Delhi India.webm by Subhashish Panigrahi, CC BY-SA 3.0 via Wikimedia Commons"
+ },
+ {
+  "file": "crowd3_0.mp4",
+  "key": "crowd3",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8d/Local_train_starting_from_Mumbai_CSTM_001.webm/Local_train_starting_from_Mumbai_CSTM_001.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Local_train_starting_from_Mumbai_CSTM_001.webm",
+  "dur": 9.540000000000001,
+  "credit": "Local train starting from Mumbai CSTM 001.webm by Suyash Dwivedi, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "crowd3_1.mp4",
+  "key": "crowd3",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Street_in_Mumbai_%28video%29_03.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Street_in_Mumbai_(video)_03.webm",
+  "dur": 211.272,
+  "credit": "Street in Mumbai (video) 03.webm by Nicolas Vigier, CC0 via Wikimedia Commons"
+ },
+ {
+  "file": "farm_0.mp4",
+  "key": "farm",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a2/Raising_the_Flag_on_Iwo_Jima_%28color%29.ogv/Raising_the_Flag_on_Iwo_Jima_%28color%29.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Raising_the_Flag_on_Iwo_Jima_(color).ogv",
+  "dur": 9.96,
+  "credit": "Raising the Flag on Iwo Jima (color).ogv by Bill Genaust, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "farm_1.mp4",
+  "key": "farm",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/24/Creating_A_Fire_Belt.webm/Creating_A_Fire_Belt.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Creating_A_Fire_Belt.webm",
+  "dur": 56.456,
+  "credit": "Creating A Fire Belt.webm by Salifu Wumpini Hussein, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "farm_2.mp4",
+  "key": "farm",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e2/Saora_Language_song_on_Domestic_Animals.webm/Saora_Language_song_on_Domestic_Animals.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Saora_Language_song_on_Domestic_Animals.webm",
+  "dur": 147.731,
+  "credit": "Saora Language song on Domestic Animals.webm by Abhishek Kumar Dash, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "farm2_0.mp4",
+  "key": "farm2",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/86/Rice_field_Japan_autumn.webm/Rice_field_Japan_autumn.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Rice_field_Japan_autumn.webm",
+  "dur": 31.001,
+  "credit": "Rice field Japan autumn.webm by Shironsilentpond, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "farm2_1.mp4",
+  "key": "farm2",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/29/Rice_transplanter_in_use_-_rural_Kanagawa_-_2023_June_13.webm/Rice_transplanter_in_use_-_rural_Kanagawa_-_2023_June_13.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Rice_transplanter_in_use_-_rural_Kanagawa_-_2023_June_13.webm",
+  "dur": 32.433,
+  "credit": "Rice transplanter in use - rural Kanagawa - 2023 June 13.webm by Nesnad, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "market_0.mp4",
+  "key": "market",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Covid-19_in_India-_Market_in_TN%E2%80%99s_Tiruppur_sets_up_disinfection_tunnel_for_customers.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Covid-19_in_India-_Market_in_TN%E2%80%99s_Tiruppur_sets_up_disinfection_tunnel_for_customers.webm",
+  "dur": 81.301,
+  "credit": "Covid-19 in India- Market in TN’s Tiruppur sets up disinfection tunnel for customers.webm by The Times of India, CC BY 3.0 via Wikimedia Commons"
+ },
+ {
+  "file": "market_1.mp4",
+  "key": "market",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Integral_India-_Peace_for_Development.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Integral_India-_Peace_for_Development.webm",
+  "dur": 367.069,
+  "credit": "Integral India- Peace for Development.webm by Indian Diplomacy, CC BY 3.0 via Wikimedia Commons"
+ },
+ {
+  "file": "beach_0.mp4",
+  "key": "beach",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7f/Beach_in_Carrascal.webm/Beach_in_Carrascal.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Beach_in_Carrascal.webm",
+  "dur": 6.7490000000000006,
+  "credit": "Beach in Carrascal.webm by Wazzup Carl, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "beach_1.mp4",
+  "key": "beach",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b9/Jacqueville_beach_in_may_2026_%280%29.webm/Jacqueville_beach_in_may_2026_%280%29.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Jacqueville_beach_in_may_2026_(0).webm",
+  "dur": 19.254,
+  "credit": "Jacqueville beach in may 2026 (0).webm by Poro26, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "worker_0.mp4",
+  "key": "worker",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Manual_workers_from_medginskogo.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Manual_workers_from_medginskogo.webm",
+  "dur": 15.803,
+  "credit": "Manual workers from medginskogo.webm by Zeliotvankaizer, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "worker_1.mp4",
+  "key": "worker",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4c/%E1%80%9E%E1%80%85%E1%80%BA%E1%80%81%E1%80%BD%E1%80%95%E1%80%94%E1%80%BA%E1%80%B8_%E1%80%95%E1%80%BB%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%A5%E1%80%9A%E1%80%BB%E1%80%AC%E1%80%A5%E1%80%BA.webm/%E1%80%9E%E1%80%85%E1%80%BA%E1%80%81%E1%80%BD%E1%80%95%E1%80%94%E1%80%BA%E1%80%B8_%E1%80%95%E1%80%BB%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%A5%E1%80%9A%E1%80%BB%E1%80%AC%E1%80%A5%E1%80%BA.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:%E1%80%9E%E1%80%85%E1%80%BA%E1%80%81%E1%80%BD%E1%80%95%E1%80%94%E1%80%BA%E1%80%B8_%E1%80%95%E1%80%BB%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%A5%E1%80%9A%E1%80%BB%E1%80%AC%E1%80%A5%E1%80%BA.webm",
+  "dur": 87.282,
+  "credit": "သစ်ခွပန်း ပျိုးဥယျာဥ်.webm by စာကလေး, CC0 via Wikimedia Commons"
+ },
+ {
+  "file": "micro_0.mp4",
+  "key": "micro",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7b/Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s004.ogv/Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s004.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s004.ogv",
+  "dur": 24.394013605442176,
+  "credit": "Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s004.ogv by Karreman M, Mercier L, Schieber N, Shibue T, Schwab Y, Goetz J, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "micro_1.mp4",
+  "key": "micro",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c7/Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s005.ogv/Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s005.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s005.ogv",
+  "dur": 55.09079365079365,
+  "credit": "Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s005.ogv by Karreman M, Mercier L, Schieber N, Shibue T, Schwab Y, Goetz J, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "micro_2.mp4",
+  "key": "micro",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c2/Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s003.ogv/Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s003.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s003.ogv",
+  "dur": 25.091733333333334,
+  "credit": "Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor-Cells-pone.0114448.s003.ogv by Karreman M, Mercier L, Schieber N, Shibue T, Schwab Y, Goetz J, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "surgery_0.mp4",
+  "key": "surgery",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c8/Eye_surgery_with_micro-robots_-_The_Royal_Society.webm/Eye_surgery_with_micro-robots_-_The_Royal_Society.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Eye_surgery_with_micro-robots_-_The_Royal_Society.webm",
+  "dur": 731.828,
+  "credit": "Eye surgery with micro-robots - The Royal Society.webm by The Royal Society, CC BY 3.0 via Wikimedia Commons"
+ },
+ {
+  "file": "surgery_1.mp4",
+  "key": "surgery",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Emerging-Applications-of-Bedside-3D-Printing-in-Plastic-Surgery-video_1.ogv/Emerging-Applications-of-Bedside-3D-Printing-in-Plastic-Surgery-video_1.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Emerging-Applications-of-Bedside-3D-Printing-in-Plastic-Surgery-video_1.ogv",
+  "dur": 66.12133333333334,
+  "credit": "Emerging-Applications-of-Bedside-3D-Printing-in-Plastic-Surgery-video 1.ogv by Chae M, Rozen W, McMenamin P, Findlay M, Spychal R, Hunter-Smith D, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "hospital_0.mp4",
+  "key": "hospital",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/90/Isolo_General_Hospital_Entrance.webm/Isolo_General_Hospital_Entrance.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Isolo_General_Hospital_Entrance.webm",
+  "dur": 32.233000000000004,
+  "credit": "Isolo General Hospital Entrance.webm by Ready Street, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "hospital_1.mp4",
+  "key": "hospital",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/54/Cl%C3%ADnica_Especializada_Internacional_video.ogv/Cl%C3%ADnica_Especializada_Internacional_video.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Cl%C3%ADnica_Especializada_Internacional_video.ogv",
+  "dur": 28.35156462585034,
+  "credit": "Clínica Especializada Internacional video.ogv by Truthman10200, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "clock_0.mp4",
+  "key": "clock",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/19/Coventry_lady_Godiva_clock.webm/Coventry_lady_Godiva_clock.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Coventry_lady_Godiva_clock.webm",
+  "dur": 67.07300000000001,
+  "credit": "Coventry lady Godiva clock.webm by Secretlondon (talk), CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "clock_1.mp4",
+  "key": "clock",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Clock_by_Veo_2.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:Clock_by_Veo_2.webm",
+  "dur": 8,
+  "credit": "Clock by Veo 2.webm by Veo 2; prompted by FallingGravity, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "ecg_0.mp4",
+  "key": "ecg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/OE25_-_COSMAR_ECG_%28962391%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "page": "https://commons.wikimedia.org/wiki/File:OE25_-_COSMAR_ECG_(962391).webm",
+  "dur": 41.659,
+  "credit": "OE25 - COSMAR ECG (962391).webm by U.S. Navy photo by Petty Officer 2nd Class Caleb Foote, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "ecg_1.mp4",
+  "key": "ecg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cb/Electrocardiography_Basics.webm/Electrocardiography_Basics.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Electrocardiography_Basics.webm",
+  "dur": 500.973,
+  "credit": "Electrocardiography Basics.webm by Osmosis, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "feet_0.mp4",
+  "key": "feet",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a1/Recycling-Energy-to-Restore-Impaired-Ankle-Function-during-Human-Walking-pone.0009307.s007.ogv/Recycling-Energy-to-Restore-Impaired-Ankle-Function-during-Human-Walking-pone.0009307.s007.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Recycling-Energy-to-Restore-Impaired-Ankle-Function-during-Human-Walking-pone.0009307.s007.ogv",
+  "dur": 22.333333333333332,
+  "credit": "Recycling-Energy-to-Restore-Impaired-Ankle-Function-during-Human-Walking-pone.0009307.s007.ogv by Collins S, Kuo A, CC BY 2.5 via Wikimedia Commons"
+ },
+ {
+  "file": "feet_1.mp4",
+  "key": "feet",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/14/Strider_v3_with_new_feet.webm/Strider_v3_with_new_feet.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Strider_v3_with_new_feet.webm",
+  "dur": 24.087,
+  "credit": "Strider v3 with new feet.webm by DIY Walkers, CC BY 3.0 via Wikimedia Commons"
+ },
+ {
+  "file": "hand_0.mp4",
+  "key": "hand",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/55/Public_auto_handwashing_point_%28video%29.ogv/Public_auto_handwashing_point_%28video%29.ogv.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Public_auto_handwashing_point_(video).ogv",
+  "dur": 98.66160416666666,
+  "credit": "Public auto handwashing point (video).ogv by Wabyona Bingi, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "hand_1.mp4",
+  "key": "hand",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9f/Fish_on_hand.webm/Fish_on_hand.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Fish_on_hand.webm",
+  "dur": 6.333,
+  "credit": "Fish on hand.webm by KEmel49, CC BY-SA 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "eye_0.mp4",
+  "key": "eye",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/26/Close_Up_View_of_Milton%E2%80%99s_Ferocious_Eye_%28CIRA_2024-10-08_-_portrait%29.webm/Close_Up_View_of_Milton%E2%80%99s_Ferocious_Eye_%28CIRA_2024-10-08_-_portrait%29.webm.480p.vp9.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Close_Up_View_of_Milton%E2%80%99s_Ferocious_Eye_(CIRA_2024-10-08_-_portrait).webm",
+  "dur": 6.172,
+  "credit": "Close Up View of Milton’s Ferocious Eye (CIRA 2024-10-08 - portrait).webm by GOES imagery: CSU/CIRA &amp; NOAA, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "sunimg_0.jpg",
+  "key": "sunimg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/3840px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+  "dur": 0,
+  "credit": "The Sun by the Atmospheric Imaging Assembly of NASA's Solar Dynamics Observatory - 20100819.jpg by NASA/SDO (AIA), Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "sunimg_1.jpg",
+  "key": "sunimg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Sun_-_August_1%2C_2010.jpg/3840px-Sun_-_August_1%2C_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Sun_-_August_1,_2010.jpg",
+  "dur": 0,
+  "credit": "Sun - August 1, 2010.jpg by NASA/SDO/AIA, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "sunimg_2.jpg",
+  "key": "sunimg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/August_2010_CME_SDO_Multi-Wavelength.jpg/3840px-August_2010_CME_SDO_Multi-Wavelength.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:August_2010_CME_SDO_Multi-Wavelength.jpg",
+  "dur": 0,
+  "credit": "August 2010 CME SDO Multi-Wavelength.jpg by NASA/SDO/AIA, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "derm_0.jpg",
+  "key": "derm",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Nevus_melanoc%C3%ADtico_intrad%C3%A9rmico_%28RPS_09-12-2019%29_imagen_dermatosc%C3%B3pica.jpg/3840px-Nevus_melanoc%C3%ADtico_intrad%C3%A9rmico_%28RPS_09-12-2019%29_imagen_dermatosc%C3%B3pica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Nevus_melanoc%C3%ADtico_intrad%C3%A9rmico_(RPS_09-12-2019)_imagen_dermatosc%C3%B3pica.jpg",
+  "dur": 0,
+  "credit": "Nevus melanocítico intradérmico (RPS 09-12-2019) imagen dermatoscópica.jpg by Raimundo Pastor, CC BY 4.0 via Wikimedia Commons"
+ },
+ {
+  "file": "doctor_0.jpg",
+  "key": "doctor",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Severerash.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Severerash.jpg",
+  "dur": 0,
+  "credit": "Severerash.jpg by Rashy100 at English Wikipedia, Public domain via Wikimedia Commons"
+ },
+ {
+  "file": "doctor_1.jpg",
+  "key": "doctor",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Skin.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Skin.png",
+  "dur": 0,
+  "credit": "Skin.png by US-Gov, Public domain via Wikimedia Commons"
+ }
+]

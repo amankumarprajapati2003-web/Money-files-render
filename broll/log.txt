@@ -1,0 +1,112 @@
+== sun Sun SDO
+  + sun_0.mp4 SDO Sun This Week (SVS5577 - 048p30).webm by NASA's Scientific Visualization Studio - SSAI
+  + sun_1.mp4 SDO Sun This Week (SVS5577 - 4hr 2048p30).webm by NASA's Scientific Visualization Studio -
+  + sun_2.mp4 Sun Emits X6 3 Flare on February 22, 2024 (SVS14535 - SDO 02222024 X6 HMI-Continuum 4k).we
+  + sun_3.mp4 Sun Emits X6 3 Flare on February 22, 2024 (SVS14535 - SDO 02222024 X6 131 4k).webm by NASA
+== flare solar flare
+  + flare_0.mp4 Solar Blast.ogv by NASA, Public domain via Wikimedia Commons
+  + flare_1.mp4 Earth from Orbit- Solar Flare Erupts (NESDIS 2021-11-04 2021 11 04 SolarFlareErupts UHD).w
+== sunrise sunrise
+  + sunrise_0.mp4 Yogyakarta Sunrise, One.webm by Joaquim Baeta, CC BY 4.0 via Wikimedia Commons
+  + sunrise_1.mp4 Twilight and Sunrise in Gjøvik in February 2021.webm by Renepick, CC BY-SA 4.0 via Wikimed
+  + sunrise_2.mp4 Yogyakarta Sunrise, Two.webm by Joaquim Baeta, CC BY 4.0 via Wikimedia Commons
+== sunset sunset timelapse
+  + sunset_0.mp4 Sunset Timelapse 4K.0001.webm by Artistosteles, CC BY-SA 4.0 via Wikimedia Commons
+  + sunset_1.mp4 Timelapse of sunset in Konarka (original).webm by Subhashish Panigrahi, CC BY-SA 4.0 via W
+== heat heat wave
+  + heat_0.mp4 Relentless Heat Wave Hits California - VOANews.webm by Voice of America, Public domain via
+  + heat_1.mp4 Heat vs Wave 1D.webm by Gpeyre, CC BY-SA 4.0 via Wikimedia Commons
+== crowd Kolkata street
+  + crowd_0.mp4 Kolkata on streets with reclaim the night campaign second time seeking justice for R G Kar
+  + crowd_1.mp4 A video clips of Iftar special ambience at Zakaria street Kolkata.webm by Sumita Roy Dutta
+== crowd2 Delhi
+  + crowd2_0.mp4 Video clip of new normal Holi bonfires in Delhi during COVID-19 pandemic in Delhi VID 2021
+  + crowd2_1.mp4 Doves eating grains New Delhi India.webm by Subhashish Panigrahi, CC BY-SA 3.0 via Wikimed
+== crowd3 Mumbai
+  + crowd3_0.mp4 Local train starting from Mumbai CSTM 001.webm by Suyash Dwivedi, CC BY-SA 4.0 via Wikimed
+  + crowd3_1.mp4 Street in Mumbai (video) 03.webm by Nicolas Vigier, CC0 via Wikimedia Commons
+== farm farmer
+  + farm_0.mp4 Raising the Flag on Iwo Jima (color).ogv by Bill Genaust, Public domain via Wikimedia Comm
+  + farm_1.mp4 Creating A Fire Belt.webm by Salifu Wumpini Hussein, CC BY-SA 4.0 via Wikimedia Commons
+  + farm_2.mp4 Saora Language song on Domestic Animals.webm by Abhishek Kumar Dash, CC BY-SA 4.0 via Wiki
+== farm2 rice paddy field
+  + farm2_0.mp4 Rice field Japan autumn.webm by Shironsilentpond, CC BY 4.0 via Wikimedia Commons
+  + farm2_1.mp4 Rice transplanter in use - rural Kanagawa - 2023 June 13.webm by Nesnad, CC BY-SA 4.0 via 
+== market market India
+  + market_0.mp4 Covid-19 in India- Market in TN’s Tiruppur sets up disinfection tunnel for customers.webm 
+  + market_1.mp4 Integral India- Peace for Development.webm by Indian Diplomacy, CC BY 3.0 via Wikimedia Co
+== beach beach
+  + beach_0.mp4 Beach in Carrascal.webm by Wazzup Carl, CC BY-SA 4.0 via Wikimedia Commons
+  + beach_1.mp4 Jacqueville beach in may 2026 (0).webm by Poro26, CC BY-SA 4.0 via Wikimedia Commons
+== worker labourers
+  + worker_0.mp4 Manual workers from medginskogo.webm by Zeliotvankaizer, CC BY 4.0 via Wikimedia Commons
+  + worker_1.mp4 သစ်ခွပန်း ပျိုးဥယျာဥ်.webm by စာကလေး, CC0 via Wikimedia Commons
+== micro cells microscopy
+  + micro_0.mp4 Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor
+  + micro_1.mp4 Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor
+  + micro_2.mp4 Correlating-Intravital-Multi-Photon-Microscopy-to-3D-Electron-Microscopy-of-Invading-Tumor
+== surgery surgery
+  + surgery_0.mp4 Eye surgery with micro-robots - The Royal Society.webm by The Royal Society, CC BY 3.0 via
+  + surgery_1.mp4 Emerging-Applications-of-Bedside-3D-Printing-in-Plastic-Surgery-video 1.ogv by Chae M, Roz
+== hospital hospital
+  + hospital_0.mp4 Isolo General Hospital Entrance.webm by Ready Street, CC BY-SA 4.0 via Wikimedia Commons
+  + hospital_1.mp4 Clínica Especializada Internacional video.ogv by Truthman10200, CC BY-SA 4.0 via Wikimedia
+== clock clock
+  + clock_0.mp4 Coventry lady Godiva clock.webm by Secretlondon (talk), CC BY-SA 4.0 via Wikimedia Commons
+  + clock_1.mp4 Clock by Veo 2.webm by Veo 2; prompted by FallingGravity, Public domain via Wikimedia Comm
+== ecg electrocardiogram monitor
+  + ecg_0.mp4 OE25 - COSMAR ECG (962391).webm by U.S. Navy photo by Petty Officer 2nd Class Caleb Foote,
+  + ecg_1.mp4 Electrocardiography Basics.webm by Osmosis, CC BY-SA 4.0 via Wikimedia Commons
+== feet feet walking
+  + feet_0.mp4 Recycling-Energy-to-Restore-Impaired-Ankle-Function-during-Human-Walking-pone.0009307.s007
+  + feet_1.mp4 Strider v3 with new feet.webm by DIY Walkers, CC BY 3.0 via Wikimedia Commons
+== hand hands
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+  + hand_0.mp4 Public auto handwashing point (video).ogv by Wabyona Bingi, CC BY-SA 4.0 via Wikimedia Com
+  + hand_1.mp4 Fish on hand.webm by KEmel49, CC BY-SA 4.0 via Wikimedia Commons
+== eye eye close-up
+  + eye_0.mp4 Close Up View of Milton’s Ferocious Eye (CIRA 2024-10-08 - portrait).webm by GOES imagery:
+== sunimg Sun ultraviolet SDO
+  + sunimg_0.jpg The Sun by the Atmospheric Imaging Assembly of NASA's Solar Dynamics Observatory - 2010081
+  + sunimg_1.jpg Sun - August 1, 2010.jpg by NASA/SDO/AIA, Public domain via Wikimedia Commons
+  + sunimg_2.jpg August 2010 CME SDO Multi-Wavelength.jpg by NASA/SDO/AIA, Public domain via Wikimedia Comm
+== farmimg Indian farmer working field
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+== derm dermatoscopy
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+  + derm_0.jpg Nevus melanocítico intradérmico (RPS 09-12-2019) imagen dermatoscópica.jpg by Raimundo Pas
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+== mel melanoma skin
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+== doctor dermatologist
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+curl: (22) The requested URL returned error: 429
+  + doctor_0.jpg Severerash.jpg by Rashy100 at English Wikipedia, Public domain via Wikimedia Commons
+  + doctor_1.jpg Skin.png by US-Gov, Public domain via Wikimedia Commons
+52 assets; pixabay off
