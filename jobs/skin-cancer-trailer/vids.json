@@ -2,140 +2,179 @@
  "items": [
   {
    "key": "sun",
-   "q": "solar flare SDO",
-   "n": 3,
+   "q": "Sun SDO",
+   "n": 4,
+   "kind": "video",
+   "secs": 8
+  },
+  {
+   "key": "flare",
+   "q": "solar flare",
+   "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "sunrise",
-   "q": "sunrise timelapse sun",
+   "q": "sunrise",
+   "n": 3,
+   "kind": "video",
+   "secs": 8
+  },
+  {
+   "key": "sunset",
+   "q": "sunset timelapse",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "heat",
-   "q": "heat haze mirage road",
+   "q": "heat wave",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "crowd",
-   "q": "India street crowd",
-   "n": 3,
-   "kind": "video",
-   "secs": 8
-  },
-  {
-   "key": "farm",
-   "q": "India farmer field",
-   "n": 3,
-   "kind": "video",
-   "secs": 8
-  },
-  {
-   "key": "market",
-   "q": "India market",
+   "q": "Kolkata street",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
-   "key": "traffic",
-   "q": "traffic India",
+   "key": "crowd2",
+   "q": "Delhi",
+   "n": 2,
+   "kind": "video",
+   "secs": 8
+  },
+  {
+   "key": "crowd3",
+   "q": "Mumbai",
+   "n": 2,
+   "kind": "video",
+   "secs": 8
+  },
+  {
+   "key": "farm",
+   "q": "farmer",
+   "n": 3,
+   "kind": "video",
+   "secs": 8
+  },
+  {
+   "key": "farm2",
+   "q": "rice paddy field",
+   "n": 2,
+   "kind": "video",
+   "secs": 8
+  },
+  {
+   "key": "market",
+   "q": "market India",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "beach",
-   "q": "beach sunbathing",
+   "q": "beach",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "worker",
-   "q": "construction workers India",
+   "q": "labourers",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "micro",
-   "q": "cancer cells microscope",
-   "n": 2,
+   "q": "cells microscopy",
+   "n": 3,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "surgery",
-   "q": "surgery operating room",
+   "q": "surgery",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "hospital",
-   "q": "hospital corridor",
+   "q": "hospital",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "clock",
-   "q": "clock ticking",
+   "q": "clock",
    "n": 2,
    "kind": "video",
    "secs": 6
   },
   {
-   "key": "heart",
-   "q": "heartbeat monitor ECG",
+   "key": "ecg",
+   "q": "electrocardiogram monitor",
    "n": 2,
    "kind": "video",
    "secs": 6
   },
   {
-   "key": "skin",
-   "q": "skin close up",
+   "key": "feet",
+   "q": "feet walking",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
    "key": "hand",
-   "q": "hands close up",
+   "q": "hands",
    "n": 2,
    "kind": "video",
    "secs": 8
   },
   {
-   "key": "feet",
-   "q": "walking barefoot feet",
-   "n": 2,
+   "key": "eye",
+   "q": "eye close-up",
+   "n": 1,
    "kind": "video",
    "secs": 8
   },
   {
-   "key": "news",
-   "q": "television studio news",
-   "n": 2,
-   "kind": "video",
-   "secs": 8
-  },
-  {
-   "key": "mel",
-   "q": "melanoma",
+   "key": "sunimg",
+   "q": "Sun ultraviolet SDO",
    "n": 3,
    "kind": "image"
   },
   {
-   "key": "acral",
-   "q": "acral lentiginous melanoma",
+   "key": "farmimg",
+   "q": "Indian farmer working field sun",
+   "n": 4,
+   "kind": "image"
+  },
+  {
+   "key": "crowdimg",
+   "q": "crowd India street sun",
+   "n": 3,
+   "kind": "image"
+  },
+  {
+   "key": "labourimg",
+   "q": "construction worker India",
    "n": 2,
+   "kind": "image"
+  },
+  {
+   "key": "mel",
+   "q": "melanoma",
+   "n": 4,
    "kind": "image"
   },
   {
@@ -146,25 +185,31 @@
   },
   {
    "key": "derm",
-   "q": "dermatoscope",
-   "n": 2,
+   "q": "dermatoscopy",
+   "n": 3,
    "kind": "image"
   },
   {
    "key": "sunscreen",
    "q": "sunscreen",
+   "n": 3,
+   "kind": "image"
+  },
+  {
+   "key": "sole",
+   "q": "foot sole",
    "n": 2,
    "kind": "image"
   },
   {
-   "key": "uv",
-   "q": "UV index",
-   "n": 1,
+   "key": "doctor",
+   "q": "dermatologist examining skin",
+   "n": 2,
    "kind": "image"
   },
   {
-   "key": "bcc",
-   "q": "basal cell carcinoma",
+   "key": "umbrella",
+   "q": "umbrella sun India",
    "n": 2,
    "kind": "image"
   }

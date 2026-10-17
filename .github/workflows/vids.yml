@@ -18,7 +18,7 @@ jobs:
       - name: Fetch b-roll
         env:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-        run: python engine/fetch_vids.py "jobs/${{ inputs.job }}/vids.json" out
+        run: mkdir -p out && python engine/fetch_vids.py "jobs/${{ inputs.job }}/vids.json" out 2>&1 | tee out/log.txt
       - name: Commit to branch vids-${{ inputs.job }}
         run: |
           B="vids-${{ inputs.job }}"

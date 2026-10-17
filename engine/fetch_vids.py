@@ -73,7 +73,7 @@ def pixabay(q, n):
 for it in cfg["items"]:
     kind, n = it.get("kind", "video"), it.get("n", 2)
     print("==", it["key"], it["q"], flush=True)
-    cands = (pixabay(it["q"], n) if kind == "video" else []) + commons(it.get("cq", it["q"]), kind, n + 2)
+    cands = (pixabay(it["q"], n) if kind == "video" else []) + commons(it.get("cq", it["q"]), kind, n + 8)
     got = 0
     for c in cands:
         if got >= n: break
