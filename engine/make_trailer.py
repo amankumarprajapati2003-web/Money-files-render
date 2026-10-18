@@ -11,7 +11,7 @@ tmp = tempfile.mkdtemp(); parts = []; t_out = 0.0; cues = []
 def find(sub, occ):
     hits = [l for l in L if sub in l["text"]]
     return hits[occ - 1]
-vf_box = "drawbox=x=0:y=0:w=iw:h=130:color=black@1:t=fill,drawbox=x=0:y=ih-130:w=iw:h=130:color=black@1:t=fill"
+vf_box = "null" if spec.get("letterbox", True) is False else "drawbox=x=0:y=0:w=iw:h=130:color=black@1:t=fill,drawbox=x=0:y=ih-130:w=iw:h=130:color=black@1:t=fill"
 for k, (sub, occ, a, b) in enumerate(spec["segments"]):
     l = find(sub, occ); s0 = max(0, l["start"] - a); s1 = l["end"] + b; f = os.path.join(tmp, f"s{k:02d}.mp4")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{s0:.3f}", "-t", f"{s1 - s0:.3f}", "-i", main, "-vf", vf_box + ",fade=t=in:st=0:d=0.06:c=white",

@@ -4,3 +4,4 @@ jobs/*/frames/
 __pycache__/
 jobs/text-scam/part1.mp3
 jobs/before-money/*.mp3
+jobs/*/*.wav

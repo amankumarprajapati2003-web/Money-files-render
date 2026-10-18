@@ -1,0 +1,20 @@
+{"segments": [
+  ["Right now, there's a number on your phone", 1, 0.1, 0.2],
+  ["No coins.", 1, 0.05, 0.05],
+  ["No banks.", 1, 0.05, 0.05],
+  ["No bills.", 1, 0.05, 0.3],
+  ["It almost certainly never happened.", 1, 0.1, 0.4],
+  ["It was insurance.", 1, 0.05, 0.3],
+  ["Seventy-five thousand years old.", 1, 0.1, 0.3],
+  ["It's accounting.", 1, 0.05, 0.3],
+  ["They declared a clean slate.", 1, 0.1, 0.3],
+  ["The biggest is about twelve feet", 1, 0.1, 0.2],
+  ["One giant stone fell into the sea", 1, 0.1, 0.1],
+  ["Nobody ever saw it again.", 1, 0.05, 0.4],
+  ["The fire got out of control.", 1, 0.1, 0.1],
+  ["And it burned down most", 1, 0.05, 0.4],
+  ["Just like the stone at the bottom", 1, 0.1, 0.6]
+ ],
+ "kicker": "THE MONEY FILES",
+ "title": ["WHAT DID HUMANS USE", "BEFORE MONEY?"],
+ "end": "STARTING NOW", "letterbox": false}
