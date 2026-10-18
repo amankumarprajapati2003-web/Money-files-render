@@ -1,0 +1,1272 @@
+{
+"duration": 661.2,
+"lines": [
+{
+"i": 0,
+"p": 0,
+"text": "Right now, there's a number on your phone that decides what you can eat this week.",
+"start": 0.437,
+"end": 4.875
+},
+{
+"i": 1,
+"p": 0,
+"text": "Your bank balance.",
+"start": 6.152,
+"end": 7.218
+},
+{
+"i": 2,
+"p": 0,
+"text": "You check it.",
+"start": 8.427,
+"end": 9.245
+},
+{
+"i": 3,
+"p": 0,
+"text": "You worry about it.",
+"start": 10.444,
+"end": 11.514
+},
+{
+"i": 4,
+"p": 0,
+"text": "You work forty hours a week to make it go up.",
+"start": 12.749,
+"end": 15.259
+},
+{
+"i": 5,
+"p": 1,
+"text": "But for almost all of human history, that number didn't exist.",
+"start": 16.997,
+"end": 20.936
+},
+{
+"i": 6,
+"p": 1,
+"text": "No coins.",
+"start": 22.204,
+"end": 23.078
+},
+{
+"i": 7,
+"p": 1,
+"text": "No banks.",
+"start": 24.276,
+"end": 25.094
+},
+{
+"i": 8,
+"p": 1,
+"text": "No bills.",
+"start": 26.31,
+"end": 27.127
+},
+{
+"i": 9,
+"p": 1,
+"text": "For hundreds of thousands of years, humans lived with no money at all.",
+"start": 28.351,
+"end": 32.583
+},
+{
+"i": 10,
+"p": 2,
+"text": "So how did they get anything?",
+"start": 34.361,
+"end": 35.818
+},
+{
+"i": 11,
+"p": 3,
+"text": "You probably learned the answer in school.",
+"start": 37.607,
+"end": 39.629
+},
+{
+"i": 12,
+"p": 3,
+"text": "They bartered.",
+"start": 40.949,
+"end": 41.767
+},
+{
+"i": 13,
+"p": 3,
+"text": "I'll give you three fish for your spear.",
+"start": 42.981,
+"end": 44.875
+},
+{
+"i": 14,
+"p": 3,
+"text": "Then barter got annoying, so someone invented money.",
+"start": 46.193,
+"end": 49.465
+},
+{
+"i": 15,
+"p": 4,
+"text": "It's a great story.",
+"start": 51.308,
+"end": 52.399
+},
+{
+"i": 16,
+"p": 4,
+"text": "There's just one problem.",
+"start": 53.654,
+"end": 55.041
+},
+{
+"i": 17,
+"p": 4,
+"text": "It almost certainly never happened.",
+"start": 56.343,
+"end": 58.224
+},
+{
+"i": 18,
+"p": 5,
+"text": "Chapter one.",
+"start": 59.947,
+"end": 60.826
+},
+{
+"i": 19,
+"p": 5,
+"text": "The barter myth.",
+"start": 62.037,
+"end": 63.018
+},
+{
+"i": 20,
+"p": 6,
+"text": "Here's a test.",
+"start": 64.678,
+"end": 65.594
+},
+{
+"i": 21,
+"p": 6,
+"text": "Two hunters.",
+"start": 66.83,
+"end": 67.711
+},
+{
+"i": 22,
+"p": 6,
+"text": "One has meat.",
+"start": 68.944,
+"end": 69.891
+},
+{
+"i": 23,
+"p": 6,
+"text": "The other has a brand new spear.",
+"start": 71.115,
+"end": 72.864
+},
+{
+"i": 24,
+"p": 6,
+"text": "The first one wants the spear.",
+"start": 74.214,
+"end": 75.869
+},
+{
+"i": 25,
+"p": 6,
+"text": "But the second one isn't hungry.",
+"start": 77.184,
+"end": 78.972
+},
+{
+"i": 26,
+"p": 6,
+"text": "He wants a warm fur.",
+"start": 80.347,
+"end": 81.631
+},
+{
+"i": 27,
+"p": 6,
+"text": "So... what happens?",
+"start": 82.93,
+"end": 85.488
+},
+{
+"i": 28,
+"p": 7,
+"text": "In the barter story, nothing.",
+"start": 87.175,
+"end": 88.655
+},
+{
+"i": 29,
+"p": 7,
+"text": "No deal.",
+"start": 89.993,
+"end": 90.698
+},
+{
+"i": 30,
+"p": 7,
+"text": "Everyone goes home angry.",
+"start": 91.989,
+"end": 93.504
+},
+{
+"i": 31,
+"p": 7,
+"text": "Economists even have a name for this problem: the double coincidence of wants.",
+"start": 94.897,
+"end": 99.859
+},
+{
+"i": 32,
+"p": 8,
+"text": "The story comes from Adam Smith, in seventeen seventy-six.",
+"start": 101.553,
+"end": 105.5
+},
+{
+"i": 33,
+"p": 8,
+"text": "A baker has bread.",
+"start": 106.758,
+"end": 107.921
+},
+{
+"i": 34,
+"p": 8,
+"text": "A butcher has meat.",
+"start": 109.215,
+"end": 110.363
+},
+{
+"i": 35,
+"p": 8,
+"text": "But the butcher already has bread.",
+"start": 111.638,
+"end": 113.321
+},
+{
+"i": 36,
+"p": 8,
+"text": "So no exchange can be made.",
+"start": 114.624,
+"end": 116.328
+},
+{
+"i": 37,
+"p": 9,
+"text": "Anthropologists went looking for these barter economies.",
+"start": 118.099,
+"end": 121.308
+},
+{
+"i": 38,
+"p": 9,
+"text": "All over the world.",
+"start": 122.602,
+"end": 123.694
+},
+{
+"i": 39,
+"p": 9,
+"text": "For more than a century.",
+"start": 124.931,
+"end": 126.218
+},
+{
+"i": 40,
+"p": 10,
+"text": "In nineteen eighty-five, Cambridge anthropologist Caroline Humphrey summed up what they found.",
+"start": 127.997,
+"end": 133.923
+},
+{
+"i": 41,
+"p": 10,
+"text": "No example of a barter economy, pure and simple, has ever been described.",
+"start": 135.274,
+"end": 140.448
+},
+{
+"i": 42,
+"p": 11,
+"text": "Not one.",
+"start": 142.181,
+"end": 142.902
+},
+{
+"i": 43,
+"p": 11,
+"text": "So if they didn't barter... what did they actually do?",
+"start": 144.097,
+"end": 148.225
+},
+{
+"i": 44,
+"p": 12,
+"text": "Chapter two.",
+"start": 149.993,
+"end": 150.894
+},
+{
+"i": 45,
+"p": 12,
+"text": "The gift.",
+"start": 152.057,
+"end": 152.723
+},
+{
+"i": 46,
+"p": 13,
+"text": "Picture a camp in the Kalahari, thousands of years ago.",
+"start": 154.324,
+"end": 157.741
+},
+{
+"i": 47,
+"p": 13,
+"text": "A hunter comes home with a big antelope.",
+"start": 159.138,
+"end": 161.454
+},
+{
+"i": 48,
+"p": 14,
+"text": "He doesn't sell it.",
+"start": 163.183,
+"end": 164.113
+},
+{
+"i": 49,
+"p": 14,
+"text": "He doesn't trade it.",
+"start": 165.421,
+"end": 166.373
+},
+{
+"i": 50,
+"p": 14,
+"text": "He shares it.",
+"start": 167.66,
+"end": 168.403
+},
+{
+"i": 51,
+"p": 14,
+"text": "With everyone.",
+"start": 169.681,
+"end": 170.576
+},
+{
+"i": 52,
+"p": 15,
+"text": "Why would anyone give away the most valuable thing they own?",
+"start": 172.28,
+"end": 175.54
+},
+{
+"i": 53,
+"p": 15,
+"text": "Because next week, he might come home with nothing.",
+"start": 177.009,
+"end": 179.611
+},
+{
+"i": 54,
+"p": 15,
+"text": "And then someone else shares with him.",
+"start": 180.973,
+"end": 182.731
+},
+{
+"i": 55,
+"p": 16,
+"text": "Among the Zhu-twa-see people of southern Africa, anthropologist Polly Wiessner studied a gift system called kharo.",
+"start": 184.562,
+"end": 192.012
+},
+{
+"i": 56,
+"p": 16,
+"text": "People gave beads, arrows and tools to partners who lived far away.",
+"start": 193.422,
+"end": 197.701
+},
+{
+"i": 57,
+"p": 16,
+"text": "Sometimes they waited months, or years, for a gift in return.",
+"start": 199.065,
+"end": 202.893
+},
+{
+"i": 58,
+"p": 17,
+"text": "That wasn't generosity.",
+"start": 204.766,
+"end": 206.299
+},
+{
+"i": 59,
+"p": 17,
+"text": "It was insurance.",
+"start": 207.648,
+"end": 208.748
+},
+{
+"i": 60,
+"p": 17,
+"text": "If drought hit your land, you could walk to your kharo partner's camp... and they had to take you in.",
+"start": 210.014,
+"end": 216.683
+},
+{
+"i": 61,
+"p": 18,
+"text": "So the first \"money\" wasn't a thing.",
+"start": 218.48,
+"end": 220.383
+},
+{
+"i": 62,
+"p": 18,
+"text": "It was a relationship.",
+"start": 221.781,
+"end": 223.114
+},
+{
+"i": 63,
+"p": 18,
+"text": "A promise.",
+"start": 224.36,
+"end": 225.148
+},
+{
+"i": 64,
+"p": 18,
+"text": "I'll remember what you did for me.",
+"start": 226.397,
+"end": 228.205
+},
+{
+"i": 65,
+"p": 19,
+"text": "Chapter three.",
+"start": 229.986,
+"end": 230.91
+},
+{
+"i": 66,
+"p": 19,
+"text": "The beads.",
+"start": 232.105,
+"end": 232.881
+},
+{
+"i": 67,
+"p": 20,
+"text": "In a cave on the coast of South Africa, called Blombos Cave, archaeologists found something strange.",
+"start": 234.534,
+"end": 240.929
+},
+{
+"i": 68,
+"p": 20,
+"text": "Tiny sea shells, each with a hole in it.",
+"start": 242.214,
+"end": 244.452
+},
+{
+"i": 69,
+"p": 20,
+"text": "Strung together.",
+"start": 245.781,
+"end": 246.703
+},
+{
+"i": 70,
+"p": 20,
+"text": "Seventy-five thousand years old.",
+"start": 247.942,
+"end": 249.96
+},
+{
+"i": 71,
+"p": 21,
+"text": "They're some of the oldest jewelry ever found.",
+"start": 251.694,
+"end": 254.139
+},
+{
+"i": 72,
+"p": 21,
+"text": "And jewelry is interesting.",
+"start": 255.441,
+"end": 256.979
+},
+{
+"i": 73,
+"p": 21,
+"text": "You can't eat it.",
+"start": 258.33,
+"end": 259.273
+},
+{
+"i": 74,
+"p": 21,
+"text": "You can't hunt with it.",
+"start": 260.491,
+"end": 261.532
+},
+{
+"i": 75,
+"p": 21,
+"text": "But everyone wants it.",
+"start": 262.822,
+"end": 263.991
+},
+{
+"i": 76,
+"p": 22,
+"text": "Beads like these could show who you were, who you belonged to... and who owed you.",
+"start": 265.763,
+"end": 271.36
+},
+{
+"i": 77,
+"p": 22,
+"text": "Some researchers think valuables like this were humanity's first store of wealth.",
+"start": 272.622,
+"end": 277.414
+},
+{
+"i": 78,
+"p": 23,
+"text": "Chapter four.",
+"start": 279.172,
+"end": 280.078
+},
+{
+"i": 79,
+"p": 23,
+"text": "The clay.",
+"start": 281.271,
+"end": 281.936
+},
+{
+"i": 80,
+"p": 24,
+"text": "Now jump forward to Mesopotamia, in what is now Iraq.",
+"start": 283.608,
+"end": 287.335
+},
+{
+"i": 81,
+"p": 24,
+"text": "About five thousand years ago.",
+"start": 288.643,
+"end": 290.424
+},
+{
+"i": 82,
+"p": 25,
+"text": "People have started farming.",
+"start": 292.207,
+"end": 293.675
+},
+{
+"i": 83,
+"p": 25,
+"text": "There are cities, temples, and huge storehouses full of barley.",
+"start": 294.999,
+"end": 298.684
+},
+{
+"i": 84,
+"p": 25,
+"text": "And now there's a new problem.",
+"start": 300.069,
+"end": 301.711
+},
+{
+"i": 85,
+"p": 25,
+"text": "Who gave what?",
+"start": 303.073,
+"end": 303.989
+},
+{
+"i": 86,
+"p": 25,
+"text": "Who owes what?",
+"start": 305.217,
+"end": 306.212
+},
+{
+"i": 87,
+"p": 26,
+"text": "So people pressed little marks into wet clay.",
+"start": 307.906,
+"end": 310.474
+},
+{
+"i": 88,
+"p": 26,
+"text": "Sheep.",
+"start": 311.809,
+"end": 312.334
+},
+{
+"i": 89,
+"p": 26,
+"text": "Barley.",
+"start": 313.401,
+"end": 313.946
+},
+{
+"i": 90,
+"p": 26,
+"text": "Oil.",
+"start": 315.133,
+"end": 315.609
+},
+{
+"i": 91,
+"p": 26,
+"text": "Debts.",
+"start": 316.765,
+"end": 317.3
+},
+{
+"i": 92,
+"p": 27,
+"text": "Here's the amazing part.",
+"start": 318.868,
+"end": 320.304
+},
+{
+"i": 93,
+"p": 27,
+"text": "Some of the oldest writing in the world isn't poetry or prayers.",
+"start": 321.571,
+"end": 325.611
+},
+{
+"i": 94,
+"p": 27,
+"text": "It's accounting.",
+"start": 326.871,
+"end": 327.807
+},
+{
+"i": 95,
+"p": 27,
+"text": "Receipts.",
+"start": 329.01,
+"end": 329.732
+},
+{
+"i": 96,
+"p": 27,
+"text": "I-O-Us.",
+"start": 330.918,
+"end": 331.686
+},
+{
+"i": 97,
+"p": 28,
+"text": "Money had a unit now.",
+"start": 333.343,
+"end": 334.716
+},
+{
+"i": 98,
+"p": 28,
+"text": "A shekel of silver, about eight grams.",
+"start": 336.003,
+"end": 338.353
+},
+{
+"i": 99,
+"p": 28,
+"text": "But most people never even touched the silver.",
+"start": 339.62,
+"end": 342.342
+},
+{
+"i": 100,
+"p": 28,
+"text": "They ran a tab.",
+"start": 343.687,
+"end": 344.682
+},
+{
+"i": 101,
+"p": 28,
+"text": "The tab was the money.",
+"start": 345.956,
+"end": 347.262
+},
+{
+"i": 102,
+"p": 29,
+"text": "And just like today, there was interest.",
+"start": 349.035,
+"end": 351.191
+},
+{
+"i": 103,
+"p": 29,
+"text": "Around seventeen fifty B C, King Hammurabi's laws capped interest on loans.",
+"start": 352.474,
+"end": 357.746
+},
+{
+"i": 104,
+"p": 29,
+"text": "Twenty percent on silver.",
+"start": 359.044,
+"end": 360.585
+},
+{
+"i": 105,
+"p": 29,
+"text": "Thirty-three percent on barley.",
+"start": 361.917,
+"end": 363.62
+},
+{
+"i": 106,
+"p": 30,
+"text": "And when too many farmers fell into debt, some kings did something you'll never see today.",
+"start": 365.462,
+"end": 370.564
+},
+{
+"i": 107,
+"p": 30,
+"text": "They declared a clean slate.",
+"start": 371.927,
+"end": 373.306
+},
+{
+"i": 108,
+"p": 30,
+"text": "Certain debts... simply erased.",
+"start": 374.68,
+"end": 377.805
+},
+{
+"i": 109,
+"p": 31,
+"text": "Chapter five.",
+"start": 379.458,
+"end": 380.413
+},
+{
+"i": 110,
+"p": 31,
+"text": "Cows, shells and salt.",
+"start": 381.652,
+"end": 383.049
+},
+{
+"i": 111,
+"p": 32,
+"text": "Around the world, people found their own things to count value with.",
+"start": 384.797,
+"end": 388.692
+},
+{
+"i": 112,
+"p": 33,
+"text": "Cattle were so important that the Latin word for money, pecunia, comes from pecus... the word for cattle.",
+"start": 390.417,
+"end": 398.486
+},
+{
+"i": 113,
+"p": 34,
+"text": "In ancient China and across Africa and Asia, people used cowrie shells.",
+"start": 400.236,
+"end": 404.892
+},
+{
+"i": 114,
+"p": 34,
+"text": "Small, shiny, hard to fake.",
+"start": 406.143,
+"end": 407.8
+},
+{
+"i": 115,
+"p": 34,
+"text": "The Chinese character for money and wealth still contains the sign for a shell.",
+"start": 409.097,
+"end": 413.525
+},
+{
+"i": 116,
+"p": 35,
+"text": "And salt?",
+"start": 415.348,
+"end": 416.073
+},
+{
+"i": 117,
+"p": 35,
+"text": "You've probably heard that Roman soldiers were paid in salt... and that's where the word salary comes from.",
+"start": 417.277,
+"end": 424.021
+},
+{
+"i": 118,
+"p": 35,
+"text": "Historians say there's actually very little evidence for that.",
+"start": 425.411,
+"end": 428.821
+},
+{
+"i": 119,
+"p": 35,
+"text": "Another myth.",
+"start": 430.238,
+"end": 431.103
+},
+{
+"i": 120,
+"p": 36,
+"text": "Chapter six.",
+"start": 432.747,
+"end": 433.703
+},
+{
+"i": 121,
+"p": 36,
+"text": "The stones of Yap.",
+"start": 434.887,
+"end": 436.154
+},
+{
+"i": 122,
+"p": 37,
+"text": "Now for the strangest money in the world.",
+"start": 437.863,
+"end": 440.017
+},
+{
+"i": 123,
+"p": 38,
+"text": "On the tiny Pacific island of Yap, people used giant stone discs as money.",
+"start": 441.78,
+"end": 446.675
+},
+{
+"i": 124,
+"p": 38,
+"text": "They're called rai.",
+"start": 448.071,
+"end": 449.024
+},
+{
+"i": 125,
+"p": 38,
+"text": "Pronounced rye.",
+"start": 450.307,
+"end": 451.229
+},
+{
+"i": 126,
+"p": 38,
+"text": "The biggest is about twelve feet wide and weighs around four tons.",
+"start": 452.502,
+"end": 456.723
+},
+{
+"i": 127,
+"p": 39,
+"text": "They were carved on another island, Palau, hundreds of miles away, and brought back by canoe.",
+"start": 458.505,
+"end": 464.166
+},
+{
+"i": 128,
+"p": 40,
+"text": "You can't put a four-ton stone in your pocket.",
+"start": 466.049,
+"end": 468.246
+},
+{
+"i": 129,
+"p": 40,
+"text": "So the stones almost never moved.",
+"start": 469.591,
+"end": 471.595
+},
+{
+"i": 130,
+"p": 40,
+"text": "When one was used as payment, everyone simply remembered that it now had a new owner.",
+"start": 472.901,
+"end": 478.037
+},
+{
+"i": 131,
+"p": 41,
+"text": "And here's the best part.",
+"start": 479.878,
+"end": 481.191
+},
+{
+"i": 132,
+"p": 41,
+"text": "One giant stone fell into the sea during the trip home.",
+"start": 482.514,
+"end": 485.392
+},
+{
+"i": 133,
+"p": 41,
+"text": "It sank to the bottom.",
+"start": 486.816,
+"end": 488.039
+},
+{
+"i": 134,
+"p": 41,
+"text": "Nobody ever saw it again.",
+"start": 489.32,
+"end": 491.008
+},
+{
+"i": 135,
+"p": 42,
+"text": "But everyone agreed it was still there.",
+"start": 492.844,
+"end": 494.709
+},
+{
+"i": 136,
+"p": 42,
+"text": "So it kept being used as money.",
+"start": 496.035,
+"end": 497.716
+},
+{
+"i": 137,
+"p": 42,
+"text": "For generations.",
+"start": 499.076,
+"end": 500.153
+},
+{
+"i": 138,
+"p": 42,
+"text": "A fortune that nobody could see... that everyone believed in.",
+"start": 501.418,
+"end": 506.044
+},
+{
+"i": 139,
+"p": 43,
+"text": "Chapter seven.",
+"start": 507.798,
+"end": 508.759
+},
+{
+"i": 140,
+"p": 43,
+"text": "The first coins.",
+"start": 509.951,
+"end": 511.023
+},
+{
+"i": 141,
+"p": 44,
+"text": "Coins finally arrive about two thousand six hundred years ago, in the kingdom of Lydia, in modern-day Turkey.",
+"start": 512.732,
+"end": 519.841
+},
+{
+"i": 142,
+"p": 44,
+"text": "Little lumps of electrum, a natural mix of gold and silver, stamped with a lion.",
+"start": 521.264,
+"end": 526.735
+},
+{
+"i": 143,
+"p": 45,
+"text": "Why then?",
+"start": 528.607,
+"end": 529.296
+},
+{
+"i": 144,
+"p": 45,
+"text": "Armies.",
+"start": 530.573,
+"end": 531.214
+},
+{
+"i": 145,
+"p": 45,
+"text": "Kings needed to pay soldiers, and soldiers needed something they could carry and spend anywhere.",
+"start": 532.424,
+"end": 538.011
+},
+{
+"i": 146,
+"p": 46,
+"text": "Coins spread fast.",
+"start": 539.857,
+"end": 541.057
+},
+{
+"i": 147,
+"p": 46,
+"text": "But the old idea of money as a record never went away.",
+"start": 542.285,
+"end": 545.968
+},
+{
+"i": 148,
+"p": 47,
+"text": "In England, for more than six hundred years, the government kept track of taxes and debts with wooden tally sticks.",
+"start": 547.842,
+"end": 555.138
+},
+{
+"i": 149,
+"p": 47,
+"text": "Notches cut into willow.",
+"start": 556.387,
+"end": 557.831
+},
+{
+"i": 150,
+"p": 47,
+"text": "The stick was split in half.",
+"start": 559.075,
+"end": 560.433
+},
+{
+"i": 151,
+"p": 47,
+"text": "You kept one half.",
+"start": 561.685,
+"end": 562.822
+},
+{
+"i": 152,
+"p": 47,
+"text": "The government kept the other.",
+"start": 564.023,
+"end": 565.533
+},
+{
+"i": 153,
+"p": 48,
+"text": "In eighteen thirty-four, officials decided to get rid of the old sticks.",
+"start": 567.293,
+"end": 571.813
+},
+{
+"i": 154,
+"p": 48,
+"text": "So they burned them in a furnace under the House of Lords.",
+"start": 573.074,
+"end": 576.328
+},
+{
+"i": 155,
+"p": 49,
+"text": "The fire got out of control.",
+"start": 578.04,
+"end": 579.591
+},
+{
+"i": 156,
+"p": 49,
+"text": "And it burned down most of the Houses of Parliament.",
+"start": 580.933,
+"end": 583.618
+},
+{
+"i": 157,
+"p": 50,
+"text": "Chapter eight.",
+"start": 585.462,
+"end": 586.325
+},
+{
+"i": 158,
+"p": 50,
+"text": "Your stone at the bottom of the sea.",
+"start": 587.543,
+"end": 589.23
+},
+{
+"i": 159,
+"p": 51,
+"text": "So what did ancient humans use before money?",
+"start": 591.037,
+"end": 593.562
+},
+{
+"i": 160,
+"p": 51,
+"text": "Friendship.",
+"start": 594.927,
+"end": 595.653
+},
+{
+"i": 161,
+"p": 51,
+"text": "Gifts.",
+"start": 596.787,
+"end": 597.393
+},
+{
+"i": 162,
+"p": 51,
+"text": "Shells.",
+"start": 598.488,
+"end": 599.121
+},
+{
+"i": 163,
+"p": 51,
+"text": "Clay.",
+"start": 600.318,
+"end": 600.831
+},
+{
+"i": 164,
+"p": 51,
+"text": "Cows.",
+"start": 602.007,
+"end": 602.516
+},
+{
+"i": 165,
+"p": 51,
+"text": "Giant stones.",
+"start": 603.659,
+"end": 604.651
+},
+{
+"i": 166,
+"p": 51,
+"text": "And promises.",
+"start": 605.9,
+"end": 606.865
+},
+{
+"i": 167,
+"p": 52,
+"text": "Now look at your phone again.",
+"start": 608.563,
+"end": 609.986
+},
+{
+"i": 168,
+"p": 52,
+"text": "Look at that balance.",
+"start": 611.315,
+"end": 612.513
+},
+{
+"i": 169,
+"p": 53,
+"text": "There's no gold behind it.",
+"start": 614.209,
+"end": 615.712
+},
+{
+"i": 170,
+"p": 53,
+"text": "Most of it isn't even paper.",
+"start": 617.078,
+"end": 618.823
+},
+{
+"i": 171,
+"p": 53,
+"text": "It's a number in someone's computer.",
+"start": 620.128,
+"end": 622.17
+},
+{
+"i": 172,
+"p": 53,
+"text": "A record.",
+"start": 623.511,
+"end": 624.211
+},
+{
+"i": 173,
+"p": 53,
+"text": "A promise that everyone agrees to believe in.",
+"start": 625.423,
+"end": 628.001
+},
+{
+"i": 174,
+"p": 54,
+"text": "Just like the stone at the bottom of the sea.",
+"start": 629.889,
+"end": 632.084
+},
+{
+"i": 175,
+"p": 55,
+"text": "The people of Yap would understand your bank account perfectly.",
+"start": 633.911,
+"end": 637.111
+},
+{
+"i": 176,
+"p": 55,
+"text": "Your ancestors in the Kalahari would find it strange.",
+"start": 638.495,
+"end": 641.951
+},
+{
+"i": 177,
+"p": 55,
+"text": "They kept their wealth in people, not numbers.",
+"start": 643.234,
+"end": 645.973
+},
+{
+"i": 178,
+"p": 56,
+"text": "Maybe that's the oldest money of all.",
+"start": 647.682,
+"end": 649.666
+},
+{
+"i": 179,
+"p": 57,
+"text": "If you enjoyed this file, subscribe to The Money Files.",
+"start": 651.44,
+"end": 654.946
+},
+{
+"i": 180,
+"p": 57,
+"text": "Next time: what did a medieval peasant actually earn?",
+"start": 656.236,
+"end": 661.2
+}
+]
+}
