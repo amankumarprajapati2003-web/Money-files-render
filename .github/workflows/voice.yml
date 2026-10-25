@@ -32,10 +32,14 @@ jobs:
       - name: Install Kokoro (free, Apache-2.0)
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg > /dev/null
-          pip install -q "kokoro>=0.9.4" soundfile
+          pip install -q "kokoro==0.9.4" "misaki[en]==0.9.4" soundfile 2>&1 | tail -5
+          pip freeze | grep -i -E "kokoro|misaki|torch|transformers|huggingface" > pipfreeze.txt || true
       - name: Speak
+        shell: bash
         run: |
-          J="jobs/${{ inputs.job }}"; mkdir -p out
+          set -o pipefail
+          J="jobs/${{ inputs.job }}"; mkdir -p out; cp pipfreeze.txt out/ 2>/dev/null || true
+          exec > >(tee out/speak-log.txt) 2>&1
           if [ "${{ inputs.mode }}" = "samples" ]; then
             python engine/tts_kokoro.py --samples "$J/${{ inputs.text }}" "${{ inputs.voices }}" out
             for f in out/*.wav; do ffmpeg -v error -y -i "$f" -b:a 128k "${f%.wav}.mp3"; done
@@ -45,9 +49,10 @@ jobs:
           fi
           ls -la out
       - name: Publish
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           T="${{ inputs.job }}-voice"
           gh release view "$T" --repo "${{ github.repository }}" >/dev/null 2>&1 || gh release create "$T" --repo "${{ github.repository }}" --title "$T" --notes "Kokoro TTS"
-          gh release upload "$T" out/*.mp3 --clobber --repo "${{ github.repository }}"
+          shopt -s nullglob; F=(out/*.mp3 out/*.txt); [ ${#F[@]} -gt 0 ] && gh release upload "$T" "${F[@]}" --clobber --repo "${{ github.repository }}"
