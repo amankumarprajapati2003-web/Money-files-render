@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Bebas;src:url(../../engine/fonts/BebasNeue-Regular.ttf)}
+@font-face{font-family:Inter;src:url(../../engine/fonts/Inter.ttf)}
+@font-face{font-family:Play;src:url(../../engine/fonts/Playfair.ttf)}
+@font-face{font-family:PlayI;src:url(../../engine/fonts/PlayfairItalic.ttf)}
+@font-face{font-family:Marker;src:url(../../engine/fonts/PermanentMarker-Regular.ttf)}
+@font-face{font-family:Caveat;src:url(../../engine/fonts/Caveat.ttf)}
+@font-face{font-family:Type;src:url(../../engine/fonts/SpecialElite-Regular.ttf)}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#000}
+svg{display:block}
+</style></head><body><div id="root"></div>
+<script>
+const V=new URLSearchParams(location.search).get('v')||'a';
+const R=document.getElementById('root');
+function rnd(s){let x=Math.sin(s*999.1)*43758.5453;return x-Math.floor(x)}
+let svg='';
+if(V==='a'){ // CINEMATIC SPACE / MAP DOCUMENTARY
+  let stars='';for(let i=0;i<260;i++)stars+=`<circle cx="${rnd(i)*1920}" cy="${rnd(i+.5)*1080}" r="${rnd(i+.3)*1.6+.3}" fill="#fff" opacity="${rnd(i+.7)*.8+.1}"/>`;
+  let sats='';for(let k=0;k<5;k++){const ry=120+k*38;sats+=`<ellipse cx="1080" cy="1500" rx="${1150+k*60}" ry="${900+k*40}" fill="none" stroke="rgba(120,200,255,${.12+k*.03})" stroke-width="2" stroke-dasharray="4 10"/>`;for(let j=0;j<16;j++){const a=Math.PI*(1.08+j*.055+k*.013),x=1080+Math.cos(a)*(1150+k*60),y=1500+Math.sin(a)*(900+k*40);if(y<1080)sats+=`<circle cx="${x}" cy="${y}" r="4" fill="#bfe6ff"/><circle cx="${x}" cy="${y}" r="12" fill="rgba(140,210,255,.18)"/>`}}
+  svg=`<svg width="1920" height="1080"><defs>
+  <radialGradient id="earth" cx="50%" cy="20%" r="70%"><stop offset="0" stop-color="#1d5fa8"/><stop offset=".55" stop-color="#0b2347"/><stop offset="1" stop-color="#030a18"/></radialGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset=".9" stop-color="rgba(90,170,255,0)"/><stop offset=".96" stop-color="rgba(90,170,255,.55)"/><stop offset="1" stop-color="rgba(90,170,255,0)"/></radialGradient>
+  <radialGradient id="india" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="rgba(255,190,80,.9)"/><stop offset="1" stop-color="rgba(255,150,40,0)"/></radialGradient>
+  <radialGradient id="vig" cx="50%" cy="50%" r="75%"><stop offset=".55" stop-color="rgba(0,0,0,0)"/><stop offset="1" stop-color="rgba(0,0,0,.85)"/></radialGradient>
+  <filter id="grain"><feTurbulence baseFrequency=".9" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .09 0"/></filter></defs>
+  <rect width="1920" height="1080" fill="#02040b"/>${stars}
+  <circle cx="1080" cy="1640" r="1060" fill="url(#earth)"/><circle cx="1080" cy="1640" r="1110" fill="url(#glow)"/>
+  <path d="M1010 700 L1060 690 L1110 720 L1150 700 L1170 740 L1140 800 L1100 860 L1080 930 L1060 880 L1030 820 L1000 770 Z" fill="#d79a3a" opacity=".85"/>
+  <ellipse cx="1080" cy="800" rx="230" ry="150" fill="url(#india)" opacity=".7"/>
+  ${[[1040,760],[1100,740],[1070,830],[1130,790],[1050,880]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="7" fill="#ffd27a"/><line x1="${x}" y1="${y}" x2="${x+(x-1080)*2.2}" y2="${y-260}" stroke="rgba(255,210,120,.5)" stroke-width="2"/>`).join('')}
+  ${sats}
+  <rect width="1920" height="1080" fill="url(#vig)"/>
+  <text x="130" y="230" font-family="Inter" font-size="30" letter-spacing="10" fill="#8fc7ff">CHAPTER 3 · THE SKY ABOVE INDIA</text>
+  <text x="122" y="400" font-family="Play" font-size="170" fill="#fff">1,600</text>
+  <text x="130" y="480" font-family="PlayI" font-size="72" fill="#ffd27a">satellites. One answer to Musk.</text>
+  <line x1="130" y1="540" x2="560" y2="540" stroke="#ffd27a" stroke-width="3"/>
+  <text x="130" y="600" font-family="Inter" font-size="30" fill="#c9d6ea">Jio + SES · 23 ground stations · 600,000 villages</text>
+  <rect width="1920" height="1080" filter="url(#grain)"/>
+  <rect y="0" width="1920" height="70" fill="#000"/><rect y="1010" width="1920" height="70" fill="#000"/></svg>`;
+}
+if(V==='b'){ // BUSINESS CASUAL-STYLE 2D CHARACTERS
+  const man=(x,y,s,suit,tie,hair,skin,flip,label,face)=>`<g transform="translate(${x},${y}) scale(${flip?-s:s},${s})">
+   <path d="M-120 380 Q-130 120 0 100 Q130 120 120 380 Z" fill="${suit}"/>
+   <path d="M-30 110 L0 190 L30 110 Z" fill="#fff"/><path d="M-10 125 L0 230 L10 125 Z" fill="${tie}"/>
+   <path d="M-120 200 Q-170 260 -150 330" stroke="${suit}" stroke-width="44" fill="none" stroke-linecap="round"/>
+   <path d="M120 200 Q190 170 210 90" stroke="${suit}" stroke-width="44" fill="none" stroke-linecap="round"/><circle cx="212" cy="80" r="26" fill="${skin}"/>
+   <rect x="-26" y="70" width="52" height="50" fill="${skin}"/>
+   <ellipse cx="0" cy="0" rx="92" ry="104" fill="${skin}"/>
+   <path d="${hair}" fill="#2a1f1a"/>
+   ${face==='smug'?`<path d="M-48 -6 q16 -10 32 0" stroke="#222" stroke-width="7" fill="none"/><path d="M16 -6 q16 -10 32 0" stroke="#222" stroke-width="7" fill="none"/><path d="M-30 50 q35 22 60 -6" stroke="#222" stroke-width="7" fill="none"/>`:`<circle cx="-34" cy="-6" r="9" fill="#222"/><circle cx="34" cy="-6" r="9" fill="#222"/><path d="M-50 -34 l30 10 M50 -34 l-30 10" stroke="#222" stroke-width="7"/><path d="M-26 56 q26 -18 52 0" stroke="#222" stroke-width="7" fill="none"/>`}
+   <ellipse cx="0" cy="22" rx="10" ry="14" fill="rgba(0,0,0,.12)"/></g>
+   <g transform="translate(${x},${y+470})"><rect x="-120" y="-34" width="240" height="68" rx="12" fill="#111"/><text x="0" y="16" text-anchor="middle" font-family="Bebas" font-size="52" fill="#fff">${label}</text></g>`;
+  svg=`<svg width="1920" height="1080"><defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf8a"/><stop offset="1" stop-color="#ff9a6a"/></linearGradient></defs>
+  <rect width="1920" height="1080" fill="url(#sk)"/><circle cx="960" cy="420" r="300" fill="#ffe2a6" opacity=".6"/>
+  <rect x="0" y="760" width="1920" height="320" fill="#6b4d8f"/><rect x="0" y="760" width="1920" height="24" fill="#58407a"/>
+  <g opacity=".35">${[0,1,2,3,4,5,6].map(i=>`<rect x="${60+i*270}" y="${480-(i%3)*120}" width="170" height="${300+(i%3)*120}" fill="#8a5a9a"/>`).join('')}</g>
+  <path d="M960 120 L960 900" stroke="#fff" stroke-width="10" stroke-dasharray="30 22" opacity=".8"/>
+  ${man(520,470,1.05,'#1f2a44','#c0392b','M-95 -20 Q-100 -120 0 -112 Q100 -120 95 -20 Q60 -80 0 -78 Q-60 -80 -95 -20Z','#f1c7a3',false,'THE ROCKET MAN','angry')}
+  ${man(1400,470,1.05,'#f4f1ea','#1d7a4a','M-95 -30 Q-80 -118 0 -110 Q80 -118 95 -30 Q40 -70 -10 -60 Q-60 -70 -95 -30Z','#c98e63',true,'THE TELECOM KING','smug')}
+  <g transform="translate(960,190)"><rect x="-430" y="-80" width="860" height="160" rx="40" fill="#fff" stroke="#111" stroke-width="8"/><path d="M-260 70 L-330 160 L-200 76Z" fill="#fff" stroke="#111" stroke-width="8"/><rect x="-262" y="60" width="70" height="20" fill="#fff"/>
+  <text x="0" y="22" text-anchor="middle" font-family="Bebas" font-size="84" fill="#111">"WILL YOU LET ME COMPETE?"</text></g>
+  <text x="960" y="1000" text-anchor="middle" font-family="Bebas" font-size="70" fill="#ffd400" stroke="#111" stroke-width="3">1.4 BILLION PEOPLE · ONE SKY</text></svg>`;
+}
+if(V==='c'){ // KINETIC DATA / VS SPLIT SCREEN
+  svg=`<svg width="1920" height="1080"><defs><linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#0a1f44"/><stop offset="1" stop-color="#123a7a"/></linearGradient><linearGradient id="r" x1="0" x2="1"><stop offset="0" stop-color="#7a1020"/><stop offset="1" stop-color="#3d0710"/></linearGradient>
+  <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="2"/></pattern></defs>
+  <polygon points="0,0 1010,0 910,1080 0,1080" fill="url(#l)"/><polygon points="1010,0 1920,0 1920,1080 910,1080" fill="url(#r)"/><rect width="1920" height="1080" fill="url(#grid)"/>
+  <polygon points="1010,0 1030,0 930,1080 910,1080" fill="#fff"/>
+  <text x="120" y="190" font-family="Bebas" font-size="150" fill="#fff">STARLINK</text><text x="124" y="250" font-family="Inter" font-size="34" fill="#8fc7ff" letter-spacing="4">ELON MUSK · SPACEX</text>
+  <text x="1170" y="190" font-family="Bebas" font-size="150" fill="#fff">JIO</text><text x="1174" y="250" font-family="Inter" font-size="34" fill="#ffb0b8" letter-spacing="4">MUKESH AMBANI · RELIANCE</text>
+  ${[['SATELLITES IN ORBIT','~9,000',1],['PAYING USERS IN INDIA','0',.02],['DATA PRICE / GB','???',.4]].map(([k,v,w],i)=>`<text x="120" y="${400+i*170}" font-family="Inter" font-size="30" fill="#9fb6d9">${k}</text><text x="120" y="${470+i*170}" font-family="Bebas" font-size="86" fill="#fff">${v}</text><rect x="420" y="${425+i*170}" width="${440*w}" height="40" fill="#3fa9ff"/>`).join('')}
+  ${[['PLANNED SATELLITES','1,600',.18],['SUBSCRIBERS','500M+',1],['DATA PRICE / GB','$0.08',.08]].map(([k,v,w],i)=>`<text x="1170" y="${400+i*170}" font-family="Inter" font-size="30" fill="#e5a8b0">${k}</text><text x="1170" y="${470+i*170}" font-family="Bebas" font-size="86" fill="#fff">${v}</text><rect x="1470" y="${425+i*170}" width="${380*w}" height="40" fill="#ff4d5e"/>`).join('')}
+  <circle cx="960" cy="540" r="130" fill="#ffd400" stroke="#111" stroke-width="10"/><text x="960" y="585" text-anchor="middle" font-family="Bebas" font-size="150" fill="#111">VS</text>
+  <g transform="translate(960,960) rotate(-2)"><rect x="-560" y="-60" width="1120" height="120" fill="#fff"/><text x="0" y="22" text-anchor="middle" font-family="Bebas" font-size="78" fill="#111">THE $108 BILLION SHOWDOWN</text></g></svg>`;
+}
+if(V==='d'){ // MIXED-MEDIA COLLAGE (Johnny Harris-style)
+  const photo=(x,y,w,h,rot,label,col)=>`<g transform="translate(${x},${y}) rotate(${rot})"><rect x="${-w/2-14}" y="${-h/2-14}" width="${w+28}" height="${h+70}" fill="#fbfaf5" filter="url(#sh)"/><rect x="${-w/2}" y="${-h/2}" width="${w}" height="${h}" fill="${col}"/>
+   <ellipse cx="0" cy="${-h*.12}" rx="${w*.2}" ry="${h*.17}" fill="rgba(0,0,0,.35)"/><path d="M${-w*.38} ${h/2} Q0 ${h*.02} ${w*.38} ${h/2}Z" fill="rgba(0,0,0,.35)"/>
+   <text x="0" y="${h/2+44}" text-anchor="middle" font-family="Caveat" font-size="44" fill="#222">${label}</text>
+   <rect x="-60" y="${-h/2-40}" width="120" height="44" fill="rgba(255,240,180,.75)" transform="rotate(${-rot*1.5})"/></g>`;
+  svg=`<svg width="1920" height="1080"><defs><filter id="paper"><feTurbulence baseFrequency=".6" numOctaves="3" seed="8"/><feColorMatrix values="0 0 0 0 .55  0 0 0 0 .5  0 0 0 0 .42  0 0 0 .18 0"/></filter>
+  <filter id="sh"><feDropShadow dx="6" dy="10" stdDeviation="8" flood-opacity=".35"/></filter></defs>
+  <rect width="1920" height="1080" fill="#e8dfcc"/><rect width="1920" height="1080" filter="url(#paper)"/>
+  <g transform="translate(980,560) rotate(-3)" filter="url(#sh)"><path d="M-260 -360 L-60 -390 L120 -330 L240 -380 L300 -240 L200 -40 L80 200 L0 390 L-80 220 L-200 20 L-300 -180 Z" fill="#cfe0c3" stroke="#5c6b52" stroke-width="4"/>
+   <text x="-40" y="-60" font-family="Type" font-size="54" fill="#3c4a33">INDIA</text>
+   ${[[-120,-180],[60,-200],[-40,40],[150,-80],[-160,-20]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="13" fill="#e0262f"/>`).join('')}
+   <ellipse cx="0" cy="-60" rx="360" ry="420" fill="none" stroke="#e0262f" stroke-width="7" stroke-dasharray="1400" transform="rotate(8)"/></g>
+  ${photo(330,420,360,420,-5,'Elon Musk','#7d8fa3')}${photo(1600,430,360,420,4,'Mukesh Ambani','#a88f6e')}
+  <g transform="translate(980,150) rotate(1.5)" filter="url(#sh)"><rect x="-520" y="-80" width="1040" height="160" fill="#f6f2e7"/><text x="-490" y="-30" font-family="Type" font-size="26" fill="#555">OCT 10, 2026 · POSTED ON X</text>
+   <text x="-490" y="40" font-family="Play" font-size="62" fill="#111">"Prime Minister <tspan fill="#111" style="text-decoration:underline">Ambani</tspan>..."</text><rect x="-90" y="-6" width="370" height="58" fill="rgba(255,226,60,.55)"/></g>
+  <path d="M520 620 C700 760, 760 800, 840 760" stroke="#e0262f" stroke-width="7" fill="none" marker-end=""/><text x="430" y="760" font-family="Marker" font-size="46" fill="#e0262f" transform="rotate(-6 430 760)">blocked?</text>
+  <g transform="translate(980,960)"><rect x="-430" y="-58" width="860" height="116" fill="#111"/><text x="0" y="24" text-anchor="middle" font-family="Bebas" font-size="80" fill="#ffd400">WHO REALLY CONTROLS INDIA'S SKY?</text></g></svg>`;
+}
+R.innerHTML=svg;window.ready=true;
+</script></body></html>
