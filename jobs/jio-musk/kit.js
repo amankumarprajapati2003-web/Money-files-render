@@ -81,7 +81,7 @@ export function makeKit(A) {
     if (o.mustache) { ctx.beginPath(); ctx.ellipse(-14, 44, 20, 8, 0.2, 0, Math.PI * 2); ctx.ellipse(14, 44, 20, 8, -0.2, 0, Math.PI * 2); ctx.fillStyle = hc; ctx.fill(); }
     if (o.glasses) { ctx.lineWidth = 5; ctx.strokeStyle = INK; ctx.beginPath(); ctx.arc(-32, 6, 22, 0, 7); ctx.moveTo(54, 6); ctx.arc(32, 6, 22, 0, 7); ctx.moveTo(-10, 4); ctx.lineTo(10, 4); ctx.stroke(); }
     if (o.sweat) { const sy = (t * 50) % 40; fillPath([[80, -40 + sy], [88, -16 + sy], [72, -16 + sy]], '#7fd0ff'); }
-    if (o.crown) { fillPath([[-60, -96], [-60, -150], [-30, -118], [0, -160], [30, -118], [60, -150], [60, -96]], YEL); }
+    if (o.crown) { fillPath([[-58, -78], [-62, -136], [-30, -104], [0, -146], [30, -104], [62, -136], [58, -78]], YEL); }
     if (o.helmet) { ctx.beginPath(); ctx.arc(0, -10, 100, Math.PI, 0); ctx.fillStyle = o.helmet; ctx.fill(); rr(-108, -16, 216, 18, 8, o.helmet); }
     ctx.restore();
     if (o.label) tag(x, y + 50 * s, o.label, 44 * Math.max(0.7, s), o.labelCol || INK);
