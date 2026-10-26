@@ -1,0 +1,978 @@
+{
+"duration": 601.08,
+"lines": [
+{
+"i": 0,
+"p": 0,
+"text": "In twenty seventeen, a young man in Minnesota named Alec Smith turned twenty-six.",
+"start": 0.442,
+"end": 5.773
+},
+{
+"i": 1,
+"p": 1,
+"text": "On his birthday, he aged off his mother's health insurance.",
+"start": 7.5,
+"end": 10.938
+},
+{
+"i": 2,
+"p": 2,
+"text": "Alec managed a restaurant.",
+"start": 12.672,
+"end": 14.172
+},
+{
+"i": 3,
+"p": 2,
+"text": "He made about thirty-five thousand dollars a year.",
+"start": 15.468,
+"end": 18.091
+},
+{
+"i": 4,
+"p": 2,
+"text": "Too much for government help.",
+"start": 19.446,
+"end": 20.961
+},
+{
+"i": 5,
+"p": 2,
+"text": "Not enough for a good plan.",
+"start": 22.231,
+"end": 23.686
+},
+{
+"i": 6,
+"p": 3,
+"text": "He had type one diabetes.",
+"start": 25.523,
+"end": 27.166
+},
+{
+"i": 7,
+"p": 3,
+"text": "Without insurance, his pharmacist estimated his supplies would cost about thirteen hundred dollars a month.",
+"start": 28.432,
+"end": 35.125
+},
+{
+"i": 8,
+"p": 4,
+"text": "Less than a month later, Alec was found alone in his apartment.",
+"start": 37.074,
+"end": 40.802
+},
+{
+"i": 9,
+"p": 4,
+"text": "He had died from diabetic ketoacidosis.",
+"start": 42.144,
+"end": 44.681
+},
+{
+"i": 10,
+"p": 4,
+"text": "Three days before payday.",
+"start": 45.956,
+"end": 47.511
+},
+{
+"i": 11,
+"p": 4,
+"text": "His family believes he had been rationing his insulin.",
+"start": 48.846,
+"end": 51.755
+},
+{
+"i": 12,
+"p": 5,
+"text": "Here's the part that should make you angry.",
+"start": 53.598,
+"end": 55.703
+},
+{
+"i": 13,
+"p": 5,
+"text": "The people who discovered insulin sold the patent for one dollar.",
+"start": 57.027,
+"end": 60.842
+},
+{
+"i": 14,
+"p": 6,
+"text": "So how did a one dollar medicine become something people die without?",
+"start": 62.653,
+"end": 66.508
+},
+{
+"i": 15,
+"p": 7,
+"text": "Chapter one.",
+"start": 68.382,
+"end": 69.261
+},
+{
+"i": 16,
+"p": 7,
+"text": "The one dollar miracle.",
+"start": 70.506,
+"end": 71.899
+},
+{
+"i": 17,
+"p": 8,
+"text": "Before nineteen twenty-two, type one diabetes was a death sentence.",
+"start": 73.692,
+"end": 78.046
+},
+{
+"i": 18,
+"p": 8,
+"text": "Doctors could only put children on starvation diets.",
+"start": 79.322,
+"end": 82.552
+},
+{
+"i": 19,
+"p": 8,
+"text": "It bought them a few months.",
+"start": 83.837,
+"end": 85.229
+},
+{
+"i": 20,
+"p": 8,
+"text": "Sometimes a year.",
+"start": 86.443,
+"end": 87.563
+},
+{
+"i": 21,
+"p": 9,
+"text": "Then, in Toronto, a young surgeon named Frederick Banting and his team found a way to extract insulin.",
+"start": 89.317,
+"end": 96.202
+},
+{
+"i": 22,
+"p": 10,
+"text": "In January nineteen twenty-two, they injected a fourteen-year-old boy named Leonard Thompson.",
+"start": 98.076,
+"end": 104.107
+},
+{
+"i": 23,
+"p": 10,
+"text": "He was dying.",
+"start": 105.521,
+"end": 106.475
+},
+{
+"i": 24,
+"p": 10,
+"text": "And he came back.",
+"start": 107.733,
+"end": 108.735
+},
+{
+"i": 25,
+"p": 11,
+"text": "Within a year, insulin was being made in bulk.",
+"start": 110.43,
+"end": 113.298
+},
+{
+"i": 26,
+"p": 11,
+"text": "Children who had been given months to live were going home.",
+"start": 114.567,
+"end": 117.793
+},
+{
+"i": 27,
+"p": 12,
+"text": "Banting could have become one of the richest men alive.",
+"start": 119.676,
+"end": 122.803
+},
+{
+"i": 28,
+"p": 12,
+"text": "Instead, the discoverers sold the patent to the University of Toronto.",
+"start": 124.11,
+"end": 128.359
+},
+{
+"i": 29,
+"p": 12,
+"text": "For one dollar.",
+"start": 129.715,
+"end": 130.702
+},
+{
+"i": 30,
+"p": 13,
+"text": "Banting's reason was simple.",
+"start": 132.437,
+"end": 133.963
+},
+{
+"i": 31,
+"p": 13,
+"text": "Insulin does not belong to me, he said.",
+"start": 135.29,
+"end": 137.552
+},
+{
+"i": 32,
+"p": 13,
+"text": "It belongs to the world.",
+"start": 138.966,
+"end": 140.359
+},
+{
+"i": 33,
+"p": 14,
+"text": "Chapter two.",
+"start": 142.089,
+"end": 142.979
+},
+{
+"i": 34,
+"p": 14,
+"text": "Three companies.",
+"start": 144.169,
+"end": 145.128
+},
+{
+"i": 35,
+"p": 15,
+"text": "The university needed help to make insulin at scale.",
+"start": 146.822,
+"end": 150.11
+},
+{
+"i": 36,
+"p": 15,
+"text": "So it partnered with drug companies.",
+"start": 151.43,
+"end": 153.388
+},
+{
+"i": 37,
+"p": 16,
+"text": "A hundred years later, about ninety percent of the world's insulin market is controlled by just three of them.",
+"start": 155.111,
+"end": 161.988
+},
+{
+"i": 38,
+"p": 16,
+"text": "Eli Lilly.",
+"start": 163.44,
+"end": 164.199
+},
+{
+"i": 39,
+"p": 16,
+"text": "Novo Nordisk.",
+"start": 165.443,
+"end": 166.408
+},
+{
+"i": 40,
+"p": 16,
+"text": "And Sanofi.",
+"start": 167.637,
+"end": 168.567
+},
+{
+"i": 41,
+"p": 17,
+"text": "And over the decades, they kept improving the product.",
+"start": 170.272,
+"end": 173.412
+},
+{
+"i": 42,
+"p": 17,
+"text": "Purer insulin.",
+"start": 174.69,
+"end": 175.703
+},
+{
+"i": 43,
+"p": 17,
+"text": "Faster insulin.",
+"start": 176.971,
+"end": 178.073
+},
+{
+"i": 44,
+"p": 17,
+"text": "Longer-lasting insulin.",
+"start": 179.335,
+"end": 180.813
+},
+{
+"i": 45,
+"p": 17,
+"text": "Better pens.",
+"start": 182.123,
+"end": 183.106
+},
+{
+"i": 46,
+"p": 18,
+"text": "Every improvement came with a new patent.",
+"start": 184.812,
+"end": 186.793
+},
+{
+"i": 47,
+"p": 18,
+"text": "And every new patent meant a new chance to set a new price.",
+"start": 188.265,
+"end": 191.522
+},
+{
+"i": 48,
+"p": 19,
+"text": "Chapter three.",
+"start": 193.236,
+"end": 194.16
+},
+{
+"i": 49,
+"p": 19,
+"text": "The price climb.",
+"start": 195.356,
+"end": 196.388
+},
+{
+"i": 50,
+"p": 20,
+"text": "In nineteen ninety-six, Eli Lilly launched a fast-acting insulin called Humalog.",
+"start": 198.117,
+"end": 203.326
+},
+{
+"i": 51,
+"p": 20,
+"text": "The list price was about twenty-one dollars a vial.",
+"start": 204.779,
+"end": 207.691
+},
+{
+"i": 52,
+"p": 21,
+"text": "By twenty nineteen, that same vial had a list price of about two hundred and seventy-five dollars.",
+"start": 209.496,
+"end": 215.608
+},
+{
+"i": 53,
+"p": 22,
+"text": "Same medicine.",
+"start": 217.335,
+"end": 218.276
+},
+{
+"i": 54,
+"p": 22,
+"text": "Same vial.",
+"start": 219.516,
+"end": 220.355
+},
+{
+"i": 55,
+"p": 22,
+"text": "More than thirteen times the price.",
+"start": 221.619,
+"end": 223.536
+},
+{
+"i": 56,
+"p": 23,
+"text": "And it wasn't just one drug.",
+"start": 225.26,
+"end": 226.844
+},
+{
+"i": 57,
+"p": 23,
+"text": "Between twenty twelve and twenty sixteen, the price of insulin in America more than doubled.",
+"start": 228.169,
+"end": 234.079
+},
+{
+"i": 58,
+"p": 24,
+"text": "When one company raised its price, the others often followed.",
+"start": 235.854,
+"end": 239.537
+},
+{
+"i": 59,
+"p": 24,
+"text": "A U.S.",
+"start": 240.835,
+"end": 241.534
+},
+{
+"i": 60,
+"p": 24,
+"text": "Senate investigation found that Novo Nordisk and Sanofi tracked each other's prices and raised them in lockstep.",
+"start": 242.696,
+"end": 250.024
+},
+{
+"i": 61,
+"p": 24,
+"text": "Sometimes within days.",
+"start": 251.468,
+"end": 252.948
+},
+{
+"i": 62,
+"p": 25,
+"text": "But here's the strange part.",
+"start": 254.657,
+"end": 256.011
+},
+{
+"i": 63,
+"p": 25,
+"text": "The companies said they weren't actually keeping most of that money.",
+"start": 257.377,
+"end": 260.942
+},
+{
+"i": 64,
+"p": 26,
+"text": "So where was it going?",
+"start": 262.76,
+"end": 264.038
+},
+{
+"i": 65,
+"p": 27,
+"text": "Chapter four.",
+"start": 265.787,
+"end": 266.693
+},
+{
+"i": 66,
+"p": 27,
+"text": "The middlemen.",
+"start": 267.895,
+"end": 268.684
+},
+{
+"i": 67,
+"p": 28,
+"text": "Between the drug company and your pharmacy, there's a player most Americans have never heard of.",
+"start": 270.446,
+"end": 276.124
+},
+{
+"i": 68,
+"p": 28,
+"text": "The pharmacy benefit manager.",
+"start": 277.562,
+"end": 279.388
+},
+{
+"i": 69,
+"p": 28,
+"text": "The PBM.",
+"start": 280.709,
+"end": 281.656
+},
+{
+"i": 70,
+"p": 29,
+"text": "PBMs work for insurance plans.",
+"start": 283.377,
+"end": 285.529
+},
+{
+"i": 71,
+"p": 29,
+"text": "They decide which drugs are covered and which ones aren't.",
+"start": 286.812,
+"end": 290.065
+},
+{
+"i": 72,
+"p": 29,
+"text": "That list is called a formulary.",
+"start": 291.346,
+"end": 293.196
+},
+{
+"i": 73,
+"p": 29,
+"text": "And getting on it is worth billions.",
+"start": 294.545,
+"end": 296.617
+},
+{
+"i": 74,
+"p": 30,
+"text": "So drug companies pay PBMs secret discounts, called rebates, to get on the list.",
+"start": 298.33,
+"end": 303.942
+},
+{
+"i": 75,
+"p": 31,
+"text": "Here's the catch.",
+"start": 305.704,
+"end": 306.668
+},
+{
+"i": 76,
+"p": 31,
+"text": "The rebate is a percentage of the list price.",
+"start": 307.898,
+"end": 310.503
+},
+{
+"i": 77,
+"p": 31,
+"text": "So the higher the list price, the bigger the rebate.",
+"start": 311.741,
+"end": 314.58
+},
+{
+"i": 78,
+"p": 31,
+"text": "And the more the middleman makes.",
+"start": 315.972,
+"end": 317.604
+},
+{
+"i": 79,
+"p": 32,
+"text": "The Senate report found rebates for insulin grew from single digits in twenty thirteen to sixty percent or more for the biggest buyers.",
+"start": 319.292,
+"end": 328.406
+},
+{
+"i": 80,
+"p": 33,
+"text": "It even found that Novo Nordisk's board voted down a proposal to cut its insulin price.",
+"start": 330.187,
+"end": 336.288
+},
+{
+"i": 81,
+"p": 33,
+"text": "One of the reasons?",
+"start": 337.57,
+"end": 338.65
+},
+{
+"i": 82,
+"p": 33,
+"text": "Fear of backlash from the PBMs and insurers.",
+"start": 339.916,
+"end": 342.745
+},
+{
+"i": 83,
+"p": 34,
+"text": "Think about that.",
+"start": 344.438,
+"end": 345.405
+},
+{
+"i": 84,
+"p": 34,
+"text": "A lower price was seen as a business risk.",
+"start": 346.644,
+"end": 349.099
+},
+{
+"i": 85,
+"p": 35,
+"text": "Chapter five.",
+"start": 350.788,
+"end": 351.723
+},
+{
+"i": 86,
+"p": 35,
+"text": "Who pays the sticker price?",
+"start": 352.985,
+"end": 354.478
+},
+{
+"i": 87,
+"p": 36,
+"text": "Now, insurance companies got those big rebates.",
+"start": 356.186,
+"end": 359.072
+},
+{
+"i": 88,
+"p": 36,
+"text": "But not everyone has a plan that passes the savings on.",
+"start": 360.327,
+"end": 363.593
+},
+{
+"i": 89,
+"p": 37,
+"text": "If you're uninsured, you pay the list price.",
+"start": 365.475,
+"end": 367.844
+},
+{
+"i": 90,
+"p": 37,
+"text": "If you have a high deductible, you pay the list price until you hit it.",
+"start": 369.105,
+"end": 373.003
+},
+{
+"i": 91,
+"p": 37,
+"text": "Every January, that clock resets.",
+"start": 374.413,
+"end": 376.73
+},
+{
+"i": 92,
+"p": 38,
+"text": "And that list price is wildly out of line with the rest of the world.",
+"start": 378.443,
+"end": 382.657
+},
+{
+"i": 93,
+"p": 38,
+"text": "A twenty twenty-four RAND study found that American list prices for insulin were nearly ten times higher than in thirty-three other wealthy countries combined.",
+"start": 383.994,
+"end": 394.633
+},
+{
+"i": 94,
+"p": 39,
+"text": "So people did what Alec did.",
+"start": 396.355,
+"end": 398.037
+},
+{
+"i": 95,
+"p": 39,
+"text": "A Yale study found that about one in four diabetes patients had used less insulin than prescribed because of the cost.",
+"start": 399.368,
+"end": 407.424
+},
+{
+"i": 96,
+"p": 40,
+"text": "They skipped doses.",
+"start": 409.217,
+"end": 410.351
+},
+{
+"i": 97,
+"p": 40,
+"text": "They stretched vials.",
+"start": 411.575,
+"end": 412.746
+},
+{
+"i": 98,
+"p": 40,
+"text": "Some crossed the border into Canada.",
+"start": 413.992,
+"end": 415.917
+},
+{
+"i": 99,
+"p": 40,
+"text": "And some, like Alec, didn't make it.",
+"start": 417.258,
+"end": 419.025
+},
+{
+"i": 100,
+"p": 41,
+"text": "Chapter six.",
+"start": 420.788,
+"end": 421.743
+},
+{
+"i": 101,
+"p": 41,
+"text": "The crack in the wall.",
+"start": 422.917,
+"end": 423.998
+},
+{
+"i": 102,
+"p": 42,
+"text": "Alec's mother, Nicole Smith-Holt, became one of the loudest voices in a growing movement.",
+"start": 425.715,
+"end": 431.37
+},
+{
+"i": 103,
+"p": 42,
+"text": "Parents.",
+"start": 432.672,
+"end": 433.279
+},
+{
+"i": 104,
+"p": 42,
+"text": "Patients.",
+"start": 434.414,
+"end": 435.086
+},
+{
+"i": 105,
+"p": 42,
+"text": "Doctors.",
+"start": 436.231,
+"end": 436.993
+},
+{
+"i": 106,
+"p": 42,
+"text": "All asking the same question.",
+"start": 438.222,
+"end": 439.819
+},
+{
+"i": 107,
+"p": 42,
+"text": "Why does this cost so much?",
+"start": 441.172,
+"end": 442.693
+},
+{
+"i": 108,
+"p": 43,
+"text": "The pressure finally broke through.",
+"start": 444.392,
+"end": 446.038
+},
+{
+"i": 109,
+"p": 44,
+"text": "In twenty twenty-two, Congress passed a law capping insulin at thirty-five dollars a month for people on Medicare.",
+"start": 447.864,
+"end": 455.264
+},
+{
+"i": 110,
+"p": 45,
+"text": "Then, on March first, twenty twenty-three, Eli Lilly announced it would cut the list price of its most common insulins by seventy percent.",
+"start": 457.136,
+"end": 466.084
+},
+{
+"i": 111,
+"p": 45,
+"text": "And cap what many patients pay at thirty-five dollars a month.",
+"start": 467.41,
+"end": 470.828
+},
+{
+"i": 112,
+"p": 46,
+"text": "Within weeks, Novo Nordisk and Sanofi announced cuts of their own.",
+"start": 472.602,
+"end": 476.548
+},
+{
+"i": 113,
+"p": 47,
+"text": "And in January twenty twenty-six, California started selling its own state-branded insulin.",
+"start": 478.427,
+"end": 484.343
+},
+{
+"i": 114,
+"p": 47,
+"text": "Generic long-acting pens for about eleven dollars each.",
+"start": 485.757,
+"end": 489.327
+},
+{
+"i": 115,
+"p": 48,
+"text": "After decades of climbing, the wall finally cracked.",
+"start": 491.08,
+"end": 494.181
+},
+{
+"i": 116,
+"p": 49,
+"text": "Chapter seven.",
+"start": 495.868,
+"end": 496.82
+},
+{
+"i": 117,
+"p": 49,
+"text": "What it actually costs.",
+"start": 498.039,
+"end": 499.321
+},
+{
+"i": 118,
+"p": 50,
+"text": "So how much does insulin really cost to make?",
+"start": 500.979,
+"end": 503.569
+},
+{
+"i": 119,
+"p": 51,
+"text": "A study in the journal BMJ Global Health estimated it.",
+"start": 505.327,
+"end": 508.917
+},
+{
+"i": 120,
+"p": 51,
+"text": "For most modern insulins, about seventy-eight to one hundred and thirty-three dollars per person.",
+"start": 510.309,
+"end": 516.17
+},
+{
+"i": 121,
+"p": 51,
+"text": "Not per vial.",
+"start": 517.567,
+"end": 518.528
+},
+{
+"i": 122,
+"p": 51,
+"text": "For a whole year.",
+"start": 519.758,
+"end": 520.726
+},
+{
+"i": 123,
+"p": 52,
+"text": "In many countries, governments cap the price by law.",
+"start": 522.45,
+"end": 525.518
+},
+{
+"i": 124,
+"p": 52,
+"text": "In India, basic human insulin is under a government price ceiling.",
+"start": 526.909,
+"end": 531.074
+},
+{
+"i": 125,
+"p": 52,
+"text": "A vial can cost just a few dollars.",
+"start": 532.493,
+"end": 534.745
+},
+{
+"i": 126,
+"p": 53,
+"text": "Same science.",
+"start": 536.464,
+"end": 537.379
+},
+{
+"i": 127,
+"p": 53,
+"text": "Same hormone.",
+"start": 538.612,
+"end": 539.546
+},
+{
+"i": 128,
+"p": 53,
+"text": "Discovered by the same people who wanted it to belong to the world.",
+"start": 540.843,
+"end": 544.634
+},
+{
+"i": 129,
+"p": 54,
+"text": "Chapter eight.",
+"start": 546.382,
+"end": 547.245
+},
+{
+"i": 130,
+"p": 54,
+"text": "The one dollar promise.",
+"start": 548.469,
+"end": 549.886
+},
+{
+"i": 131,
+"p": 55,
+"text": "A hundred years ago, Frederick Banting gave away a fortune because he believed no one should die for lack of insulin.",
+"start": 551.608,
+"end": 559.057
+},
+{
+"i": 132,
+"p": 56,
+"text": "In twenty seventeen, a twenty-six-year-old restaurant manager died three days before payday, with an empty insulin pen.",
+"start": 560.954,
+"end": 569.367
+},
+{
+"i": 133,
+"p": 57,
+"text": "Prices are finally falling.",
+"start": 571.24,
+"end": 572.796
+},
+{
+"i": 134,
+"p": 57,
+"text": "But Alec's story is a reminder of what happens when a medicine becomes a business model.",
+"start": 574.182,
+"end": 579.545
+},
+{
+"i": 135,
+"p": 58,
+"text": "The patent was sold for one dollar.",
+"start": 581.383,
+"end": 583.227
+},
+{
+"i": 136,
+"p": 58,
+"text": "The question is who decided what it should cost after that.",
+"start": 584.586,
+"end": 588.154
+},
+{
+"i": 137,
+"p": 59,
+"text": "If you enjoyed this file, subscribe to The Money Files.",
+"start": 590.015,
+"end": 593.521
+},
+{
+"i": 138,
+"p": 59,
+"text": "Next time: why does a hospital charge fifty dollars for a single Tylenol?",
+"start": 594.811,
+"end": 601.08
+}
+]
+}

@@ -41,7 +41,7 @@ export default function (A) {
     night(); const pb = S('Three days before payday.'), rat = S('His family believes');
     candle(960, 760, 1.4, t); pen(960, 860, 0.8, '#2f6fdb', 0, true);
     if (t > S('He had died from')) tag(960, 160, 'DIABETIC KETOACIDOSIS', 62, '#fff', INK, pop(t, S('He had died from')));
-    if (t > pb) { calendar(450, 470, 0.9, 'PAYDAY', 'IN 3 DAYS', RED); }
+    if (t > pb) { calendar(450, 470, 0.9, 'DAYS TO PAYDAY', '3', RED); }
     if (t > rat) tag(1450, 470, 'EMPTY INSULIN PEN', 52, YEL, INK, pop(t, rat));
   });
   sc(S('Here\'s the part that should') - 0.15, S('So how did a one dollar') - 0.15, (t) => {
@@ -55,8 +55,8 @@ export default function (A) {
   // =================== CH 1 ===================
   ch(S('Chapter one.') - 0.1, S('Before nineteen twenty-two') - 0.15, 1, 'THE ONE DOLLAR MIRACLE', '#2ecc71');
   sc(S('Before nineteen twenty-two') - 0.15, S('Then, in Toronto') - 0.15, (t) => {
-    lab1920(); calendar(330, 300, 0.75, 'BEFORE', '1922', '#6e5235'); hospital(); bed(1000, 760, 1.1);
-    person(1000, 700, 0.75, { shirt: '#e9eef5', pants: '#e9eef5', skin: SK[0], hair: 'short', mood: 'sad', build: 0.7 }, t);
+    lab1920(); calendar(330, 300, 0.75, 'BEFORE', '1922', '#6e5235'); hospital();
+    person(1000, 800, 0.75, { shirt: '#e9eef5', pants: '#e9eef5', skin: SK[0], hair: 'short', mood: 'sad', build: 0.7 }, t); bed(1000, 800, 1.1); rr(760, 690, 520, 60, 20, '#cfe0f0');
     if (t > S('Doctors could only')) tag(1000, 200, 'ONLY TREATMENT: STARVATION DIETS', 54, RED, '#fff', pop(t, S('Doctors could only')));
     if (t > S('It bought them')) tag(1000, 320, 'A FEW MONTHS. MAYBE A YEAR.', 48, INK, '#fff', pop(t, S('It bought them')));
   });
@@ -67,8 +67,8 @@ export default function (A) {
     if (t > P('Then, in Toronto', 'extract')) tag(900, 300, 'INSULIN EXTRACTED', 64, YEL, INK, pop(t, P('Then, in Toronto', 'extract')));
   });
   sc(S('In January nineteen twenty-two') - 0.15, S('Within a year') - 0.15, (t) => {
-    hospital(); bed(900, 780, 1.1); const back = S('And he came back.');
-    person(900, 720, 0.8, { shirt: '#e9eef5', pants: '#e9eef5', skin: SK[0], hair: 'short', build: 0.7, mood: t > back ? 'smile' : 'sad', label: 'LEONARD, 14' }, t);
+    hospital(); const back = S('And he came back.');
+    person(900, 820, 0.8, { shirt: '#e9eef5', pants: '#e9eef5', skin: SK[0], hair: 'short', build: 0.7, mood: t > back ? 'smile' : 'sad' }, t); bed(900, 820, 1.1); rr(660, 710, 520, 60, 20, '#cfe0f0'); tag(900, 960, 'LEONARD THOMPSON, 14', 50, INK, '#fff', 1);
     calendar(330, 330, 0.75, 'JAN', '1922', '#6e5235');
     if (t > back) { tag(900, 200, 'HE CAME BACK', 80, '#2ecc71', '#fff', pop(t, back)); for (let k = 0; k < 8; k++) { const a = k / 8 * 6.28 + t; cir(900 + Math.cos(a) * 240, 470 + Math.sin(a) * 120, 8, YEL); } }
   });
@@ -164,7 +164,7 @@ export default function (A) {
   sc(S('The Senate report found rebates') - 0.15, S('It even found') - 0.15, (t) => {
     grad('#bfe3ff', '#eaf6ff'); capitol(960, 980, 0.9);
     panel(360, 160, 1200, 420, '#fff', 20); T('INSULIN REBATES', 960, 220, 56, INK);
-    const p = clamp((t - S('The Senate report found rebates') - 0.6) / 2); rr(460, 420, 300, -60, 6, '#3a86ff'); T('2013', 610, 460, 40, '#666'); T('single digits', 610, 330, 34, INK, SANS); rr(1160, 420, 300, -260 * p, 6, RED); T('LATER', 1310, 460, 40, '#666'); if (p > 0.9) T('60%+', 1310, 130 + 60, 90, RED);
+    const p = clamp((t - S('The Senate report found rebates') - 0.6) / 2); rr(460, 420, 300, -60, 6, '#3a86ff'); T('2013', 610, 460, 40, '#666'); T('single digits', 610, 330, 34, INK, SANS); rr(1160, 420, 300, -260 * p, 6, RED); T('LATER', 1310, 460, 40, '#666'); if (p > 0.9) T('60%+', 1310, 120, 90, RED);
   });
   sc(S('It even found') - 0.15, S('Think about that.') - 0.15, (t) => {
     office('#e3e8ef', '#8f9bb0'); rr(360, 640, 1200, 40, 10, '#6e5235'); for (let k = 0; k < 4; k++) person(520 + k * 300, 760, 0.7, EXEC('NOVO BOARD', '#1f4e9a', { label: k === 0 ? 'NOVO NORDISK BOARD' : '', mood: 'neutral', arms: [12, k === 3 ? 160 : 12] }), t + k);
