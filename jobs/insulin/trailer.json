@@ -1,0 +1,17 @@
+{"segments": [
+  ["On his birthday, he aged off", 1, 0.1, 0.3],
+  ["Without insurance, his pharmacist", 1, 0.05, 0.3],
+  ["Three days before payday.", 1, 0.05, 0.5],
+  ["The people who discovered insulin sold", 1, 0.1, 0.4],
+  ["By twenty nineteen", 1, 0.1, 0.2],
+  ["Same medicine.", 1, 0.05, 0.05],
+  ["Same vial.", 1, 0.05, 0.3],
+  ["So the higher the list price", 1, 0.1, 0.1],
+  ["And the more the middleman makes.", 1, 0.05, 0.4],
+  ["It even found that Novo", 1, 0.1, 0.4],
+  ["A lower price was seen", 1, 0.05, 0.5],
+  ["And some, like Alec", 1, 0.05, 0.6]
+ ],
+ "kicker": "THE MONEY FILES",
+ "title": ["THE $1 MEDICINE", "AMERICA CAN'T AFFORD"],
+ "end": "STARTING NOW", "letterbox": false}
