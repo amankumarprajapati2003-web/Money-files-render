@@ -17,7 +17,7 @@ export default function (A) {
     space(t); earth(960, 1500, 900, t);
     for (let k = 0; k < 14; k++) { const a = -Math.PI + k / 13 * Math.PI + t * 0.04; satellite(960 + Math.cos(a) * 1050, 1500 + Math.sin(a) * 1050 * 0.95, 0.42, a + Math.PI / 2); }
     bigNum(t, S('Elon Musk has thousands') + 0.4, 'THOUSANDS OF SATELLITES', 960, 150, 110, '#fff');
-    const items = [[S('He can beam'), 'A BOAT AT SEA', 380], [P('He can beam', 'war zone'), 'A WAR ZONE', 960], [P('He can beam', 'cabin'), 'A CABIN IN ALASKA', 1540]];
+    const items = [[S('He can beam'), 'A BOAT AT SEA', 380], [S('To a war zone.'), 'A WAR ZONE', 960], [S('To a cabin'), 'A CABIN IN ALASKA', 1540]];
     if (t > S('He can beam')) items.forEach(([t0, s, x]) => { if (t > t0) { tag(x, 420, s, 56, '#fff', INK, pop(t, t0, 0.3)); stroke([[x, 470], [x, 640]], 'rgba(140,210,255,0.8)', 6); } });
   });
   sc(S('But there\'s one country') - 0.15, S('And earlier this month') - 0.15, (t) => {
@@ -28,14 +28,14 @@ export default function (A) {
   });
   cue(S('A country of one point'), 'hit', 0.7);
   sc(S('And earlier this month') - 0.15, S('So who is this man?') - 0.15, (t) => {
-    office('#dde8f5', '#9aa7bd'); const pm = P('He called him', 'Prime');
+    office('#dde8f5', '#9aa7bd'); const pm = S('"Prime Minister Ambani."');
     person(420, 860, 1.25, ELON({ mood: t > pm ? 'smug' : 'neutral', talk: t < pm, arms: [12, 60], hold: () => { rr(-24, -70, 48, 90, 8, '#222'); } }), t);
     const items = [[P('Not to a president', 'president'), 'PRESIDENT', 0], [P('Not to a prime minister', 'prime'), 'PRIME MINISTER', 1]];
     items.forEach(([t0, s, k]) => { if (t > t0) { tag(1300, 250 + k * 130, s, 60, '#fff', INK, pop(t, t0)); bigX(1300, 250 + k * 130, 50, (t - t0 - 0.3) / 0.3); } });
     if (t > S('To a businessman.')) tag(1300, 510, 'A BUSINESSMAN', 64, YEL, INK, pop(t, S('To a businessman.')));
     if (t > pm) post(1150, 760, 0.85, 'Elon Musk', '@elonmusk', ['"Prime Minister Ambani"'], pop(t, pm, 0.4), 'Ambani');
   });
-  cue(P('He called him', 'Prime'), 'hit', 1.0);
+  cue(S('"Prime Minister Ambani."'), 'hit', 1.0);
   sc(S('So who is this man?') - 0.15, S('Chapter one.') - 0.1, (t) => {
     city('#ffb36b', '#ffe0a8', '#e58a4e', '#c9693a', '#ffd27a');
     person(1150, 900, 1.5, AMB({ mood: 'smug', arms: [14, 20] }), t);
@@ -46,18 +46,18 @@ export default function (A) {
   });
   // =================== CHAPTER 1 ===================
   ch(S('Chapter one.') - 0.1, S('Right now, in America') - 0.15, 1, 'THE CHEAPEST INTERNET ON EARTH', '#ff6b35', NAVY);
-  sc(S('Right now, in America') - 0.15, S('Eight cents. That') - 0.15, (t) => {
+  sc(S('Right now, in America') - 0.15, S('Eight cents.') - 0.15, (t) => {
     grad('#ffffff', '#eef2f8'); rr(958, 0, 4, 1080, 0, '#ccd'); T('AMERICA', 480, 150, 80, NAVY); T('INDIA', 1440, 150, 80, '#d1601c');
     phone(480, 560, 0.9, { draw: () => { T('1 GB', 0, -150, 70, '#555'); T('$5–10', 0, 0, 120, RED); T('SEVERAL DOLLARS', 0, 120, 38, '#555'); } });
     if (t > S('In India, it costs')) phone(1440, 560, 0.9, { draw: () => { T('1 GB', 0, -150, 70, '#555'); T('$0.08', 0, 0, 120, '#18a957'); T('≈ ₹7.7', 0, 120, 44, '#555'); } }, Math.sin(Math.min(1, (t - S('In India, it costs')) * 3) * Math.PI) * 0.05);
     T('*typical prepaid prices', 480, 1000, 30, '#99a', SANS);
   });
   cue(S('In India, it costs'), 'pop', 0.7);
-  sc(S('Eight cents. That') - 0.15, S('And it\'s cheap because') - 0.15, (t) => {
-    grad('#14213d', '#22345e'); coin(960, 470, 230 * pop(t, S('Eight cents. That'), 0.5), '8¢');
-    caption(t, P('Eight cents. That', 'That\'s not'), 'NOT A TYPO', 820, 90, INK, YEL); caption(t, S('It\'s among the cheapest'), 'AMONG THE CHEAPEST IN THE WORLD', 960, 70, '#fff', RED);
+  sc(S('Eight cents.') - 0.15, S('And it\'s cheap because') - 0.15, (t) => {
+    grad('#14213d', '#22345e'); coin(960, 470, 230 * pop(t, S('Eight cents.'), 0.5), '8¢');
+    caption(t, S('That\'s not a typo.'), 'NOT A TYPO', 820, 90, INK, YEL); caption(t, S('It\'s among the cheapest'), 'AMONG THE CHEAPEST IN THE WORLD', 960, 70, '#fff', RED);
   });
-  cue(S('Eight cents. That'), 'hit', 0.8);
+  cue(S('Eight cents.'), 'hit', 0.8);
   sc(S('And it\'s cheap because') - 0.15, S('That network is called Jio.') - 0.15, (t) => {
     city('#9ad0ff', '#e3f3ff', '#7fa7cf', '#5d82ad', '#cfe6ff'); const mk = S('Mukesh Ambani.'), ri = S('The richest person in Asia.'), ch2 = S('The chairman of'), co = S('A company that started');
     person(560, 920, 1.45, AMB({ mood: 'smile', arms: [14, 30] }), t);
@@ -170,13 +170,13 @@ export default function (A) {
     calendar(960, 250, 0.7, 'MARCH', '2025', '#8338ec'); if (t > S('To sell Starlink')) tag(960, 470, 'STARLINK KITS IN JIO STORES', 56, YEL, INK, pop(t, S('To sell Starlink')));
   });
   cue(S('Jio signed a deal'), 'hit', 0.8);
-  sc(S('Its biggest rival, Airtel') - 0.15, S('Why? One theory') - 0.15, (t) => {
+  sc(S('Its biggest rival, Airtel') - 0.15, S('Why?') - 0.15, (t) => {
     grad('#f1eaff', '#d9ccff'); store(520, 820, 1.0, 'Jio', '#0f3c8c'); store(1400, 820, 1.0, 'airtel', RED); dish(520, 860, 0.9); dish(1400, 860, 0.9);
     if (t > S('So the two giants')) { tag(960, 170, '80% OF INDIA\'S PHONE MARKET', 66, INK, '#fff', pop(t, S('So the two giants'))); tag(960, 290, 'NOW PARTNERS WITH THEIR RIVAL', 56, YEL, INK, pop(t, S('So the two giants') + 1.5)); }
   });
-  sc(S('Why? One theory') - 0.15, S('And by the summer of') - 0.15, (t) => {
+  sc(S('Why?') - 0.15, S('And by the summer of') - 0.15, (t) => {
     office('#f3e2c7', '#c99b6a'); person(700, 920, 1.35, AMB({ mood: 'smug', arms: [14, 60] }), t); person(1200, 920, 1.3, ELON({ flip: true, mood: 'neutral', arms: [12, 12] }), t);
-    if (t > P('Why? One theory', 'keep')) bubble(560, 220, 640, 190, ['KEEP YOUR RIVALS', 'CLOSER'], 66, pop(t, P('Why? One theory', 'keep')), [0.3, 1]);
+    if (t > P('One theory', 'keep')) bubble(560, 220, 640, 190, ['KEEP YOUR RIVALS', 'CLOSER'], 66, pop(t, P('One theory', 'keep')), [0.3, 1]);
     if (t > S('If Starlink was coming')) tag(1300, 200, 'BE THE ONE SELLING IT', 56, YEL, INK, pop(t, P('If Starlink was coming', 'better')));
   });
   sc(S('And by the summer of') - 0.15, S('Chapter five.') - 0.1, (t) => {
